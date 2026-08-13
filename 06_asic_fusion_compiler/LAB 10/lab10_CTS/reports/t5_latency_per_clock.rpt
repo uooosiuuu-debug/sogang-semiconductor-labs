@@ -1,0 +1,168 @@
+****************************************
+Report : clock timing
+        -type latency
+        -launch
+        -nworst 1
+        -setup
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 10:09:27 2026
+****************************************
+
+  Mode: func
+  Clock: pll1_clk_in
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK
+                                         0.05     0.00       --     1.35     1.35 rpi-+    ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: pll2_clk_in
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/panel_clk_q1_reg/CLK
+                                         0.05     0.00       --     0.68     0.68 rpi-+    ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: pixel_clk
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/pixel_comp_clk_q1_reg/CLK
+                                         0.05     2.50       --     0.66     3.16 rpi-+    ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: system_clk
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK
+                                         0.05     0.00       --     0.99     0.99 rpi-+    ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: comp_clk
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/pixel_comp_clk_q1_reg/CLK
+                                         0.05     2.50       --     0.97     3.47 rpi-+    ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: i2c_scl
+
+  No valid pins.
+
+
+  Mode: func
+  Clock: test_clk
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_main_controller_top/u_main_controller/red_parameters_reg[21]/CLK
+                                         0.07     0.00       --     1.06     1.06 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: system_clk_div2
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_main_controller_top/u_main_controller/red_parameters_reg[11]/CLK
+                                         0.07     0.00       --     2.59     2.59 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: panel_clk_inv_gate
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_datapath/u_shiftout/u_ddr_out0/Q_reg[8]/CLK
+                                         0.05     0.00       --     1.38     1.38 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: panel_clk_dly
+
+  No valid pins.
+
+
+  Mode: func
+  Clock: panel_clk_gate
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_datapath/u_shiftout/out_f1_reg[1]/CLK
+                                         0.05     1.16       --     0.30     1.47 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: system_clk_int
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_power_manager/count_reg[10]/CLK
+                                         0.05     1.49       --     0.19     1.68 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: flash_clk_gate
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_freq_detect/level_3_reg[20]/CLK      0.08     0.85       --     0.47     1.32 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: i2c_clk
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_main_controller_top/u_main_controller/mirror_mem_din_2_reg[66]/CLK
+                                         0.07     0.52       --     0.52     1.04 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: sdram_clk_gate
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_datapath/u_gamma_correction/ms_pos_mem_c_reg[30][13]/CLK
+                                         0.08     1.53       --     0.50     2.03 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: sdram_clk
+
+  No valid pins.
+
+
+  Mode: func
+  Clock: pixel_comp_clk_pix
+
+                                                 --- Latency ---
+  Clock Pin                             Trans   Source   Offset  Network    Total            Corner
+---------------------------------------------------------------------------------------------------
+  u_DE_generator/u_hsync_count/count_reg[11]/CLK
+                                         0.07     3.58       --     0.27     3.84 rp-+     ss0p95v125c
+---------------------------------------------------------------------------------------------------
+1

@@ -1,0 +1,65 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+        -transition_time
+        -capacitance
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 12:25:53 2026
+****************************************
+
+  Startpoint: u_main_controller_top/u_main_controller/ewa_we_reg (rising edge-triggered flip-flop clocked by test_clk)
+  Endpoint: u_main_controller_top/u_main_controller/clock_gate_bufmap2_addr_reg (falling clock gating-check end-point clocked by test_clk')
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: test_clk
+  Path Type: max
+
+  Point                                             Cap       Trans      Incr       Path  
+  ------------------------------------------------------------------------------------------------
+  clock test_clk (rise edge)                                             0.000      0.000
+  clock network delay (ideal)                                            0.000      0.000
+
+  u_main_controller_top/u_main_controller/ewa_we_reg/CLK (SDFFARX1_LVT)
+                                                              0.000      0.000      0.000 r
+  u_main_controller_top/u_main_controller/ewa_we_reg/Q (SDFFARX1_LVT)
+                                                   7.874      0.076      0.174      0.174 r
+  u_main_controller_top/u_main_controller/u_sr_s64x32_1/O[6] (SRAM1RW64x32)
+                                                  43.910      0.421      0.366      0.540 f
+  u_main_controller_top/u_main_controller/phfnr_buf_94756/Y (IBUFFX8_LVT)
+                                                  17.732      0.048      0.159      0.699 r
+  u_main_controller_top/u_main_controller/ctmTdsLR_2_214668/Y (INVX1_LVT)
+                                                   0.683      0.025      0.012      0.712 f
+  u_main_controller_top/u_main_controller/ctmTdsLR_3_214669/Y (OA22X2_LVT)
+                                                   5.441      0.043      0.074      0.786 f
+  u_main_controller_top/u_main_controller/ZINV_4_inst_244348/Y (INVX8_LVT)
+                                                  22.909      0.037      0.031      0.817 r
+  u_main_controller_top/u_main_controller/ctmTdsLR_5_248867/Y (OR2X2_LVT)
+                                                   2.934      0.026      0.054      0.871 r
+  u_main_controller_top/u_main_controller/ctmTdsLR_6_248868/Y (INVX4_LVT)
+                                                   4.284      0.019      0.014      0.885 f
+  u_main_controller_top/u_main_controller/ctmTdsLR_3_248797/Y (OA221X1_LVT)
+                                                   1.182      0.036      0.069      0.953 f
+  u_main_controller_top/u_main_controller/clock_gate_bufmap2_addr_reg/EN (CGLNPRX2_HVT)
+                                                              0.036      0.000      0.953 f
+  data arrival time                                                                 0.953
+
+  clock test_clk' (fall edge)                                          100.000    100.000
+  clock network delay (ideal)                                           -0.155     99.845
+  u_main_controller_top/u_main_controller/clock_gate_bufmap2_addr_reg/CLK (CGLNPRX2_HVT)
+                                                              0.000      0.000     99.845 f
+  clock uncertainty                                                    -2000.000  -1900.155
+  library setup time                                                    -0.102    -1900.257
+  data required time                                                              -1900.257
+  ------------------------------------------------------------------------------------------------
+  data required time                                                              -1900.257
+  data arrival time                                                                -0.953
+  ------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                -1901.210
+
+
+1

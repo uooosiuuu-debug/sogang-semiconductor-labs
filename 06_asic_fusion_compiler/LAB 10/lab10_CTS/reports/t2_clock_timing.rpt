@@ -1,0 +1,472 @@
+****************************************
+Report : clock timing
+        -type summary
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 09:30:51 2026
+****************************************
+
+  Mode: func
+  Clock: pll1_clk_in
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK               1.35       rpi-+  ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK                   0.41       rpi-+  ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK                   0.41       rpi-+  ss0p95v125c
+
+  Maximum hold capture latency:
+      u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK               1.35       rpi-+  ss0p95v125c
+
+  Maximum active transition:
+      u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK                   0.05       rpi-+  ss0p95v125c
+
+  Minimum active transition:
+      u_clk_gen/u_clock_gen/sdram_clk_en_reg/CLK               0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_clk_gen/u_pll_mux/pll1_ld_q2_reg/CLK                              rp-+   ss0p95v125c
+      u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK                   0.23       rpi-+  ss0p95v125c
+
+  Maximum hold skew:
+      u_clk_gen/u_clock_gen/sdram_clk_q_reg/CLK                           rp-+   ss0p95v125c
+      u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK               0.18       rpi-+  ss0p95v125c
+
+
+
+  Mode: func
+  Clock: pll2_clk_in
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_clk_gen/u_clock_gen/panel_clk_q1_reg/CLK               0.68       rpi-+  ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_clock_gen/panel_clk_sel_q1_reg/CLK           0.27       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_clock_gen/panel_clk_sel_q1_reg/CLK           0.27       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_clk_gen/u_clock_gen/panel_clk_q1_reg/CLK               0.68       rpi-+  ss0p95v125c
+
+  Maximum active transition:
+      u_clk_gen/u_pll_mux/pll2_ld_q3_reg/CLK                   0.05       rpi-+  ss0p95v125c
+
+  Minimum active transition:
+      pll2_clk_div2_reg/CLK                                    0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_clk_gen/u_clock_gen/panel_clk_en_reg/CLK                          rp-+   ss0p95v125c
+      u_clk_gen/u_clock_gen/panel_clk_q_reg/CLK                0.04       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_clk_gen/u_clock_gen/panel_clk_sel_q1_reg/CLK                      rp-+   ss0p95v125c
+      u_clk_gen/u_clock_gen/panel_clk_sel_q2_reg/CLK           0.13       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: pixel_clk
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_DE_generator/u_hsync_count/count_reg[11]/CLK           3.57       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_clock_gen/pixel_clk_sel_q1_reg/CLK           1.79       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_clock_gen/pixel_clk_sel_q1_reg/CLK           1.79       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_DE_generator/u_hsync_count/count_reg[11]/CLK           3.57       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_video_in_mux/din_rgb_reg[15]/CLK                       0.08       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_datapath/u_pixel_in_buffer/pixel_count_reg[6]/CLK      0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_datapath/u_pixel_in_buffer/pixel_count_reg[5]/CLK                 rp-+   ss0p95v125c
+      u_datapath/u_pixel_in_buffer/buffer0_write_enable_reg/CLK
+                                                               1.24       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_datapath/de2_reg/CLK                                              rp-+   ss0p95v125c
+      u_datapath/u_pixel_in_buffer/pixel_count_reg[8]/CLK      1.27       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: system_clk
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK               0.99       rpi-+  ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_clock_gen/sdram_clk_sel_sys_q2_reg/CLK       0.29       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_clock_gen/sdram_clk_sel_sys_q2_reg/CLK       0.29       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK               0.99       rpi-+  ss0p95v125c
+
+  Maximum active transition:
+      u_clk_gen/u_clock_gen/panel_clk_sel_sys_q3_reg/CLK       0.06       rpi-+  ss0p95v125c
+
+  Minimum active transition:
+      u_clk_gen/u_clock_gen/flash_clk_q_reg/CLK                0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_clk_gen/u_clock_gen/sdram_clk_en_reg/CLK                          rp-+   ss0p95v125c
+      u_clk_gen/u_clock_gen/sdram_clk_q_reg/CLK                0.51       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_clk_gen/u_clock_gen/sdram_clk_q_reg/CLK                           rp-+   ss0p95v125c
+      u_clk_gen/u_clock_gen/sdram_clk_q1_reg/CLK               0.56       rpi-+  ss0p95v125c
+
+
+
+  Mode: func
+  Clock: comp_clk
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_DE_generator/u_hsync_count/count_reg[11]/CLK           3.84       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_clock_gen/comp_clk_sel_q1_reg/CLK            1.90       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_clock_gen/comp_clk_sel_q1_reg/CLK            1.90       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_DE_generator/u_hsync_count/count_reg[11]/CLK           3.84       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_clk_gen/u_clock_gen/comp_clk_sel_q1_reg/CLK            0.09       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_datapath/u_pixel_in_buffer/pixel_count_reg[6]/CLK      0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_datapath/u_pixel_in_buffer/pixel_count_reg[5]/CLK                 rp-+   ss0p95v125c
+      u_datapath/u_pixel_in_buffer/buffer0_write_enable_reg/CLK
+                                                               1.23       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_datapath/de2_reg/CLK                                              rp-+   ss0p95v125c
+      u_datapath/u_pixel_in_buffer/pixel_count_reg[8]/CLK      1.27       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: i2c_scl
+  No valid pins.
+
+
+  Mode: func
+  Clock: test_clk
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_main_controller_top/u_main_controller/red_parameters_reg[21]/CLK
+                                                               1.06       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_clock_gen/pixel_clk_sel_q3_reg/CLK           0.46       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_clock_gen/pixel_clk_sel_q3_reg/CLK           0.46       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_main_controller_top/u_main_controller/red_parameters_reg[21]/CLK
+                                                               1.06       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/u_sr_d512x72f116_MMS2_bist/bist_addr_reg[7]/CLK
+                                                               0.09       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_clk_gen/u_clock_gen/flash_clk_q_reg/CLK                0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_main_controller_top/u_main_controller/init_done_reg/CLK           rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/init_done_os_reg/CLK
+                                                               0.27       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_main_controller_top/u_main_controller/code_count_reg[1]/CLK       rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/buffer_count_reg[2]/CLK
+                                                               0.28       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: system_clk_div2
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_main_controller_top/u_main_controller/red_parameters_reg[21]/CLK
+                                                               2.59       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_clock_gen/panel_clk_div2_q_reg/CLK           0.73       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_clock_gen/panel_clk_div2_q_reg/CLK           0.73       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_main_controller_top/u_main_controller/red_parameters_reg[21]/CLK
+                                                               2.59       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/u_sr_d512x72f116_MMS2_bist/bist_addr_reg[7]/CLK
+                                                               0.09       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_main_controller_top/u_main_controller/buffer_sizes_reg[15][4]/CLK
+                                                               0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_main_controller_top/u_main_controller/init_done_reg/CLK           rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/init_done_os_reg/CLK
+                                                               1.35       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_main_controller_top/u_main_controller/code_count_reg[1]/CLK       rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/buffer_count_reg[2]/CLK
+                                                               1.36       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: panel_clk_inv_gate
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_datapath/u_shiftout/enable1_reg[0]/CLK                 1.38       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_datapath/u_shiftout/enable1_reg[0]/CLK                 1.29       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_datapath/u_shiftout/enable1_reg[0]/CLK                 1.29       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_datapath/u_shiftout/enable1_reg[0]/CLK                 1.38       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_datapath/u_shiftout/enable1_reg[0]/CLK                 0.05       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_datapath/u_shiftout/enable1_reg[0]/CLK                 0.04       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      --                                                         --
+
+  Maximum hold skew:
+      --                                                         --
+
+
+
+  Mode: func
+  Clock: panel_clk_dly
+  No valid pins.
+
+
+  Mode: func
+  Clock: panel_clk_gate
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_datapath/u_shiftout/out_r1_reg[1]/CLK                  1.47       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_main_controller_top/u_main_controller/u_output_buf/ctrl_shiftout1_reg[0]/CLK
+                                                               0.87       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_main_controller_top/u_main_controller/u_output_buf/ctrl_shiftout1_reg[0]/CLK
+                                                               0.87       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_datapath/u_shiftout/out_r1_reg[1]/CLK                  1.47       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_q_reg[8]/CLK
+                                                               0.08       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_main_controller_top/u_main_controller/u_output_buf/ptr_shiftout_reg[42]/CLK
+                                                               0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_datapath/u_shiftout/out_r1_reg[10]/CLK                            rp-+   ss0p95v125c
+      u_datapath/u_shiftout/out_r2_reg[11]/CLK                 0.49       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_main_controller_top/u_main_controller/u_output_buf/sync_reg/CLK   rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/sync_dly_reg[0]/CLK
+                                                               0.53       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: system_clk_int
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_clk_gen/u_power_manager/count_reg[14]/CLK              1.68       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_clk_gen/u_power_manager/comp_fid_sync1_reg/CLK         0.41       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_clk_gen/u_power_manager/comp_fid_sync1_reg/CLK         0.41       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_clk_gen/u_power_manager/count_reg[14]/CLK              1.68       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_clk_gen/u_power_manager/count_reg[26]/CLK              0.05       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_clk_gen/u_power_manager/comp_fid_sync1_reg/CLK         0.03       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_clk_gen/u_power_manager/count_reg[14]/CLK                         rp-+   ss0p95v125c
+      u_clk_gen/u_power_manager/current_state_reg[0]/CLK       1.28       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_clk_gen/u_power_manager/vsync_sync2_reg/CLK                       rp-+   ss0p95v125c
+      u_clk_gen/u_power_manager/count_reg[14]/CLK              1.28       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: flash_clk_gate
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_freq_detect/level_2_reg[16]/CLK                        1.32       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_flash_control/fcc_count_d1_reg[1]/CLK                  0.88       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_flash_control/fcc_count_d1_reg[1]/CLK                  0.88       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_freq_detect/level_2_reg[16]/CLK                        1.32       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_freq_detect/level_0_reg[16]/CLK                        0.08       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_flash_control/regpage_reg[2]/CLK                       0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_flash_control/u_flash_control_counter/count_reg[1]/CLK            rp-+   ss0p95v125c
+      u_flash_control/fcc_count_d1_reg[1]/CLK                  0.29       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_flash_control/outreg1_reg[0]/CLK                                  rp-+   ss0p95v125c
+      u_flash_control/flash2control_dout_reg[48]/CLK           0.33       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: i2c_clk
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_main_controller_top/u_main_controller/mirror_mem_din_0_reg[66]/CLK
+                                                               1.04       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_main_controller_top/u_main_controller/MEMLOAD2_reg/CLK
+                                                               0.61       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_main_controller_top/u_main_controller/MEMLOAD2_reg/CLK
+                                                               0.61       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_main_controller_top/u_main_controller/mirror_mem_din_0_reg[66]/CLK
+                                                               1.04       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_register_map_control/choice_Z_reg[19]/CLK              0.08       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_i2c_control/rd_count_reg[1]/CLK                        0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_register_map_control/choice_D_reg[19]/CLK                         rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/cur_static_mem_in_reg[7]/CLK
+                                                               0.26       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_main_controller_top/u_main_controller/MEMLOAD2_reg/CLK            rp-+   ss0p95v125c
+      u_main_controller_top/u_main_controller/mirror_mem_din_0_reg[66]/CLK
+                                                               0.43       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: sdram_clk_gate
+                                                                                 Corner
+---------------------------------------------------------------------------------------------------
+  Maximum setup launch latency:
+      u_datapath/u_gamma_correction/ms_pos_mem_c_reg[30][17]/CLK
+                                                               2.03       rp-+   ss0p95v125c
+
+  Minimum setup capture latency:
+      u_datapath/u_rotating_cache_control/din1_reg[6]/CLK      1.58       rp-+   ss0p95v125c
+
+  Minimum hold launch latency:
+      u_datapath/u_rotating_cache_control/din1_reg[6]/CLK      1.58       rp-+   ss0p95v125c
+
+  Maximum hold capture latency:
+      u_datapath/u_gamma_correction/ms_pos_mem_c_reg[30][17]/CLK
+                                                               2.03       rp-+   ss0p95v125c
+
+  Maximum active transition:
+      u_datapath/u_gamma_correction/ms_pos_mem_b_reg[25][8]/CLK
+                                                               0.08       rp-+   ss0p95v125c
+
+  Minimum active transition:
+      u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap0/u_sr_d1kx16_f166_bist/tbl_init_reg/CLK
+                                                               0.02       rp-+   ss0p95v125c
+
+  Maximum setup skew:
+      u_datapath/u_rotating_cache_control/rc1/mem3_reg[9]/CLK             rp-+   ss0p95v125c
+      u_datapath/u_rotating_cache_control/rc1/Do_reg[1]/CLK
+                                                               0.39       rp-+   ss0p95v125c
+
+  Maximum hold skew:
+      u_datapath/u_rotating_cache_control/rc2/ad3_reg[13]/CLK             rp-+   ss0p95v125c
+      u_datapath/u_rotating_cache_control/rc2/mem13_reg[14]/CLK
+                                                               0.40       rp-+   ss0p95v125c
+
+
+
+  Mode: func
+  Clock: sdram_clk
+  No valid pins.
+
+
+  Mode: func
+  Clock: pixel_comp_clk_pix
+  No valid pins.
+
+1

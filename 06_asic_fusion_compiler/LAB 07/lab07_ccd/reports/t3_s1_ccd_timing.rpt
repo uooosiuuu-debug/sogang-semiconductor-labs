@@ -1,0 +1,22 @@
+****************************************
+Report : CCD Timing
+Version: V-2023.12-SP5
+Date   : Fri Jun 26 15:19:43 2026
+****************************************
+Scenario name mapping:
+s0: ss0p95v125c.func
+
+Printing setup and hold slacks for top 5 setup critical endpoints.
+
+-----------------------------------------------------------------------------------------------
+           Setup                                   Hold
+-----------------------------------------------------------------------------------------------
+D-slack             Q-slack             D-slack             Q-slack             Pin
+-----------------------------------------------------------------------------------------------
+-4.35 (s0)          --                   12.98 (s0)         --                  ycrcb_pad_tx[9]
+-4.25 (s0)          --                   24.31 (s0)         --                  ycrcb_pad_tx[2]
+ 0.87 (s0)          --                   5.09 (s0)          --                  u_clk_gen/u_clock_gen/panel_clk_sel_q3_reg/CLK
+ 1.09 (s0)          --                   2.91 (s0)          --                  u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK
+ 1.13 (s0)          --                   4.84 (s0)          --                  u_clk_gen/u_clock_gen/sdram_clk_sel_q3_reg/CLK
+
+Note: Setup and hold slack values are reported from most critical timing path across all active scenarios.

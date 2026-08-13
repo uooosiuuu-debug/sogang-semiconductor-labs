@@ -1,0 +1,148 @@
+****************************************
+Report : hierarchy
+Design : lcos_cont
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 14:55:41 2026
+****************************************
+
+lcos_top3.nlib:lcos_cont.design
+  AND2X1_HVT                          saed32hvt
+  AND2X2_RVT                          saed32rvt
+  B12I1025_NS                         saed32io_fc
+  CORNER                              saed32io_fc
+  D12I1025_NS                         saed32io_fc
+  ENDCAP02                            EXPLORE_physical_only
+  FILLER40                            saed32io_fc
+  I1025_NS                            saed32io_fc
+  IBUFFX16_HVT                        saed32hvt
+  INVX0_LVT                           saed32lvt
+  INVX16_RVT                          saed32rvt
+  INVX1_HVT                           saed32hvt
+  INVX1_LVT                           saed32lvt
+  INVX1_RVT                           saed32rvt
+  INVX32_RVT                          saed32rvt
+  INVX8_LVT                           saed32lvt
+  INVX8_RVT                           saed32rvt
+  IOVDD_NS                            saed32io_fc
+  IOVSS_NS                            saed32io_fc
+  NAND2X0_RVT                         saed32rvt
+  NAND2X2_HVT                         saed32hvt
+  NBUFFX16_RVT                        saed32rvt
+  NBUFFX2_LVT                         saed32lvt
+  NBUFFX32_RVT                        saed32rvt
+  NBUFFX8_HVT                         saed32hvt
+  NBUFFX8_LVT                         saed32lvt
+  NOR2X4_HVT                          saed32hvt
+  OR2X2_HVT                           saed32hvt
+  OR2X4_HVT                           saed32hvt
+  TNBUFFX1_HVT                        saed32hvt
+  VDD_NS                              saed32io_fc
+  VSS_NS                              saed32io_fc
+  fsc_top_compile.nlib:fsc_top.abstract
+     AND2X2_HVT                       saed32hvt
+     AND3X1_HVT                       saed32hvt
+     AND3X2_HVT                       saed32hvt
+     AND4X1_HVT                       saed32hvt
+     AND4X4_HVT                       saed32hvt
+     AO21X1_HVT                       saed32hvt
+     AO221X1_HVT                      saed32hvt
+     AO221X2_HVT                      saed32hvt
+     AO222X1_HVT                      saed32hvt
+     AO222X2_HVT                      saed32hvt
+     AO22X1_HVT                       saed32hvt
+     CGLPPRX2_HVT                     saed32hvt
+     DFFARX1_HVT                      saed32hvt
+     INVX0_HVT                        saed32hvt
+     INVX4_HVT                        saed32hvt
+     INVX8_HVT                        saed32hvt
+     MUX21X1_HVT                      saed32hvt
+     MUX21X2_HVT                      saed32hvt
+     MUX41X1_HVT                      saed32hvt
+     NAND2X0_HVT                      saed32hvt
+     NAND2X4_HVT                      saed32hvt
+     NBUFFX16_HVT                     saed32hvt
+     NBUFFX2_HVT                      saed32hvt
+     NBUFFX4_HVT                      saed32hvt
+     NBUFFX4_LVT                      saed32lvt
+     NBUFFX4_RVT                      saed32rvt
+     OA221X1_HVT                      saed32hvt
+     OR2X1_HVT                        saed32hvt
+     OR3X1_HVT                        saed32hvt
+     SDFFARX1_HVT                     saed32hvt
+     SDFFARX2_HVT                     saed32hvt
+     SDFFASX1_HVT                     saed32hvt
+     SDFFASX2_HVT                     saed32hvt
+     TAP02                            EXPLORE_physical_only
+     TIEH_HVT                         saed32hvt
+     TIEL_HVT                         saed32hvt
+     XNOR2X1_HVT                      saed32hvt
+     clk_gen
+        INVX16_HVT                    saed32hvt
+        NBUFFX2_RVT                   saed32rvt
+        OA21X1_HVT                    saed32hvt
+        clock_gen
+           NAND3X0_HVT                saed32hvt
+           NBUFFX8_RVT                saed32rvt
+           OA22X1_HVT                 saed32hvt
+        panel_clk_by2
+     datapath
+        AOI21X1_HVT                   saed32hvt
+        AOI22X1_HVT                   saed32hvt
+        DFFARX2_HVT                   saed32hvt
+        INVX2_HVT                     saed32hvt
+        color_interleaver
+           SRAM2RW32x32               saed32sram
+        gamma_correction
+           sr_d1kx16_f166c_wrap
+           sr_d1kx16_f166c_wrap_0
+           sr_d1kx16_f166c_wrap_1
+           sr_d1kx16_f166g_wrap
+              SRAM2RW128x16           saed32sram
+        gamma_flash_fifo_control
+           load_mem_fifo
+              SRAM2RW16x32            saed32sram
+        input_line_buffer_control
+           input_line_buffer
+              sr_d1kx16_f166_wrap0
+              sr_d1kx16_f166_wrap1
+           input_line_buffer_0
+              sr_d1kx16_f166_wrap0_0
+              sr_d1kx16_f166_wrap1_0
+           input_line_buffer_1
+              sr_d1kx16_f166_wrap0_1
+              sr_d1kx16_f166_wrap1_1
+        output_fifo_control
+           output_fifo_alt3
+              sr_d1kx32_f233_wrap
+           output_fifo_alt3_0
+              sr_d1kx32_f233_wrap_0
+                 SRAM2RW128x32        saed32sram
+        pixel_in_buffer
+           SRAM1RW64x32               saed32sram
+     main_controller_top
+        main_controller
+           AND2X4_HVT                 saed32hvt
+           DFFASX1_HVT                saed32hvt
+           NBUFFX32_HVT               saed32hvt
+           address_fifo
+              rf_d256x17_f166_wrap
+                 SRAM1RW256x32        saed32sram
+           fifo_sync_d16x50_f116
+              OR4X1_HVT               saed32hvt
+           fifo_sync_d256x11_f116
+              NAND3X1_HVT             saed32hvt
+              NOR2X0_HVT              saed32hvt
+              NOR4X1_HVT              saed32hvt
+              rf_d256x11_f116_wrap
+           fifo_sync_d64x14_f116
+              NAND4X1_HVT             saed32hvt
+              NOR3X0_HVT              saed32hvt
+              OR3X2_HVT               saed32hvt
+              SRAM2RW64x32            saed32sram
+           fifo_sync_d64x29_f116
+           sr_d512x72f116_MM0_wrap
+           sr_d512x72f116_MMS0_wrap
+           sr_d512x72f116_MMS1_wrap
+           sr_d512x72f116_MMS2_wrap
+
+1

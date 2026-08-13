@@ -1,0 +1,51 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+        -groups pll1_clk_in
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Fri Jun 26 15:19:43 2026
+****************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+  Startpoint: u_clk_gen/u_clock_gen/sdram_clk_q_reg (rising edge-triggered flip-flop clocked by pll1_clk_in)
+  Endpoint: u_clk_gen/u_clock_gen/ctmi_155 (rising clock gating-check end-point clocked by pll1_clk_in')
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: pll1_clk_in
+  Path Type: max
+  Sigma:   3.00
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pll1_clk_in (rise edge)                    0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+
+  u_clk_gen/u_clock_gen/sdram_clk_q_reg/CLK (DFFARX1_HVT)
+                                                   0.00      0.00 r
+  u_clk_gen/u_clock_gen/sdram_clk_q_reg/Q (DFFARX1_HVT)
+                                                   0.25      0.25 r
+  u_clk_gen/u_clock_gen/ctmi_155/A1 (NAND3X0_RVT)
+                                                   0.00      0.25 r
+  data arrival time                                          0.25
+
+  clock pll1_clk_in' (rise edge)                   3.79      3.79
+  clock network delay (ideal)                     -0.42      3.37
+  u_clk_gen/u_clock_gen/ctmi_155/A3 (NAND3X0_RVT)
+                                                   0.00      3.37 r
+  clock uncertainty                               -1.51      1.86
+  library setup time                               0.00      1.86
+  data required time                                         1.86
+  ------------------------------------------------------------------------
+  data required time                                         1.86
+  data arrival time                                         -0.25
+  ------------------------------------------------------------------------
+  statistical adjustment                           0.00      1.61
+  slack (MET)                                                1.61
+
+
+1

@@ -1,0 +1,279 @@
+****************************************
+Report : clock tree balance points
+Design : fsc_top
+Mode   : func
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 09:37:11 2026
+****************************************
+
+Clock 'pll1_clk_in':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'pll2_clk_in':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'pixel_clk':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'system_clk':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+u_clk_gen/u_clock_gen/panel_clk_q_reg/CLK
+u_clk_gen/u_clock_gen/panel_clk_q1_reg/CLK
+u_clk_gen/u_clock_gen/sdram_clk_sel_q3_reg/CLK
+
+
+Clock 'comp_clk':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+u_clk_gen/u_clock_gen/pixel_comp_clk_q_reg/CLK
+u_clk_gen/u_clock_gen/pixel_comp_clk_q1_reg/CLK
+
+
+Clock 'i2c_scl':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'test_clk':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'system_clk_div2':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'panel_clk_inv_gate':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'panel_clk_dly':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'panel_clk_gate':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'system_clk_int':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'flash_clk_gate':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'i2c_clk':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'sdram_clk_gate':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'sdram_clk':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock 'pixel_comp_clk_pix':
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+
+Clock Independent: 
+Balance points:              -------------- DELAY ---------------    -------------- OFFSET ---------------
+                             Early-    Early-     Late-     Late-    Early-    Early-     Late-     Late-
+Point                         Rise      Fall       Rise      Fall     Rise      Fall       Rise      Fall     Corner
+------------------------------------------------------------------------------------------------------------------------
+No balance points.
+
+
+Exclude points:
+Point
+------------------------------------------------------------------------------------------------------------------------
+No exclude points.
+
+
+1

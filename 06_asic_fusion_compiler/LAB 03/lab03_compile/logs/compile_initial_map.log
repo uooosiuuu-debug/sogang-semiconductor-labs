@@ -1,0 +1,483 @@
+ initial_map
+==================================================
+Running compile stage: initial_map
+Log file: compile_fusion.initial_map.log
+==================================================
+RM-info: Running compile_fusion -from initial_map -to initial_map
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: Starting 'compile_fusion -from initial_map -to initial_map' (FLW-8000)
+Information: Time: 2026-07-01 11:28:07 / Session:  00:01:27 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 1143 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB
+****************************************
+Report : report_tbcs
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:28:07 2026
+****************************************
+INFO: Start environment monitoring: recipes
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+Warning: The app option 'compile.flow.high_effort_timing' will be changed to Boolean type in the future.  To ensure compatibility, this app option should only be set to a value of 0 or 1 for now (FLW-3502)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: The following site def will be used during technology mapping: unit (OPT-1033)
+Information: Timer using 8 threads
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/CONTROL2[0]' to 'u_clk_gen/u_clock_gen/C383/Z[0]' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_map (FLW-8000)
+Information: Time: 2026-07-01 11:28:13 / Session:  00:01:33 / Command:  00:00:05 / CPU:  00:00:07 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_map / Load Design (FLW-8000)
+Information: Time: 2026-07-01 11:28:13 / Session:  00:01:34 / Command:  00:00:06 / CPU:  00:00:07 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     384585.31           -       14411              0.03      1211
+Information: Ending   compile_fusion / initial_map / Load Design (FLW-8001)
+Information: Time: 2026-07-01 11:28:16 / Session:  00:01:37 / Command:  00:00:09 / CPU:  00:00:10 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_map / MV Cell Insertion (FLW-8000)
+Information: Time: 2026-07-01 11:28:16 / Session:  00:01:37 / Command:  00:00:09 / CPU:  00:00:10 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+MV related app options set by user:
+Information: Result of compile_fusion / initial_map / MV Cell Insertion (FLW-8500)
+Information: Total number of MV cells in the design. (MV-334)
+-------------------------------------------------------------------------------
+MV Cells                        Total Number
+-------------------------------------------------------------------------------
+Level Shifter:                  0
+Enable Level Shifter:           0
+Isolation Cell:                 0
+Retention Cell:                 0
+Retention Clamp Cell:           0
+Switch Cell:                    0
+Always-On Cell:                 0
+Repeater Cell:                  0
+
+-------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     384585.31           -       14411              0.03      1211
+Information: Ending   compile_fusion / initial_map / MV Cell Insertion (FLW-8001)
+Information: Time: 2026-07-01 11:28:16 / Session:  00:01:37 / Command:  00:00:09 / CPU:  00:00:10 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_map / Logic Simplification (1) (FLW-8000)
+Information: Time: 2026-07-01 11:28:16 / Session:  00:01:37 / Command:  00:00:09 / CPU:  00:00:10 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Warning: Net 'u_clk_gen/panel_clk_dly' is already connected to pin 'u_clk_gen/u_prog_delay_line/delay_out'. It may cause loss of switching activity. (POW-116)
+Information: The hierarchy u_clk_gen/u_prog_delay_line is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy u_clk_gen/u_panel_clk_by2 is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_clk_gen/u_reset is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy u_clk_gen/u_pll_mux is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_clk_gen/u_clock_gen is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_clk_gen/u_power_manager is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_DE_generator/u_de_cycle_count is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_DE_generator/u_hsync_count is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_YCrCb2RGB/largecounter1 is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_pixel_in_buffer/u_length_counter is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/u_sync_r2w_load_mem_fifo is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/u_sync_w2r_load_mem_fifo is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_test_logic/u_test_sel is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy u_test_logic/u_bist_status is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy u_test_logic/u_test_mux is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy u_test_logic is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: The hierarchy u_debug is ungrouped due to auto_ungrouping. (UNG-1001)
+Information: 7 of 115 hierarchies are ungrouped. Use report_ungroup for a list. (UNG-1003)
+Information: 108 of 115 hierarchies are not ungrouped because of restrictions. Use report_ungroup for a list. (UNG-1005)
+Information: Result of compile_fusion / initial_map / Auto Ungroup (FLW-8500)
+Information: Ungroup Summary Report (UNG-1007)
+-------------------------------------------------------------------
+Hierarchy                                                 Count
+-------------------------------------------------------------------
+Auto ungrouped hierarchies                                  7
+Hierarchies preserved due to restrictions                   108
+-------------------------------------------------------------------
+Information: 98 out of 108 UNG-1004 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: Starting compile_fusion / initial_map / Logic Simplification (1) / Constant and Equal Register Detection (FLW-8000)
+Information: Time: 2026-07-01 11:28:16 / Session:  00:01:37 / Command:  00:00:09 / CPU:  00:00:10 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Unloaded register u_datapath/u_gamma_correction/ms_cnt_del3_reg[4] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/ms_cnt_del3_reg[3] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/ms_cnt_del3_reg[2] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_a_reg[9] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_a_reg[8] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_a_reg[7] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_b_reg[9] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_b_reg[8] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_b_reg[7] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_datapath/u_gamma_correction/c_addr_c_reg[9] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: 197 out of 207 SQM-4104 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: Constant register u_clk_gen/u_power_manager/current_state_reg[2] is preserved in module fsc_top_power_manager_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_clk_gen/u_pll_mux/pll2_ld_q2_reg is preserved in module fsc_top_pll_mux_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_clk_gen/u_pll_mux/pll2_ld_q1_reg is preserved in module fsc_top_pll_mux_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_clk_gen/u_pll_mux/pll2_ld_q3_reg is preserved in module fsc_top_pll_mux_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_YCrCb2RGB/DE_reg is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_YCrCb2RGB/Cr_reg_reg[9] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_YCrCb2RGB/Cr_reg_reg[8] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_YCrCb2RGB/Cr_reg_reg[7] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_YCrCb2RGB/Cr_reg_reg[6] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_YCrCb2RGB/Cr_reg_reg[5] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: 1806 registers were found constant but could not be removed due to restrictions. (SQM-3103)
+Information: Register Bits Before Sharing = 13389, After Sharing = 13389, Savings = 0 (SQM-2000)
+Information: 1796 out of 1806 SQM-4103 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     384585.31           -       13679              0.03      1211
+Information: Ending   compile_fusion / initial_map / Logic Simplification (1) / Constant and Equal Register Detection (FLW-8001)
+Information: Time: 2026-07-01 11:28:17 / Session:  00:01:38 / Command:  00:00:10 / CPU:  00:00:12 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_map / Logic Simplification (1) / Register Merging (FLW-8000)
+Information: Time: 2026-07-01 11:28:17 / Session:  00:01:38 / Command:  00:00:10 / CPU:  00:00:12 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     384585.31           -       13679              0.03      1211
+Information: Ending   compile_fusion / initial_map / Logic Simplification (1) / Register Merging (FLW-8001)
+Information: Time: 2026-07-01 11:28:17 / Session:  00:01:38 / Command:  00:00:10 / CPU:  00:00:12 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_map / Logic Simplification (1) / Constant Propagation and Register Optimization (FLW-8000)
+Information: Time: 2026-07-01 11:28:17 / Session:  00:01:38 / Command:  00:00:10 / CPU:  00:00:12 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[10] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[9] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[8] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[7] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[6] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[5] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[4] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[3] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[2] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_main_controller_top/u_main_controller/bufe_reg[1] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: 14 out of 24 SQM-4104 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     384585.31           -       12789              0.03      1211
+Information: Ending   compile_fusion / initial_map / Logic Simplification (1) / Constant Propagation and Register Optimization (FLW-8001)
+Information: Time: 2026-07-01 11:28:18 / Session:  00:01:39 / Command:  00:00:11 / CPU:  00:00:13 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     384585.31           -       12789              0.03      1211
+Information: Ending   compile_fusion / initial_map / Logic Simplification (1) (FLW-8001)
+Information: Time: 2026-07-01 11:28:18 / Session:  00:01:39 / Command:  00:00:11 / CPU:  00:00:13 / Memory: 1211 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Timer using 8 threads
+Information: Starting compile_fusion / initial_map / High-Level Optimization and Technology Mapping (FLW-8000)
+Information: Time: 2026-07-01 11:28:20 / Session:  00:01:40 / Command:  00:00:12 / CPU:  00:00:16 / Memory: 1227 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 159 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Identified 2 crossbars in module 'fsc_top_main_controller_0'. 0 out of 0 potentially congested crossbars amongst these are candidates for mux tree implementation. (MUX-6091)
+Information: Added key list 'DesignWare' to design 'fsc_top'. (DWS-0216)
+Information: Identified 1 crossbars in module 'fsc_top_gamma_correction_0'. 0 out of 0 potentially congested crossbars amongst these are candidates for mux tree implementation. (MUX-6091)
+Information: 180 shift register chains were inferred in module fsc_top_gamma_correction_0. Use report_transformed_registers for a list. (SQM-2015)
+Information: Identified 1 crossbars in module 'fsc_top_register_map_control_0'. 0 out of 0 potentially congested crossbars amongst these are candidates for mux tree implementation. (MUX-6091)
+Information: 49 shift register chains were inferred in module fsc_top_register_map_control_0. Use report_transformed_registers for a list. (SQM-2015)
+Information: 103 shift register chains were inferred in module fsc_top_flash_control_0. Use report_transformed_registers for a list. (SQM-2015)
+Warning: No cell bus will be mapped to multibit because there is no multibit cells in the cell libraries. (SQM-1040)
+Information: Shift register Inferencing is enabled so only head flop will be replaced with scan cell and not all registers in shift register chains are scan replaced. (SQM-1074)
+Warning: Sequential element 'mem15_reg[15]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[14]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[13]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[12]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[11]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[10]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[9]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[8]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[7]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Warning: Sequential element 'mem15_reg[6]' of module 'fsc_top_rotcache_1' was mapped to a flip-flop without dedicated scan out pin. Constraints placed on dedicated scan out pin will be dropped (SQM-1011)
+Information: Inferred a shift register of length 2 with u_datapath/u_rotating_cache_control/rc2/address_reg[2] as head in module fsc_top_rotcache_1. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_rotating_cache_control/rc2/address_reg[3] as head in module fsc_top_rotcache_1. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_rotating_cache_control/rc2/we1_reg as head in module fsc_top_rotcache_1. (SQM-2005)
+Information: 3 shift register chains were inferred in module fsc_top_rotcache_1. Use report_transformed_registers for a list. (SQM-2015)
+Information: 3 shift register chains were inferred in module fsc_top_rotcache_0. Use report_transformed_registers for a list. (SQM-2015)
+Warning: Sequential element 'h_offset2_reg[0]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_b_reg[2]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_b_reg[1]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_b_reg[0]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_r_reg[2]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_r_reg[1]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_r_reg[0]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_g_reg[2]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_g_reg[1]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Warning: Sequential element 'plane_group_g_reg[0]' of module 'fsc_top_input_line_buffer_control_0' is mapped to library cell 'SDFFARX1_HVT' or its equivalents, which don't have nextstate:data defined on input port. This may result in synchronous input nets swapped. (SQM-1046)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/blue_plane_count1_reg[0] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/green_plane_count1_reg[0] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/addr_end_reg[0] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/addr_end_reg[1] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/addr_end_reg[2] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/red_plane_count1_reg[0] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_datapath/u_input_line_buffer_control/color_reg[0] as head in module fsc_top_input_line_buffer_control_0. (SQM-2005)
+Information: 36 shift register chains were inferred in module fsc_top_input_line_buffer_control_0. Use report_transformed_registers for a list. (SQM-2015)
+Information: 40 shift register chains were inferred in module fsc_top_SDR_controller_0. Use report_transformed_registers for a list. (SQM-2015)
+Information: 1 register's output was inverted. Use report_transformed_registers for a list. (SQM-2014)
+Information: 9 shift register chains were inferred in module fsc_top_i2c_control_0. Use report_transformed_registers for a list. (SQM-2015)
+Information: 51 shift register chains were inferred in module fsc_top_shiftout2_0. Use report_transformed_registers for a list. (SQM-2015)
+Warning: Sequential element 'B_int_reg[20]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[19]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[18]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[17]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[16]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[15]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[14]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[13]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[12]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Warning: Sequential element 'B_int_reg[11]' of module 'fsc_top_YCrCb2RGB_0' is mapped to library cell 'SDFFSSRX1_RVT' or its equivalents, which have multiple input ports defined as nextstate:data. This may result in synchronous input nets swapped. (SQM-1047)
+Information: 8 shift register chains were inferred in module fsc_top_freq_detect_0. Use report_transformed_registers for a list. (SQM-2015)
+Information: Early Mux Extraction engine extracted '1' SelectOps in module 'fsc_top_DI2CSB_0'. (EMX-0001)
+Information: Identified 1 crossbars in module 'fsc_top_color_interleaver_0'. 0 out of 0 potentially congested crossbars amongst these are candidates for mux tree implementation. (MUX-6091)
+Information: 11738 out of 11748 SQM-1011 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 108 out of 109 SQM-1040 messages were not printed due to limit 1 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 1550 out of 1560 SQM-1046 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 49 out of 59 SQM-1047 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 108 out of 109 SQM-1074 messages were not printed due to limit 1 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 826 out of 836 SQM-2005 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 26 out of 27 SQM-2014 messages were not printed due to limit 1 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: 21 out of 31 SQM-2015 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     565040.75           -       38098              0.04      1836
+Information: Ending   compile_fusion / initial_map / High-Level Optimization and Technology Mapping (FLW-8001)
+Information: Time: 2026-07-01 11:28:52 / Session:  00:02:12 / Command:  00:00:44 / CPU:  00:01:55 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Warning: No valid clocks available in mode 'default'. Setting clock frequency to 1 GHz. (POW-034)
+Information: Starting compile_fusion / initial_map / DFT Core Wrapper Analysis (FLW-8000)
+Information: Time: 2026-07-01 11:28:52 / Session:  00:02:13 / Command:  00:00:45 / CPU:  00:01:56 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     565040.75           -       38098              0.04      1836
+Information: Ending   compile_fusion / initial_map / DFT Core Wrapper Analysis (FLW-8001)
+Information: Time: 2026-07-01 11:28:52 / Session:  00:02:13 / Command:  00:00:45 / CPU:  00:01:56 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_map / Logic Simplification (2) (FLW-8000)
+Information: Time: 2026-07-01 11:28:53 / Session:  00:02:13 / Command:  00:00:45 / CPU:  00:01:56 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Constant register u_YCrCb2RGB/ce_out_reg is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_datapath/u_gamma_correction/lines_reg[5] is preserved in module fsc_top_gamma_correction_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/displayed_numrows_reg[5] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/displayed_numrows_m1_reg[1] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/displayed_numrows_m1_reg[0] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/codelines_m1_reg[0] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/codelines_reg[4] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/active_numrows_reg[8] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/active_numrows_next_reg[8] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: Constant register u_main_controller_top/u_main_controller/active_numrows_next_reg[6] is preserved in module fsc_top_main_controller_0 due to restriction: compile.seqmap.remove_constant_registers is set false . (SQM-4103)
+Information: 1806 registers were found constant but could not be removed due to restrictions. (SQM-3103)
+Information: Register Bits Before Sharing = 13330, After Sharing = 13330, Savings = 0 (SQM-2000)
+Information: 9 out of 19 SQM-4103 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Information: Starting compile_fusion / initial_map / Logic Simplification (2) / Constant Propagation and Register Optimization (FLW-8000)
+Information: Time: 2026-07-01 11:28:54 / Session:  00:02:14 / Command:  00:00:46 / CPU:  00:01:57 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[8] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[7] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[6] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[5] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[4] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[3] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[2] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[1] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[0] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/Cb_reg2_reg[9] is preserved in module fsc_top_YCrCb2RGB_0 due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: 87 out of 97 SQM-4104 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_compile.tcl:41) (MSG-3913)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     562710.25           -       36624              0.04      1836
+Information: Ending   compile_fusion / initial_map / Logic Simplification (2) / Constant Propagation and Register Optimization (FLW-8001)
+Information: Time: 2026-07-01 11:28:54 / Session:  00:02:15 / Command:  00:00:47 / CPU:  00:01:59 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     562710.25           -       36624              0.04      1836
+Information: Ending   compile_fusion / initial_map / Logic Simplification (2) (FLW-8001)
+Information: Time: 2026-07-01 11:28:54 / Session:  00:02:15 / Command:  00:00:47 / CPU:  00:01:59 / Memory: 1837 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Result of compile_fusion / initial_map / Clock Gate Insertion (FLW-8500)
+--------------------------------------------------------------------------------
+|                             Clock Gating Options                             |
+--------------------------------------------------------------------------------
+|         Objects         |    Minimum Bitwidth     |      Maximum Fanout      |
+--------------------------+-------------------------+---------------------------
+|   top-level (design)    |          3 (d)          |      Unlimited (d)       |
+--------------------------------------------------------------------------------
+
+Number of Pre-Existing Clock Gates with dont touch attribute: 0
+Number of ICG library cells with CTS purpose: 6
+---------------------------------------------------------------------------------------------
+                          Tool Gated Register Summary                                        
+---------------------------------------------------------------------------------------------
+Clock Gating Type                   | Number of   | Register Count | Equivalent | % of Gated 
+                                    | Clock Gates |                | Bitwidth   | Bits       
+---------------------------------------------------------------------------------------------
+Regular Clock Gating                |         513 |           7788 |       7788 |    58.17%
+---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                 Regular Clock Gating Ungated Register Summary                  
+--------------------------------------------------------------------------------
+ Ungated Reason                                            | Count | Bitwidth   
+--------------------------------------------------------------------------------
+ Enable is Constant One.                                   |  5006 |     5006
+ Enable is Constant Zero.                                  |   363 |      363
+ Minimum Bitwidth Not Met.                                 |   199 |      199
+ Partial Minimum Bitwidth Not Met.                         |     6 |        6
+ Register Model Issue.                                     |    27 |       27
+--------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     562719.69           -       36628              0.04      1936
+
+Information: Runtime Summary (compile_fusion / initial_map)  (FLW-9001)
+----------------------------------------------------------------------------
+     Elapse(Hr:Min:Sec)     Elapse(%)     Category
+----------------------------------------------------------------------------
+       00:00:03              7.4%         Load Design 
+       00:00:00              0.0%         MV Cell Insertion 
+       00:00:00              0.2%         Logic Simplification (1) 
+       00:00:01              2.9%         Logic Simplification (1)/Constant and Equal Register Detection 
+       00:00:00              0.0%         Logic Simplification (1)/Register Merging 
+       00:00:00              1.7%         Logic Simplification (1)/Constant Propagation and Register Optimization 
+       00:00:31             74.6%         High-Level Optimization and Technology Mapping 
+       00:00:00              0.0%         DFT Core Wrapper Analysis 
+       00:00:00              2.3%         Logic Simplification (2) 
+       00:00:00              1.6%         Logic Simplification (2)/Constant Propagation and Register Optimization 
+       00:00:04              9.3%         Other 
+----------------------------------------------------------------------------
+       00:00:42            100.0%         Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 8
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6548Y+ / 128 CPUs  
+Sockets: 2, Cores: 32, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   compile_fusion / initial_map (FLW-8001)
+Information: Time: 2026-07-01 11:28:56 / Session:  00:02:16 / Command:  00:00:48 / CPU:  00:02:01 / Memory: 1937 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Information: >>>>>>> 6 unique error and warning message tags while observing compile_fusion / initial_map: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     0     1 10 SQM-1061  WARNING   Cannot infer functionality of libcell '%s' and will be exclu... (MSG-3032)
+Information:    10  1180 10 SQM-1046  WARNING   Sequential element '%s' of module '%s' is mapped to library ... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   No cell bus will be mapped to multibit because there is no m... (MSG-3032)
+Information:    10  2879 10 SQM-1011  WARNING   Sequential element '%s' of module '%s' was mapped to a flip-... (MSG-3032)
+Information:     1     1 10 POW-034   WARNING   Warning: No valid clocks available in mode 'default'. Settin... (MSG-3032)
+Information:     1     1 10 POW-116   WARNING   Warning: Net 'u_clk_gen/panel_clk_dly' is already connected ... (MSG-3032)
+Information:    23  4063  6        6  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 4063 error&warning MSGs observed during compile_fusion / initial_map (MSG-3103)
+
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: Structural Congestion Optimization technology (Post-DTDP SCO) has been enabled. (SCO-0001)
+Information: Total 2 MV-099 violations. (MV-080)
+Information: Total 103 MV-027 violations. (MV-080)
+Information: Please run check_mv_design for more details. (UPF-535)
+Information: Summary of UPF Cells (UPF-532)
+*******************************************************************************
+                            Summary of UPF Cells                               
+*******************************************************************************
+This is a UPF design.
+UPF is loaded.
+UPF is committed.
+-------------------------------------------------------------------------------
+Number of power domains:        1
+Number of supply nets:          2
+-------------------------------------------------------------------------------
+                             Voltage Area Info                                 
+-------------------------------------------------------------------------------
+Name                            X           Y           Power Domain Name
+-------------------------------------------------------------------------------
+DEFAULT_VA                                              TOP
+                                8.0000      8.0000
+                                8.0000      930.9440
+                                932.0080    930.9440
+                                932.0080    8.0000
+
+-------------------------------------------------------------------------------
+MV Cells                        Total Number
+-------------------------------------------------------------------------------
+Level Shifter:                  0
+Enable Level Shifter:           0
+Isolation Cell:                 0
+Retention Cell:                 0
+Retention Clamp Cell:           0
+Switch Cell:                    0
+Always-On Cell:                 0
+Repeater Cell:                  0
+
+-------------------------------------------------------------------------------
+Unmapped MV Cells
+-------------------------------------------------------------------------------
+No unmapped MV cell found
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+Information: Timer using 8 threads
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 10 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 7 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1     1  0 FLW-3502  WARNING   Warning: The app option 'compile.flow.high_effort_timing' wi... (MSG-3032)
+Information:     0     3 10 SQM-1061  WARNING   Cannot infer functionality of libcell '%s' and will be exclu... (MSG-3032)
+Information:    10  1180 10 SQM-1046  WARNING   Sequential element '%s' of module '%s' is mapped to library ... (MSG-3032)
+Information:     1     1  1 SQM-1040  WARNING   No cell bus will be mapped to multibit because there is no m... (MSG-3032)
+Information:    10  2879 10 SQM-1011  WARNING   Sequential element '%s' of module '%s' was mapped to a flip-... (MSG-3032)
+Information:     1     1 10 POW-034   WARNING   Warning: No valid clocks available in mode 'default'. Settin... (MSG-3032)
+Information:     1     1 10 POW-116   WARNING   Warning: Net 'u_clk_gen/panel_clk_dly' is already connected ... (MSG-3032)
+Information:    24  4066  6        7  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 4066 error&warning MSGs observed during fusion (MSG-3103)
+
+  Block: fsc_top_compile.nlib:fsc_top.design
+  Current State: is mapped; is partly placed; has non-collapsed synth_ref; 
+  Events:
+	- initial_map             	07/01/26 11:28 -->     0.012 hours
+
+Information: Ending   'compile_fusion -from initial_map -to initial_map' (FLW-8001)
+Information: Time: 2026-07-01 11:28:57 / Session:  00:02:18 / Command:  00:00:50 / CPU:  00:02:03 / Memory: 1937 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+1
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+****************************************
+Report : qor
+        -summary
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:28:58 2026
+****************************************
+Information: Corner ss0p95v125c: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Design Average RC for design fsc_top  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.077054 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.089232 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'fsc_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 37120, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            pocv
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    enabled
+************************************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)        -12148.71   -12466029.02           2360
+ss0p95v125c.test   (Setup)            10.00           0.00              0
+Design             (Setup)        -12148.71   -12466029.02           2360
+
+ss0p95v125c.func   (Hold)            -30.08         -89.21             11
+Design             (Hold)            -30.08         -89.21             11
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         562719.66
+Cell Area (netlist and physical only):       568646.80
+Nets with DRC Violations:     3131
+Information: Overwriting block 'initial_map.design' in library 'fsc_top_compile.nlib'. (DES-025)
+INFO: Stage initial_map completed and block saved.

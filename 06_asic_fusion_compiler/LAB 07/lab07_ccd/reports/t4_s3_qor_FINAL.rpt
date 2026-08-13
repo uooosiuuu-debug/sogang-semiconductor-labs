@@ -1,0 +1,219 @@
+****************************************
+Report : qor
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Fri Jun 26 15:23:45 2026
+****************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'pll1_clk_in'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.25
+Critical Path Slack:               1.62
+Critical Path Clk Period:          7.57
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -3.16
+Total Hold Violation:             -3.16
+No. of Hold Violations:               1
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'pll2_clk_in'
+----------------------------------------
+Levels of Logic:                      1
+Critical Path Length:              0.00
+Critical Path Slack:               5.89
+Critical Path Clk Period:          7.57
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'pixel_clk'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.00
+Critical Path Slack:               6.72
+Critical Path Clk Period:         25.10
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:            -13.77
+Total Hold Violation:            -16.17
+No. of Hold Violations:               3
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'system_clk'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.25
+Critical Path Slack:               8.49
+Critical Path Clk Period:         30.30
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:            -14.58
+Total Hold Violation:            -14.58
+No. of Hold Violations:               1
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'system_clk_div2'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.25
+Critical Path Slack:              17.54
+Critical Path Clk Period:         60.60
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:            -29.69
+Total Hold Violation:            -29.69
+No. of Hold Violations:               1
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'i2c_clk'
+----------------------------------------
+Levels of Logic:                     10
+Critical Path Length:              1.07
+Critical Path Slack:              23.13
+Critical Path Clk Period:         30.30
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'REGOUT'
+----------------------------------------
+Levels of Logic:                      7
+Critical Path Length:              1.20
+Critical Path Slack:               6.76
+Critical Path Clk Period:         25.10
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'REGIN'
+----------------------------------------
+Levels of Logic:                      3
+Critical Path Length:             12.45
+Critical Path Slack:               7.45
+Critical Path Clk Period:         25.10
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'FEEDTHROUGH'
+----------------------------------------
+Levels of Logic:                      2
+Critical Path Length:             12.31
+Critical Path Slack:              -4.35
+Critical Path Clk Period:         25.10
+Total Negative Slack:             -8.59
+No. of Violating Paths:               2
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'R2R'
+----------------------------------------
+Levels of Logic:                      0
+Critical Path Length:              0.22
+Critical Path Slack:               0.87
+Critical Path Clk Period:          7.57
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:             -0.80
+Total Hold Violation:             -2.52
+No. of Hold Violations:               4
+----------------------------------------
+
+Scenario           'ss0p95v125c.func'
+Timing Path Group  'REG2ICG'
+----------------------------------------
+Levels of Logic:                     11
+Critical Path Length:              1.02
+Critical Path Slack:               3.50
+Critical Path Clk Period:          6.06
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:            108
+Hierarchical Port Count:          26645
+Leaf Cell Count:                  38249
+Buf/Inv Cell Count:                5833
+Buf Cell Count:                    3049
+Inv Cell Count:                    2784
+Combinational Cell Count:         24319
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:            13930
+   Integrated Clock-Gating Cell Count:                     511
+   Sequential Macro Cell Count:                            30
+   Single-bit Sequential Cell Count:                       13389
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                         30
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:            59848.37
+Noncombinational Area:        122848.89
+Buf/Inv Area:                  12123.69
+Total Buffer Area:              8256.12
+Total Inverter Area:            3867.56
+Macro/Black Box Area:         384585.30
+Net Area:                             0
+Net XLength:                  708459.67
+Net YLength:                  746960.66
+----------------------------------------
+Cell Area (netlist):                         567282.56
+Cell Area (netlist and physical only):       573209.71
+Net Length:                  1455420.33
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             38767
+Nets with Violations:               220
+Max Trans Violations:                 8
+Max Cap Violations:                 220
+----------------------------------------
+
+1

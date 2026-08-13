@@ -1,0 +1,45 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:50:39 2026
+****************************************
+
+  Startpoint: u_main_controller_top/u_main_controller/red_reg (rising edge-triggered flip-flop clocked by pll2_clk_div2)
+  Endpoint: r_en (output port clocked by pixel_comp_clk_pix)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: **reg2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pll2_clk_div2 (rise edge)                1831.94   1831.94
+  clock network delay (ideal)                      0.00    1831.94
+
+  u_main_controller_top/u_main_controller/red_reg/clocked_on (*SEQGEN.1839103_120_2)
+                                                   0.00    1831.94 r
+  u_main_controller_top/u_main_controller/red_reg/Q (*SEQGEN.1839103_120_2)
+                                                   0.00    1831.94 r ~
+  u_test_logic/u_test_mux/C112/Z[0] (*SELECT_OP.3_1_3_1_1_33)
+                                                   0.00    1831.94 r ~
+  r_en (out)                                       0.25    1832.19 r
+  data arrival time                                        1832.19
+
+  clock pixel_comp_clk_pix (rise edge)           1832.30   1832.30
+  clock network delay (ideal)                      0.00    1832.30
+  output external delay                          -12.12    1820.18
+  data required time                                       1820.18
+  ------------------------------------------------------------------------
+  data required time                                       1820.18
+  data arrival time                                        -1832.19
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                         -12.01
+
+
+1

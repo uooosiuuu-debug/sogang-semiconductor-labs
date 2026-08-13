@@ -1,0 +1,56 @@
+Information: Freeing timing information from routing. (ZRT-574)
+****************************************
+Report : qor
+        -summary
+        -pba_mode path
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 12:42:06 2026
+****************************************
+Information: The stitching and editing of coupling caps is turned ON for design 'fsc_top_routing.nlib:fsc_top.design'. (TIM-125)
+Information: Design fsc_top has 69159 nets, 0 global routed, 69157 detail routed. (NEX-024)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: The RC mode used is DR for design 'fsc_top'. (NEX-022)
+---extraction options---
+Corner: ss0p95v125c
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ late_ccap_scale               : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+ early_ccap_scale              : 1
+Global options:
+ late_ccap_threshold       : 0.003 pF
+ late_ccap_ratio           : 0.03
+ reference_direction       : vertical
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 4
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : true
+Extracting design: fsc_top 
+Information: coupling capacitance is created explicitly. (NEX-029)
+Information: 69157 nets are successfully extracted. (NEX-028)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 69157, routed nets = 69157, across physical hierarchy nets = 0, parasitics cached nets = 69157, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+Information: Update timing is using PrimeTime delay calculation. (TIM-201)
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, PBA Mode Path'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)          -989.72    -6466800.16          16632
+Design             (Setup)          -989.72    -6466800.16          16632
+
+ss0p95v125c.func   (Hold)            -30.96       -1333.78           4264
+Design             (Hold)            -30.96       -1333.78           4264
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         668403.41
+Cell Area (netlist and physical only):       674330.55
+Nets with DRC Violations:      708
+1

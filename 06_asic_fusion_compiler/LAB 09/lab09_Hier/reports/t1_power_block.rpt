@@ -1,0 +1,82 @@
+Warning: No valid clocks available in mode 'test'. Setting clock frequency to 1 GHz. (POW-034)
+****************************************
+Report : power
+        -significant_digits 2
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 14:33:07 2026
+****************************************
+Information: Activity propagation will be performed for scenario ss0p95v125c.func.
+Information: Doing activity propagation for mode 'func' and corner 'ss0p95v125c' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario ss0p95v125c.func (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation with 8 threads!
+
+ **** Information : No. of simulation cycles = 7 ****
+Mode: func
+Corner: ss0p95v125c
+Scenario: ss0p95v125c.func
+Voltage: 0.95
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+Warning: No valid clocks available in mode 'test'. Setting clock frequency to 1 GHz. (POW-034)
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+vdd (power) probability 1.00 (default)
+vss (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port D on cell u_YCrCb2RGB/R_int_reg[15] for parameter Tinp. Lowest table value = inf, highest table value = inf, value = 0.061550 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CLK on cell u_YCrCb2RGB/R_int_reg[15] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell u_YCrCb2RGB/R_int_reg[15] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell u_YCrCb2RGB/R_int_reg[15] for parameter Cout. Lowest table value = 0.000100, highest table value = 0.016000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell u_YCrCb2RGB/R_int_reg[15] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CLK on cell u_YCrCb2RGB/R_int_reg[14] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Fall toggles on pin u_YCrCb2RGB/R_int_reg[14]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell u_YCrCb2RGB/R_int_reg[14] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell u_YCrCb2RGB/R_int_reg[14] for parameter Cout. Lowest table value = 0.000100, highest table value = 0.016000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CLK on cell u_YCrCb2RGB/R_int_reg[13] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Fall toggles on pin u_YCrCb2RGB/R_int_reg[13]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell u_YCrCb2RGB/R_int_reg[13] for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+Warning: Fall toggles on pin u_YCrCb2RGB/R_int_reg[12]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/R_int_reg[11]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/G_int_reg[20]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/G_int_reg[19]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/G_int_reg[18]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/G_int_reg[16]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/G_int_reg[15]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Warning: Fall toggles on pin u_YCrCb2RGB/G_int_reg[14]/Q are impossible given input states; converted to rise toggles. (POW-069)
+Note - message 'POW-069' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 2.96e+09 pW (  2.3%)
+  Net Switching Power    = 1.24e+11 pW ( 97.7%)
+Total Dynamic Power      = 1.27e+11 pW (100.0%)
+
+Cell Leakage Power       = 2.55e+09 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    9.98e+08               4.09e+07               0.00e+00               1.04e+09    (  0.8%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.83e+09               1.24e+11               7.37e+07               1.26e+11    ( 97.1%)        i
+register                  6.77e+07               3.25e+07               1.69e+09               1.79e+09    (  1.4%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             6.69e+07               1.26e+08               7.87e+08               9.80e+08    (  0.8%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     2.96e+09 pW            1.24e+11 pW            2.55e+09 pW            1.29e+11 pW
+1

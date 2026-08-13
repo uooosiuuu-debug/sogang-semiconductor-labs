@@ -1,0 +1,12 @@
+****************************************
+Report : Ignored Layers
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:50:30 2026
+****************************************
+Layer Attribute                 Value
+--------------------------------------------------------------------------------
+Min Routing Layer               (none given)
+Max Routing Layer               M8
+RC Estimation Ignored Layers    M9 MRDL 
+1

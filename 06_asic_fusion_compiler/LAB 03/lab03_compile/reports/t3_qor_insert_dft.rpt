@@ -1,0 +1,51 @@
+Information: Timer using 8 threads
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+****************************************
+Report : qor
+        -summary
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:30:17 2026
+****************************************
+Information: Corner ss0p95v125c: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Design Average RC for design fsc_top  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.072863 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.085797 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'fsc_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 34319, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 34316, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            pocv
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    enabled
+************************************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)         -2259.32    -2354093.99           2134
+ss0p95v125c.test   (Setup)            10.00           0.00              0
+Design             (Setup)         -2259.32    -2354093.99           2134
+
+ss0p95v125c.func   (Hold)            -29.65         -65.86             11
+Design             (Hold)            -29.65         -65.86             11
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         557428.63
+Cell Area (netlist and physical only):       563355.78
+Nets with DRC Violations:     2277
+1

@@ -1,0 +1,546 @@
+ logic_opto
+==================================================
+Running compile stage: logic_opto
+Log file: compile_fusion.logic_opto.log
+==================================================
+RM-info: Running compile_fusion -from logic_opto -to logic_opto
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: Starting 'compile_fusion -from logic_opto -to logic_opto' (FLW-8000)
+Information: Time: 2026-07-01 12:01:17 / Session:  00:01:23 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB
+****************************************
+Report : report_tbcs
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 12:01:17 2026
+****************************************
+INFO: Start environment monitoring: recipes
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+Warning: The app option 'compile.flow.high_effort_timing' will be changed to Boolean type in the future.  To ensure compatibility, this app option should only be set to a value of 0 or 1 for now (FLW-3502)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / logic_opto (FLW-8000)
+Information: Time: 2026-07-01 12:01:18 / Session:  00:01:24 / Command:  00:00:00 / CPU:  00:00:01 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / logic_opto / Load Design (FLW-8000)
+Information: Time: 2026-07-01 12:01:18 / Session:  00:01:24 / Command:  00:00:01 / CPU:  00:00:01 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Timer using 16 threads
+Information: Added key list 'DesignWare' to design 'fsc_top'. (DWS-0216)
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top.nlib:fsc_top/icg.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    enabled
+************************************************************
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Information: Change threshold for extractor is reset. (FLW-1300)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     561227.06           -       35968              0.02      2273
+Information: Ending   compile_fusion / logic_opto / Load Design (FLW-8001)
+Information: Time: 2026-07-01 12:01:21 / Session:  00:01:27 / Command:  00:00:03 / CPU:  00:00:10 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Clock Gate Re-structuring (FLW-8000)
+Information: Time: 2026-07-01 12:01:21 / Session:  00:01:27 / Command:  00:00:03 / CPU:  00:00:10 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Result of compile_fusion / logic_opto / Clock Gate Re-structuring (FLW-8500)
+Number of Pre-Existing Clock Gates with dont touch attribute: 0
+Number of ICG library cells with CTS purpose: 6
+---------------------------------------------------------------------------------------------
+                          Tool Gated Register Summary                                        
+---------------------------------------------------------------------------------------------
+Clock Gating Type                   | Number of   | Register Count | Equivalent | % of Gated 
+                                    | Clock Gates |                | Bitwidth   | Bits       
+---------------------------------------------------------------------------------------------
+Regular Clock Gating                |         510 |           7779 |       7779 |    58.10%
+---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                 Regular Clock Gating Ungated Register Summary                  
+--------------------------------------------------------------------------------
+ Ungated Reason                                            | Count | Bitwidth   
+--------------------------------------------------------------------------------
+ Enable is Constant One.                                   |  5017 |     5017
+ Enable is Constant Zero.                                  |   363 |      363
+ Minimum Bitwidth Not Met.                                 |   200 |      200
+ Partial Minimum Bitwidth Not Met.                         |     5 |        5
+ Register Model Issue.                                     |    25 |       25
+--------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     561208.00           -       35965              0.02      2273
+Information: Ending   compile_fusion / logic_opto / Clock Gate Re-structuring (FLW-8001)
+Information: Time: 2026-07-01 12:01:21 / Session:  00:01:27 / Command:  00:00:04 / CPU:  00:00:11 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (1) (FLW-8000)
+Information: Time: 2026-07-01 12:01:21 / Session:  00:01:27 / Command:  00:00:04 / CPU:  00:00:11 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (1) / Logic Simplification and Register Optimization (FLW-8000)
+Information: Time: 2026-07-01 12:01:24 / Session:  00:01:30 / Command:  00:00:06 / CPU:  00:00:17 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Ending   compile_fusion / logic_opto / Optimization (1) / Logic Simplification and Register Optimization (FLW-8001)
+Information: Time: 2026-07-01 12:01:26 / Session:  00:01:32 / Command:  00:00:08 / CPU:  00:00:19 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top.nlib:fsc_top/icg.design'. (TIM-125)
+Information: Starting compile_fusion / logic_opto / Optimization (1) / Timing Optimization and DesignWare Reselection (FLW-8000)
+Information: Time: 2026-07-01 12:01:27 / Session:  00:01:33 / Command:  00:00:09 / CPU:  00:00:24 / Memory: 2274 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: 22 out of 32 SQM-1061 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_icg.tcl:62) (MSG-3913)
+Information: Ending   compile_fusion / logic_opto / Optimization (1) / Timing Optimization and DesignWare Reselection (FLW-8001)
+Information: Time: 2026-07-01 12:01:53 / Session:  00:02:00 / Command:  00:00:36 / CPU:  00:03:57 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Ending   compile_fusion / logic_opto / Optimization (1) (FLW-8001)
+Information: Time: 2026-07-01 12:01:53 / Session:  00:02:00 / Command:  00:00:36 / CPU:  00:03:57 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Area Resynthesis (FLW-8000)
+Information: Time: 2026-07-01 12:01:53 / Session:  00:02:00 / Command:  00:00:36 / CPU:  00:03:57 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: The hierarchy u_clk_gen/u_panel_clk_by2 is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_clk_gen/u_clock_gen is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap0 is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1 is not ungrouped due to restrictions. (UNG-1004)
+Information: The hierarchy u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0 is not ungrouped due to restrictions. (UNG-1004)
+Information: 41 of 41 hierarchies are not ungrouped because of restrictions. Use report_ungroup for a list. (UNG-1005)
+Information: 31 out of 41 UNG-1004 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_icg.tcl:62) (MSG-3913)
+Information: Unloaded register u_YCrCb2RGB/X_int_reg[8] is preserved in module fsc_top due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Unloaded register u_YCrCb2RGB/X_int_reg[7] is preserved in module fsc_top due to restriction: compile.seqmap.remove_unloaded_registers is set false . (SQM-4104)
+Information: Ending   compile_fusion / logic_opto / Area Resynthesis (FLW-8001)
+Information: Time: 2026-07-01 12:02:06 / Session:  00:02:12 / Command:  00:00:49 / CPU:  00:05:14 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Register Retiming (FLW-8000)
+Information: Time: 2026-07-01 12:02:06 / Session:  00:02:12 / Command:  00:00:49 / CPU:  00:05:14 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Result of compile_fusion / logic_opto / Register Retiming (FLW-8500)
+Information: No instance marked for retiming. (RTM-1031)
+Information: Ending   compile_fusion / logic_opto / Register Retiming (FLW-8001)
+Information: Time: 2026-07-01 12:02:13 / Session:  00:02:20 / Command:  00:00:56 / CPU:  00:05:21 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: 1806 registers were found constant but could not be removed due to restrictions. (SQM-3103)
+Information: Register Bits Before Sharing = 13332, After Sharing = 13332, Savings = 0 (SQM-2000)
+Information: Inferred a shift register of length 2 with u_main_controller_top/u_main_controller/address_count_early_reg[0] as head in module main_controller. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_main_controller_top/u_main_controller/line_count_reg[0] as head in module main_controller. (SQM-2005)
+Information: Inferred a shift register of length 2 with u_main_controller_top/u_main_controller/new_line_reg[0] as head in module main_controller. (SQM-2005)
+Information: 3 shift register chains were inferred in module main_controller. Use report_transformed_registers for a list. (SQM-2015)
+Information: Starting compile_fusion / logic_opto / Optimization (2) (FLW-8000)
+Information: Time: 2026-07-01 12:02:16 / Session:  00:02:22 / Command:  00:00:59 / CPU:  00:05:24 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Ending   compile_fusion / logic_opto / Optimization (2) (FLW-8001)
+Information: Time: 2026-07-01 12:02:28 / Session:  00:02:34 / Command:  00:01:11 / CPU:  00:05:55 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Auto-Floorplan (1) (FLW-8000)
+Information: Time: 2026-07-01 12:02:28 / Session:  00:02:34 / Command:  00:01:11 / CPU:  00:05:55 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Shaping unshaped voltage areas (AFP-1011)
+Information: Placing unplaced pins (AFP-1007)
+Information: Result of compile_fusion / logic_opto / Auto-Floorplan (1) (FLW-8500)
+Information: Auto-Floorplan Summary (AFP-2023)
+-------------------------------------------------------------------------------
+              origin           area     boundary
+core            user         852808   { {8 8} {8 930.944} {932.008 930.944} {932.008 8} }
+die             user         882615   { {0 0} {0 938.944} {940.008 938.944} {940.008 0} }
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+objects             total        candidates          modified         preserved                 
+voltage areas           0                 0                 0                 0
+ios                     0                 0                 0                 0
+macros                 30                 0                 0                 0
+pins                  195                 0                 0                 0
+-------------------------------------------------------------------------------
+Information: Ending   compile_fusion / logic_opto / Auto-Floorplan (1) (FLW-8001)
+Information: Time: 2026-07-01 12:02:28 / Session:  00:02:35 / Command:  00:01:11 / CPU:  00:05:55 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Early Placement (FLW-8000)
+Information: Time: 2026-07-01 12:02:28 / Session:  00:02:35 / Command:  00:01:11 / CPU:  00:05:55 / Memory: 2759 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------
+running create_placement
+Corner Scaling is off, multiplier is 1.000000
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: timingScenario ss0p95v125c.func timingCorner ss0p95v125c.  Using corner ss0p95v125c for worst leakage corner. (OPT-078)
+Information: Using default layer M5 (OPT-079)
+Information: Nominal = 0.0353099  Design MT = inf  Target = 0.1379810  MaxRC = 0.096804 Fast Target = 0.044405 (OPT-081)
+nplLib: default vr hor dist = 1155
+nplLib: default vr ver dist = 1155
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1154.78
+Info: ICG auto bound skipping extra processing.
+Info: ICG AutoBound found 510 ICGs
+Info: ICG AutoBound created 0 group bounds 
+
+Placement Options:
+Effort:                        medium_effort       
+Timing Driven:                 false               
+Buffering Aware Timing Driven: false               
+Seed locs:                     false               
+Incremental:                   false               
+Congestion:                    false               
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.auto_density_control                       :	 enhanced            
+place.coarse.cong_restruct_effort                       :	 low                 
+place.coarse.cong_restruct_iterations                   :	 1                   
+place.coarse.congestion_expansion_direction             :	 both                
+place.coarse.icg_auto_bound                             :	 true                
+place.coarse.increased_cell_expansion                   :	 true                
+
+Start transferring placement data.
+****** Net weight manager: report ******
+Weights included: Timing  
+Number of nets with non-default weights: 41871
+Timing factor = 1
+Non-default weight range: (0.57943, 1.73829)
+                             Min         Max         Avg       Stdev        Skew
+     Timing Weights      0.57943     1.73829           1    0.449384     0.77729
+      Final Weights      0.57943     1.73829           1    0.449384     0.77729
+Information: Automatic repeater spreading is enabled.
+Completed transferring placement data.
+Running placement using 16 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.50, congestion_driven_max_util 0.87. (PLACE-027)
+Information: HFW control 'off' invoked.
+Creating placement from scratch.
+coarse place 0% done.
+coarse place 14% done.
+coarse place 29% done.
+coarse place 43% done.
+coarse place 57% done.
+coarse place 71% done.
+coarse place 86% done.
+coarse place 100% done.
+Information: Coarse placer wire length estimate = 1.49263e+06
+Information: Coarse placer active wire length estimate = 0
+Information: Coarse placer weighted wire length estimate = 1.32193e+06
+Information: Extraction observers are detached as design net change threshold is reached.
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+----------------------------------------------------------------
+Non-default App Option report
+All App Options have their default value.
+Information: Ending   compile_fusion / logic_opto / Early Placement (FLW-8001)
+Information: Time: 2026-07-01 12:02:36 / Session:  00:02:42 / Command:  00:01:18 / CPU:  00:06:15 / Memory: 2849 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top.nlib:fsc_top/icg.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Starting compile_fusion / logic_opto / Optimization (3) (FLW-8000)
+Information: Time: 2026-07-01 12:02:36 / Session:  00:02:43 / Command:  00:01:19 / CPU:  00:06:20 / Memory: 2849 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (3) / Timing Optimization (FLW-8000)
+Information: Time: 2026-07-01 12:02:36 / Session:  00:02:43 / Command:  00:01:19 / CPU:  00:06:20 / Memory: 2849 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: 6 out of 16 SQM-1061 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_icg.tcl:62) (MSG-3913)
+Information: Ending   compile_fusion / logic_opto / Optimization (3) / Timing Optimization (FLW-8001)
+Information: Time: 2026-07-01 12:03:32 / Session:  00:03:38 / Command:  00:02:14 / CPU:  00:15:46 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Ending   compile_fusion / logic_opto / Optimization (3) (FLW-8001)
+Information: Time: 2026-07-01 12:03:32 / Session:  00:03:38 / Command:  00:02:15 / CPU:  00:15:52 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (4) (FLW-8000)
+Information: Time: 2026-07-01 12:03:32 / Session:  00:03:38 / Command:  00:02:15 / CPU:  00:15:52 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (4) / Logic Simplification and Register Optimization (FLW-8000)
+Information: Time: 2026-07-01 12:03:32 / Session:  00:03:38 / Command:  00:02:15 / CPU:  00:15:52 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: 5 out of 15 SQM-1061 messages were not printed due to limit 10 (after 'compile_fusion' at run_all_icg.tcl:62) (MSG-3913)
+Information: Ending   compile_fusion / logic_opto / Optimization (4) / Logic Simplification and Register Optimization (FLW-8001)
+Information: Time: 2026-07-01 12:04:03 / Session:  00:04:09 / Command:  00:02:45 / CPU:  00:20:03 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Ending   compile_fusion / logic_opto / Optimization (4) (FLW-8001)
+Information: Time: 2026-07-01 12:04:05 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:16 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (5) (FLW-8000)
+Information: Time: 2026-07-01 12:04:05 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:16 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Optimization (5) / Logic Simplification and Register Optimization (FLW-8000)
+Information: Time: 2026-07-01 12:04:05 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:16 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                 13524227.00  8824660.00         -      5817     570513.50           -       42480              0.07      3273
+Information: Ending   compile_fusion / logic_opto / Optimization (5) / Logic Simplification and Register Optimization (FLW-8001)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:17 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                 13524227.00  8824660.00         -      5817     570513.50           -       42480              0.07      3273
+Information: Ending   compile_fusion / logic_opto / Optimization (5) (FLW-8001)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:17 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Auto-Floorplan (2) (FLW-8000)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:17 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Shaping unshaped voltage areas (AFP-1011)
+Information: Placing unplaced pins (AFP-1007)
+Information: Result of compile_fusion / logic_opto / Auto-Floorplan (2) (FLW-8500)
+Information: Auto-Floorplan Summary (AFP-2023)
+-------------------------------------------------------------------------------
+              origin           area     boundary
+core            user         852808   { {8 8} {8 930.944} {932.008 930.944} {932.008 8} }
+die             user         882615   { {0 0} {0 938.944} {940.008 938.944} {940.008 0} }
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+objects             total        candidates          modified         preserved                 
+voltage areas           0                 0                 0                 0
+ios                     0                 0                 0                 0
+macros                 30                 0                 0                 0
+pins                  195                 0                 0                 0
+-------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                 13524227.00  8824660.00         -      5817     570513.50           -       42480              0.07      3273
+Information: Ending   compile_fusion / logic_opto / Auto-Floorplan (2) (FLW-8001)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:18 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / logic_opto / Secondary PG connections (FLW-8000)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:12 / Command:  00:02:48 / CPU:  00:20:18 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Secondary PG:  Secondary PG connections completed (FLW-1247)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                 13524227.00  8824660.00         -      5817     570513.50           -       42480              0.07      3273
+Information: Ending   compile_fusion / logic_opto / Secondary PG connections (FLW-8001)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:12 / Command:  00:02:49 / CPU:  00:20:18 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     570513.50           -       42480              0.07      3273
+
+Information: Runtime Summary (compile_fusion / logic_opto)  (FLW-9001)
+----------------------------------------------------------------------------
+     Elapse(Hr:Min:Sec)     Elapse(%)     Category
+----------------------------------------------------------------------------
+       00:00:02              1.6%         Load Design 
+       00:00:00              0.3%         Clock Gate Re-structuring 
+       00:00:03              2.3%         Optimization (1) 
+       00:00:01              1.1%         Optimization (1)/Logic Simplification and Register Optimization 
+       00:00:26             15.7%         Optimization (1)/Timing Optimization and DesignWare Reselection 
+       00:00:12              7.5%         Area Resynthesis 
+       00:00:07              4.3%         Register Retiming 
+       00:00:12              7.2%         Optimization (2) 
+       00:00:00              0.0%         Auto-Floorplan (1) 
+       00:00:07              4.3%         Early Placement 
+       00:00:00              0.4%         Optimization (3) 
+       00:00:55             32.7%         Optimization (3)/Timing Optimization 
+       00:00:02              1.7%         Optimization (4) 
+       00:00:30             18.1%         Optimization (4)/Logic Simplification and Register Optimization 
+       00:00:00              0.0%         Optimization (5) 
+       00:00:00              0.3%         Optimization (5)/Logic Simplification and Register Optimization 
+       00:00:00              0.0%         Auto-Floorplan (2) 
+       00:00:00              0.1%         Secondary PG connections 
+       00:00:03              2.3%         Other 
+----------------------------------------------------------------------------
+       00:02:48            100.0%         Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 16
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6548Y+ / 128 CPUs  
+Sockets: 2, Cores: 32, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   compile_fusion / logic_opto (FLW-8001)
+Information: Time: 2026-07-01 12:04:06 / Session:  00:04:13 / Command:  00:02:49 / CPU:  00:20:18 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 7%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Information: >>>>>>> 1 unique error and warning message tags while observing compile_fusion / logic_opto: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1    39 10 SQM-1061  WARNING   Warning: Cannot infer functionality of libcell 'saed32pll/PL... (MSG-3032)
+Information:     1    39  1        1  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 39 error&warning MSGs observed during compile_fusion / logic_opto (MSG-3103)
+
+Information: Structural Congestion Optimization technology (Post-DTDP SCO) has been enabled. (SCO-0001)
+Information: Total 2 MV-099 violations. (MV-080)
+Information: Total 49 MV-027 violations. (MV-080)
+Information: Please run check_mv_design for more details. (UPF-535)
+Information: Summary of UPF Cells (UPF-532)
+*******************************************************************************
+                            Summary of UPF Cells                               
+*******************************************************************************
+This is a UPF design.
+UPF is loaded.
+UPF is committed.
+-------------------------------------------------------------------------------
+Number of power domains:        1
+Number of supply nets:          2
+-------------------------------------------------------------------------------
+                             Voltage Area Info                                 
+-------------------------------------------------------------------------------
+Name                            X           Y           Power Domain Name
+-------------------------------------------------------------------------------
+DEFAULT_VA                                              TOP
+                                8.0000      8.0000
+                                8.0000      930.9440
+                                932.0080    930.9440
+                                932.0080    8.0000
+
+-------------------------------------------------------------------------------
+MV Cells                        Total Number
+-------------------------------------------------------------------------------
+Level Shifter:                  0
+Enable Level Shifter:           0
+Isolation Cell:                 0
+Retention Cell:                 0
+Retention Clamp Cell:           0
+Switch Cell:                    0
+Always-On Cell:                 0
+Repeater Cell:                  0
+
+-------------------------------------------------------------------------------
+Unmapped MV Cells
+-------------------------------------------------------------------------------
+No unmapped MV cell found
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+Information: Timer using 16 threads
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 5 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 2 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     2     1  0 FLW-3502  WARNING   Warning: The app option 'compile.flow.high_effort_timing' wi... (MSG-3032)
+Information:     1    40 10 SQM-1061  WARNING   Warning: Cannot infer functionality of libcell 'saed32pll/PL... (MSG-3032)
+Information:     3    41  1        2  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 41 error&warning MSGs observed during fusion (MSG-3103)
+
+  Block: fsc_top.nlib:fsc_top/icg.design
+  Current State: is mapped; is placed; 
+  Events:
+	- initial_map             	07/01/26 12:00 -->     0.012 hours
+	- logic_opto              	07/01/26 12:01 -->     0.047 hours
+
+Information: Ending   'compile_fusion -from logic_opto -to logic_opto' (FLW-8001)
+Information: Time: 2026-07-01 12:04:09 / Session:  00:04:15 / Command:  00:02:51 / CPU:  00:20:20 / Memory: 3273 MB (FLW-8100)
+Information: CPU Load: 6%, Ram Free: 157 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+1
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+****************************************
+Report : qor
+        -summary
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 12:04:10 2026
+****************************************
+Information: Corner ss0p95v125c: no PVT mismatches. (PVT-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top.nlib:fsc_top/icg.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Design Average RC for design fsc_top  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.074399 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.087039 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'fsc_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 43033, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 43030, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    enabled
+************************************************************
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)        -11305.12   -38300431.19          16630
+Design             (Setup)        -11305.12   -38300431.19          16630
+
+ss0p95v125c.func   (Hold)            -29.72         -81.04             12
+Design             (Hold)            -29.72         -81.04             12
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         570513.49
+Cell Area (netlist and physical only):       576440.64
+Nets with DRC Violations:     2957
+Information: Overwriting block 'logic_opto.design' in library 'fsc_top.nlib'. (DES-025)
+INFO: Stage logic_opto completed and block saved.

@@ -1,0 +1,46 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:33:38 2026
+****************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+  Startpoint: hsync (input port clocked by pixel_comp_clk_pix)
+  Endpoint: ycrcb_pad_tx[9] (output port clocked by pixel_comp_clk_pix)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: **in2out_default**
+  Path Type: max
+  Sigma:   3.00
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pixel_comp_clk_pix (rise edge)             0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                            12.12     12.12 f
+  hsync (in)                                       0.00     12.12 f
+  ctmi_37524/Y (OA21X1_LVT)                        0.10     12.22 f
+  compile_ZBUF_4_inst_53969/Y (NBUFFX8_LVT)        0.06     12.27 f
+  ycrcb_pad_tx[9] (out)                            0.01     12.28 f
+  data arrival time                                         12.28
+
+  clock pixel_comp_clk_pix (rise edge)            25.10     25.10
+  clock network delay (ideal)                      0.00     25.10
+  clock uncertainty                               -2.51     22.59
+  output external delay                          -12.12     10.47
+  data required time                                        10.47
+  ------------------------------------------------------------------------
+  data required time                                        10.47
+  data arrival time                                        -12.28
+  ------------------------------------------------------------------------
+  statistical adjustment                           0.00     -1.81
+  slack (VIOLATED)                                          -1.81
+
+
+1

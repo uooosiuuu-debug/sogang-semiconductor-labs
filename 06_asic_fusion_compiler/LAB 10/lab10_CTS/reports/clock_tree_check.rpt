@@ -1,0 +1,807 @@
+Information: CTS will work on the following scenarios. (CTS-101)
+   ss0p95v125c.func	(Mode: func; Corner: ss0p95v125c)
+Information: CTS will work on all clocks in active scenarios, including 7 master clocks and 10 generated clocks. (CTS-107)
+Output units used in this log:
+   Time        : 1.00ns
+   Resistance  : 1.00kOhm
+   Capacitance : 1.00pF
+   Power       : 1.00mW
+   Length      : 1.00um
+Information: Clock derating is disabled
+
+CTS related app options set by user:
+   cts.common.max_fanout = 32
+   cts.common.user_instance_name_prefix = CTS_
+   cts.compile.cg_timing_aware = false
+   cts.compile.enable_cell_relocation = none
+   cts.compile.enable_global_route = true
+   cts.icg.timing_aware = false
+   cts.optimize.enable_arnoldi_analyzer = true
+   cts.optimize.update_flow_speedup = true
+
+****************************************
+Report : check_clock_tree
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 08:55:21 2026
+****************************************
+
+=================================================
+Summary
+=================================================
+
+Tag           Count     Solution  Description
+--------------------------------------------------------------------------------
+
+---------------------------------------------
+       Clock Definitions & Propagation
+---------------------------------------------
+CTS-002       0         None      There are active CTS scenarios with no clock definition.
+CTS-004       0         None      There are generated clocks that cannot be reached by their master clock.
+CTS-005       0         None      Generated clocks defined on bidirectional pins
+CTS-019       0         None      Clocks propagate to output ports
+CTS-905       3         None      There are clocks with no sinks
+CTS-906       0         None      There are sinks with no clock
+CTS-907       0         None      There are disabled timing arcs in the clock network
+
+---------------------------------------------
+               Reference Cells
+---------------------------------------------
+CTS-007       0         None      Failed to specify any clock buffers or inverters for CTS
+CTS-008       0         None      Clock reference cells have dont_touch or dont_use
+CTS-903       631       None      Cells instantiated in the clock network are not in the clock reference list
+CTS-904       23        None      Some clock reference cells have no LEQ cell specified for resizing
+
+---------------------------------------------
+               Skew Balancing
+---------------------------------------------
+CTS-006       5         None      Balancing conflicts exist between different clocks
+CTS-009       0         None      Cell instances in the clock tree have multiple conditional delay arcs between the same pins
+CTS-908       0         None      Large phase delay in abstracted sub-blocks
+CTS-910       1         None      Balance point constraints are defined downstream of another balance point or ignore point constraint
+CTS-911       0         None      Clock pins downstream of a balance point or ignore point have been added to a skew group
+CTS-913       0         None      Explicit ignore points have been added to a skew group, and will not be balanced
+CTS-917       0         None      Implicit ignore points have been added to a skew group, and will be balanced
+CTS-967       0         None      %s is sink for generated clock %s but pass through for master clock.
+
+---------------------------------------------
+                Multi-Voltage
+---------------------------------------------
+CTS-901       0         None      Clock nets have MV violations
+CTS-902       0         None      No AON (always-on) buffers or inverters available for CTS
+CTS-918       0         None      Voltage area blocked for buffering.
+
+---------------------------------------------
+    Capacitance & Transition Constraints
+---------------------------------------------
+CTS-909       0         None      set_load constraints detected in the clock tree
+CTS-912       0         None      set_load constraints on output clock ports exceed the max capacitance limit
+CTS-914       6         None      set_input_transition on clock ports exceeds the max transition limit
+CTS-915       0         None      Excessively small max capacitance constraints in the clock network
+CTS-916       0         None      Excessively small max transition constraints in the clock network
+
+---------------------------------------------
+                Other issues
+---------------------------------------------
+CTS-012       0         None      Nets in the clock network have a dont_touch constraint
+CTS-013       0         None      Cells in the clock network have a dont_touch constraint
+CTS-015       0         None      set_max_delay or set_min_delay constraints are defined in the clock network
+CTS-032       0         None      There are fixed routing shapes on the net '%s', so the  dont_touch flag is set on this net to prevent buffering.
+CTS-900       1         None      Clock routing rules are outside of allowable layers
+=================================================
+                     Details
+=================================================
+
+---------------------------------------------------------------------------------------
+Warning: Balancing conflicts exist between different clocks (CTS-006)
+---------------------------------------------------------------------------------------
+Check         Mode1              Clock1        Mode2            Clock2         Conflicting pin
+                                                                               (sink of Clock1)
+---------------------------------------------------------------------------------------
+CTS-006       func               system_clk    func             pll2_clk_in    u_clk_gen/u_clock_gen/panel_clk_q_reg/CLK
+CTS-006       func               comp_clk      func             pixel_clk      u_clk_gen/u_clock_gen/pixel_comp_clk_q_reg/CLK
+CTS-006       func               system_clk    func             pll2_clk_in    u_clk_gen/u_clock_gen/panel_clk_q1_reg/CLK
+CTS-006       func               comp_clk      func             pixel_clk      u_clk_gen/u_clock_gen/pixel_comp_clk_q1_reg/CLK
+CTS-006       func               system_clk    func             pll1_clk_in    u_clk_gen/u_clock_gen/sdram_clk_sel_q3_reg/CLK
+
+---------------------------------------------------------------------------------------
+Warning: Clock routing rules are outside of allowable layers (CTS-900)
+---------------------------------------------------------------------------------------
+Check         Routing rule       Rule          Rule             Design         Design      Ignored
+                                 Min layer     Max layer        Min layer      Max layer   layers
+---------------------------------------------------------------------------------------
+CTS-900       cts_w1_s2          M1            M6               M2             M7          M1 
+
+---------------------------------------------------------------------------------------
+Warning: Cells instantiated in the clock network are not in the clock reference list (CTS-903)
+---------------------------------------------------------------------------------------
+Check         Lib cell           Example Instance
+---------------------------------------------------------------------------------------
+CTS-903       AND2X1_HVT         u_clk_gen/u_clock_gen/ctmi_154
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C380/ctmi_38
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_143
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C376/ctmi_25
+CTS-903       NAND3X0_RVT        u_clk_gen/u_clock_gen/ctmi_147
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C385/ctmi_35
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_141
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C374/ctmi_24
+CTS-903       AND2X1_HVT         ctmi_34369
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_clock_gen/pixel_comp_clk_q1_reg
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1419
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1420
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1557
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1547
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1466
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1461
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1424
+CTS-903       INVX1_HVT          u_datapath/u_pixel_in_buffer/ctmi_1423
+CTS-903       INVX1_HVT          ctmi_34318
+CTS-903       INVX1_HVT          ctmi_34980
+CTS-903       INVX1_HVT          ctmi_34988
+CTS-903       INVX1_HVT          ctmi_34987
+CTS-903       INVX1_HVT          ctmi_34986
+CTS-903       INVX1_HVT          ctmi_34985
+CTS-903       INVX1_HVT          ctmi_34984
+CTS-903       INVX1_HVT          ctmi_34983
+CTS-903       INVX1_HVT          ctmi_34982
+CTS-903       INVX1_HVT          ctmi_34981
+CTS-903       DFFARX1_HVT        u_clk_gen/u_clock_gen/pixel_comp_clk_q_reg
+CTS-903       NBUFFX2_HVT        u_clk_gen/u_clock_gen/CDIBUF_6_f_44560
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_139
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C370/ctmi_23
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_clock_gen/pixel_clk_sel_q3_reg
+CTS-903       AND2X1_HVT         ctmi_36750
+CTS-903       MUX41X1_HVT        u_clk_gen/ctmi_494
+CTS-903       OA222X1_HVT        u_clk_gen/u_clock_gen/ctmi_148
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_151
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C371/ctmi_26
+CTS-903       NAND3X0_RVT        u_clk_gen/u_clock_gen/ctmi_150
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C386/ctmi_36
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/ctmi_394
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/ctmi_430
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/ctmi_431
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/ctmi_931
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/ctmi_994
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/ctmi_996
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/ctmi_695
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/ctmi_696
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/ctmi_697
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/ctmi_695
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/ctmi_696
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/ctmi_697
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5212
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5249
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5211
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5209
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5208
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5207
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5206
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5202
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5201
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5200
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5213
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5214
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5215
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5223
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5224
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5225
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/ctmi_5246
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap1/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap1/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap1/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap0/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap0/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap0/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap0/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap0/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap0/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/ctmi_18919
+CTS-903       INVX0_LVT          u_datapath/clock_gate_inv_13513
+CTS-903       INVX1_HVT          u_datapath/ctmi_19870
+CTS-903       INVX1_HVT          u_datapath/ctmi_19868
+CTS-903       INVX1_HVT          u_datapath/ctmi_19256
+CTS-903       INVX1_HVT          u_datapath/ctmi_19865
+CTS-903       INVX1_HVT          u_datapath/ctmi_19863
+CTS-903       INVX1_HVT          u_datapath/ctmi_19859
+CTS-903       INVX1_HVT          u_datapath/ctmi_19854
+CTS-903       INVX1_HVT          u_datapath/ctmi_19848
+CTS-903       INVX1_HVT          u_datapath/ctmi_19642
+CTS-903       INVX1_HVT          u_datapath/ctmi_19641
+CTS-903       INVX1_HVT          u_datapath/ctmi_19640
+CTS-903       INVX1_HVT          u_datapath/ctmi_19328
+CTS-903       INVX1_HVT          u_datapath/ctmi_18973
+CTS-903       INVX1_HVT          u_datapath/ctmi_18972
+CTS-903       INVX1_HVT          u_datapath/ctmi_18939
+CTS-903       INVX1_HVT          u_datapath/ctmi_18938
+CTS-903       INVX1_HVT          u_datapath/ctmi_18937
+CTS-903       INVX1_HVT          u_datapath/ctmi_18866
+CTS-903       INVX1_HVT          u_datapath/ctmi_18934
+CTS-903       INVX1_HVT          u_datapath/ctmi_18922
+CTS-903       INVX1_HVT          u_datapath/ctmi_18921
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24427
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24439
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_26155
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_26150
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24983
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24982
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24981
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24980
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24979
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24978
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24977
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24976
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24975
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24974
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24973
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24972
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24971
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24970
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24969
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24381
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24968
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24967
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24966
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24965
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24964
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24963
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24962
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24961
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24960
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24959
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24958
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24957
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24956
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24955
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24954
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24953
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24952
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24951
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24950
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24949
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24948
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24947
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24946
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24945
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24944
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24943
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24942
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24941
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24940
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24939
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24938
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24937
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24936
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24935
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24934
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24933
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24932
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24931
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24930
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24929
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24928
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24927
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24926
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24925
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24924
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24923
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24922
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24921
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24920
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24919
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24918
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24917
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24916
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24915
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24914
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24913
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24912
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24911
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24910
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24909
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24908
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24907
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24906
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24905
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24904
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24903
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24902
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24901
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24900
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24899
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24896
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24893
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24889
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24886
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24884
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24882
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24835
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24832
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24829
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24827
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24806
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24803
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24800
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24798
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24794
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24776
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24775
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24747
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24746
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24744
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24690
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24689
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24669
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24557
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24556
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24555
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24547
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24544
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24543
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24456
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24442
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/ctmi_24440
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap/ctmi_1357
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap/ctmi_1359
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap/ctmi_1377
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap/ctmi_1353
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap/ctmi_1355
+CTS-903       INVX1_HVT          u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap/ctmi_1373
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/ctmi_189
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/ctmi_190
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/ctmi_191
+CTS-903       INVX1_HVT          u_datapath/u_color_interleaver/ctmi_748
+CTS-903       INVX1_HVT          u_datapath/u_color_interleaver/ctmi_803
+CTS-903       NBUFFX8_RVT        u_clk_gen/u_clock_gen/CDIBUF_12_f_44563
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_136
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C367/ctmi_20
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_clock_gen/sdram_clk_sel_q3_reg
+CTS-903       INVX1_HVT          u_clk_gen/ctmi_437
+CTS-903       MUX21X1_HVT        u_clk_gen/u_pll_mux/C88/ctmi_7
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_pll_mux/pll1_ld_q3_reg
+CTS-903       NBUFFX2_HVT        CDIBUF_6_f_44564
+CTS-903       AND2X1_HVT         ctmi_34317
+CTS-903       INVX1_HVT          u_clk_gen/ctmi_438
+CTS-903       MUX21X1_HVT        u_clk_gen/u_pll_mux/C89/ctmi_8
+CTS-903       OA222X1_HVT        u_clk_gen/u_clock_gen/ctmi_156
+CTS-903       OA22X1_HVT         u_clk_gen/u_clock_gen/ctmi_159
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_41839
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42937
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_44248
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42938
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/ctmi_1032
+CTS-903       INVX0_LVT          u_datapath/u_output_fifo_control/clock_gate_inv_13520
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/ctmi_1033
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_2052
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_2054
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_2072
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/ctmi_692
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_1/ctmi_694
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_2052
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_2054
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_2072
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/ctmi_692
+CTS-903       INVX1_HVT          u_datapath/u_output_fifo_control/u_output_fifo_0/ctmi_694
+CTS-903       INVX1_HVT          u_datapath/ctmi_18911
+CTS-903       INVX1_HVT          u_datapath/ctmi_18912
+CTS-903       INVX1_HVT          u_datapath/ctmi_18918
+CTS-903       INVX1_HVT          u_datapath/ctmi_18916
+CTS-903       INVX1_HVT          u_datapath/ctmi_18915
+CTS-903       INVX1_HVT          u_datapath/ctmi_18913
+CTS-903       NBUFFX2_RVT        u_clk_gen/CDIBUF_6_f_44567
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_162
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C377/ctmi_33
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_158
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C372/ctmi_27
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_clock_gen/panel_clk_q1_reg
+CTS-903       NAND3X0_RVT        u_clk_gen/u_clock_gen/ctmi_160
+CTS-903       DFFARX1_HVT        u_clk_gen/u_clock_gen/panel_clk_q_reg
+CTS-903       NBUFFX2_HVT        u_clk_gen/u_clock_gen/CDIBUF_6_f_44559
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_138
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C369/ctmi_22
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_clock_gen/panel_clk_sel_q3_reg
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C382/ctmi_29
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_142
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C375/ctmi_30
+CTS-903       NAND3X0_RVT        u_clk_gen/u_clock_gen/ctmi_153
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C389/ctmi_31
+CTS-903       INVX1_HVT          ctmi_35241
+CTS-903       INVX1_HVT          ctmi_35242
+CTS-903       INVX1_HVT          ctmi_35311
+CTS-903       INVX1_HVT          ctmi_35310
+CTS-903       INVX1_HVT          ctmi_35308
+CTS-903       INVX1_HVT          ctmi_35307
+CTS-903       INVX1_HVT          ctmi_35305
+CTS-903       INVX1_HVT          ctmi_34549
+CTS-903       INVX1_HVT          ctmi_34548
+CTS-903       INVX1_HVT          ctmi_34547
+CTS-903       INVX1_HVT          ctmi_35304
+CTS-903       INVX1_HVT          ctmi_35303
+CTS-903       INVX1_HVT          ctmi_35302
+CTS-903       INVX1_HVT          ctmi_35301
+CTS-903       INVX1_HVT          ctmi_35300
+CTS-903       INVX1_HVT          ctmi_35299
+CTS-903       INVX1_HVT          ctmi_35298
+CTS-903       INVX1_HVT          ctmi_35297
+CTS-903       INVX1_HVT          ctmi_35296
+CTS-903       INVX1_HVT          ctmi_35295
+CTS-903       INVX1_HVT          ctmi_35294
+CTS-903       INVX1_HVT          ctmi_35293
+CTS-903       INVX1_HVT          ctmi_35292
+CTS-903       INVX1_HVT          ctmi_35285
+CTS-903       INVX1_HVT          ctmi_35275
+CTS-903       INVX1_HVT          ctmi_35274
+CTS-903       INVX1_HVT          ctmi_35273
+CTS-903       INVX1_HVT          ctmi_35272
+CTS-903       INVX1_HVT          ctmi_35271
+CTS-903       INVX1_HVT          ctmi_35270
+CTS-903       INVX1_HVT          ctmi_35269
+CTS-903       INVX1_HVT          ctmi_35268
+CTS-903       INVX1_HVT          ctmi_35267
+CTS-903       INVX1_HVT          ctmi_35266
+CTS-903       INVX1_HVT          ctmi_35244
+CTS-903       INVX1_HVT          ctmi_35243
+CTS-903       INVX1_HVT          ctmi_34883
+CTS-903       INVX1_HVT          ctmi_34888
+CTS-903       INVX1_HVT          ctmi_34898
+CTS-903       INVX1_HVT          u_clk_gen/ctmi_436
+CTS-903       MUX21X1_HVT        u_clk_gen/u_pll_mux/C87/ctmi_6
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_137
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C368/ctmi_21
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C384/ctmi_37
+CTS-903       SDFFARX1_HVT       u_clk_gen/u_panel_clk_by2/system_clk_div2_reg
+CTS-903       INVX1_HVT          u_clk_gen/u_clock_gen/ctmi_140
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C373/ctmi_28
+CTS-903       NAND3X0_RVT        u_clk_gen/u_clock_gen/ctmi_152
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C388/ctmi_34
+CTS-903       INVX1_HVT          ctmi_35312
+CTS-903       INVX1_HVT          ctmi_35313
+CTS-903       INVX1_HVT          ctmi_35373
+CTS-903       INVX1_HVT          ctmi_35369
+CTS-903       INVX1_HVT          ctmi_35353
+CTS-903       INVX1_HVT          ctmi_35352
+CTS-903       INVX1_HVT          ctmi_35351
+CTS-903       INVX1_HVT          ctmi_35350
+CTS-903       INVX1_HVT          ctmi_35349
+CTS-903       INVX1_HVT          ctmi_35348
+CTS-903       INVX1_HVT          ctmi_35347
+CTS-903       INVX1_HVT          ctmi_35346
+CTS-903       INVX1_HVT          ctmi_35328
+CTS-903       INVX1_HVT          ctmi_35320
+CTS-903       INVX1_HVT          ctmi_35319
+CTS-903       INVX1_HVT          ctmi_35318
+CTS-903       INVX1_HVT          ctmi_35317
+CTS-903       INVX1_HVT          ctmi_35316
+CTS-903       INVX1_HVT          ctmi_35315
+CTS-903       INVX1_HVT          ctmi_35314
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2402
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2404
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2415
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2414
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2413
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2392
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2406
+CTS-903       INVX1_HVT          u_main_controller_top/ctmi_2405
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42348
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42349
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_44246
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_44244
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42936
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42935
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42934
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42933
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42932
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42931
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42930
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42929
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42928
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42927
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42926
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42925
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42924
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42923
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42890
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42889
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42883
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42828
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42803
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42782
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_41754
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42736
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42735
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42689
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42651
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42650
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42649
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42648
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42647
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42646
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42645
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42644
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42643
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42635
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42634
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42633
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42632
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42631
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42630
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42618
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42617
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42616
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42613
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42414
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42610
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42609
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42606
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42605
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42601
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42600
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42599
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42598
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42597
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42593
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42591
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42590
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42589
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42588
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42587
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42586
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42583
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42582
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42581
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42580
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42579
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42578
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42577
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42576
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42575
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42574
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42573
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42572
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42571
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42570
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42569
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42568
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42567
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42566
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42565
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42564
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42563
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42562
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42561
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42560
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42559
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42558
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42557
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42556
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42555
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42554
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42553
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42552
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42551
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42550
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42549
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42548
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42547
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42546
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42545
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42544
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42543
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42542
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42541
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42540
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42537
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42490
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42485
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42484
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42413
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42387
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42386
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42385
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42384
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42350
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/ctmi_938
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/ctmi_1007
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/ctmi_1062
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/ctmi_1064
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/ctmi_1065
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d16x50_f116_ptr_ud_fifo/ctmi_237
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d16x50_f116_ptr_ud_fifo/ctmi_238
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d16x50_f116_ptr_ud_fifo/ctmi_240
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d16x50_f116_ptr_ud_fifo/ctmi_239
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MM0_wrap/ctmi_2013
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MM0_wrap/ctmi_2015
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MM0_wrap/ctmi_2032
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/ctmi_2005
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/ctmi_2007
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/ctmi_2024
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS1_wrap/ctmi_2005
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS1_wrap/ctmi_2007
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS1_wrap/ctmi_2024
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS0_wrap/ctmi_2005
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS0_wrap/ctmi_2007
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS0_wrap/ctmi_2024
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x29_f116_ctrl_fifo/ctmi_382
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x29_f116_ctrl_fifo/ctmi_383
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x29_f116_ctrl_fifo/ctmi_385
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x29_f116_ctrl_fifo/ctmi_384
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/ctmi_531
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/ctmi_532
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/ctmi_537
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/ctmi_533
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/u_rf_d256x11_f116_wrap/ctmi_968
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/u_rf_d256x11_f116_wrap/ctmi_970
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/u_rf_d256x11_f116_wrap/ctmi_984
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x14_f116_line_mem/ctmi_417
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x14_f116_line_mem/ctmi_419
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x14_f116_line_mem/ctmi_421
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/u_fifo_sync_d64x14_f116_line_mem/ctmi_420
+CTS-903       INVX1_HVT          u_clk_gen/ctmi_453
+CTS-903       INVX1_HVT          u_clk_gen/ctmi_458
+CTS-903       MUX21X1_HVT        u_clk_gen/u_clock_gen/C383/ctmi_32
+CTS-903       INVX1_HVT          ctmi_34989
+CTS-903       INVX1_HVT          ctmi_34990
+CTS-903       INVX1_HVT          ctmi_35060
+CTS-903       INVX1_HVT          ctmi_35059
+CTS-903       INVX1_HVT          ctmi_35058
+CTS-903       INVX1_HVT          ctmi_35057
+CTS-903       INVX1_HVT          ctmi_35056
+CTS-903       INVX1_HVT          ctmi_35055
+CTS-903       INVX1_HVT          ctmi_35054
+CTS-903       INVX1_HVT          ctmi_35053
+CTS-903       INVX1_HVT          ctmi_35052
+CTS-903       INVX1_HVT          ctmi_35051
+CTS-903       INVX1_HVT          ctmi_35050
+CTS-903       INVX1_HVT          ctmi_35049
+CTS-903       INVX1_HVT          ctmi_35048
+CTS-903       INVX1_HVT          ctmi_35047
+CTS-903       INVX1_HVT          ctmi_35046
+CTS-903       INVX1_HVT          ctmi_35045
+CTS-903       INVX1_HVT          ctmi_35044
+CTS-903       INVX1_HVT          ctmi_35043
+CTS-903       INVX1_HVT          ctmi_35042
+CTS-903       INVX1_HVT          ctmi_35041
+CTS-903       INVX1_HVT          ctmi_35040
+CTS-903       INVX1_HVT          ctmi_35039
+CTS-903       INVX1_HVT          ctmi_35038
+CTS-903       INVX1_HVT          ctmi_35037
+CTS-903       INVX1_HVT          ctmi_35036
+CTS-903       INVX1_HVT          ctmi_35035
+CTS-903       INVX1_HVT          ctmi_35034
+CTS-903       INVX1_HVT          ctmi_35033
+CTS-903       INVX1_HVT          ctmi_35032
+CTS-903       INVX1_HVT          ctmi_35031
+CTS-903       INVX1_HVT          ctmi_35030
+CTS-903       INVX1_HVT          ctmi_35029
+CTS-903       INVX1_HVT          ctmi_35028
+CTS-903       INVX1_HVT          ctmi_35027
+CTS-903       INVX1_HVT          ctmi_35026
+CTS-903       INVX1_HVT          ctmi_35025
+CTS-903       INVX1_HVT          ctmi_35024
+CTS-903       INVX1_HVT          ctmi_35023
+CTS-903       INVX1_HVT          ctmi_35022
+CTS-903       INVX1_HVT          ctmi_35021
+CTS-903       INVX1_HVT          ctmi_35020
+CTS-903       SDFFARX1_HVT       u_register_map_control/choice_44_reg[10]
+CTS-903       OR2X1_LVT          u_clk_gen/u_clock_gen/ctmi_39208
+CTS-903       OR2X1_LVT          u_clk_gen/u_clock_gen/A43593
+CTS-903       NBUFFX16_LVT       u_clk_gen/u_clock_gen/CDIBUF_104_f_44566
+CTS-903       NBUFFX2_HVT        CDIBUF_10_f_44561
+CTS-903       SDFFARX1_HVT       u_register_map_control/choice_44_reg[11]
+CTS-903       NBUFFX2_HVT        CDIBUF_10_f_44562
+CTS-903       INVX1_HVT          ctmi_35019
+CTS-903       INVX1_HVT          ctmi_35018
+CTS-903       INVX1_HVT          ctmi_35017
+CTS-903       INVX1_HVT          ctmi_35016
+CTS-903       INVX1_HVT          ctmi_35015
+CTS-903       INVX1_HVT          ctmi_35014
+CTS-903       INVX1_HVT          ctmi_35013
+CTS-903       INVX1_HVT          ctmi_35012
+CTS-903       INVX1_HVT          ctmi_35011
+CTS-903       INVX1_HVT          ctmi_35010
+CTS-903       INVX1_HVT          ctmi_35009
+CTS-903       INVX1_HVT          ctmi_35008
+CTS-903       INVX1_HVT          ctmi_35007
+CTS-903       INVX1_HVT          ctmi_35006
+CTS-903       INVX1_HVT          ctmi_35005
+CTS-903       INVX1_HVT          ctmi_35004
+CTS-903       INVX1_HVT          ctmi_35003
+CTS-903       INVX1_HVT          ctmi_35002
+CTS-903       INVX1_HVT          ctmi_35001
+CTS-903       INVX1_HVT          ctmi_35000
+CTS-903       INVX1_HVT          ctmi_34999
+CTS-903       INVX1_HVT          ctmi_34998
+CTS-903       INVX1_HVT          ctmi_34997
+CTS-903       INVX1_HVT          ctmi_34996
+CTS-903       INVX1_HVT          ctmi_34995
+CTS-903       INVX1_HVT          ctmi_34994
+CTS-903       INVX1_HVT          ctmi_34993
+CTS-903       INVX1_HVT          ctmi_34992
+CTS-903       INVX1_HVT          ctmi_34991
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42939
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42940
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42958
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42956
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42955
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42954
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42949
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42948
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42947
+CTS-903       INVX1_HVT          u_main_controller_top/u_main_controller/ctmi_42946
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/ctmi_187
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/ctmi_188
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/ctmi_432
+CTS-903       INVX1_HVT          u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/ctmi_433
+CTS-903       AND2X1_HVT         ctmi_36381
+CTS-903       NBUFFX8_RVT        u_clk_gen/u_clock_gen/CDIBUF_38_f_44565
+
+---------------------------------------------------------------------------------------
+Warning: Some clock reference cells have no LEQ cell specified for resizing (CTS-904)
+---------------------------------------------------------------------------------------
+Check         Lib cell                                                 Example Instance
+---------------------------------------------------------------------------------------
+CTS-904       saed32hvt/AND2X1_HVT                                     u_clk_gen/u_clock_gen/ctmi_154
+CTS-904       fsc_top_CTS.nlib/fsc_top                                 u_clk_gen/u_clock_gen
+CTS-904       saed32hvt/DFFARX1_HVT                                    u_clk_gen/u_clock_gen/comp_clk_sel_q2_reg
+CTS-904       saed32hvt/DFFARX2_HVT                                    u_datapath/u_rotating_cache_control/rc2/address2_reg[3]
+CTS-904       saed32hvt/DFFASRX1_HVT                                   u_main_controller_top/u_main_controller/rst_ddr_fifo_n_s3_reg
+CTS-904       saed32hvt/DFFX1_HVT                                      u_YCrCb2RGB/A_int_reg[12]
+CTS-904       saed32hvt/MUX21X1_HVT                                    u_clk_gen/u_clock_gen/C380/ctmi_38
+CTS-904       saed32hvt/MUX41X1_HVT                                    u_clk_gen/ctmi_494
+CTS-904       saed32rvt/NAND3X0_RVT                                    u_clk_gen/u_clock_gen/ctmi_147
+CTS-904       saed32lvt/NBUFFX16_LVT                                   u_clk_gen/u_clock_gen/CDIBUF_104_f_44566
+CTS-904       saed32hvt/NBUFFX2_HVT                                    u_clk_gen/u_clock_gen/CDIBUF_6_f_44560
+CTS-904       saed32rvt/NBUFFX2_RVT                                    u_clk_gen/CDIBUF_6_f_44567
+CTS-904       saed32rvt/NBUFFX8_RVT                                    u_clk_gen/u_clock_gen/CDIBUF_12_f_44563
+CTS-904       saed32hvt/OA222X1_HVT                                    u_clk_gen/u_clock_gen/ctmi_148
+CTS-904       saed32hvt/OA22X1_HVT                                     u_clk_gen/u_clock_gen/ctmi_159
+CTS-904       saed32lvt/OR2X1_LVT                                      u_clk_gen/u_clock_gen/ctmi_39208
+CTS-904       saed32hvt/SDFFARX1_HVT                                   u_clk_gen/u_clock_gen/pixel_comp_clk_q1_reg
+CTS-904       saed32hvt/SDFFARX2_HVT                                   u_datapath/u_pixel_in_buffer/write_data_reg[5]
+CTS-904       saed32rvt/SDFFASRSX1_RVT                                 u_clk_gen/u_clock_gen/comp_clk_sel_q1_reg
+CTS-904       saed32hvt/SDFFSSRX2_HVT                                  u_YCrCb2RGB/B_int_reg[13]
+CTS-904       saed32lvt/SDFFX1_LVT                                     u_YCrCb2RGB/X_int_reg[9]
+CTS-904       saed32rvt/SDFFX1_RVT                                     u_YCrCb2RGB/R_int_reg[14]
+CTS-904       saed32rvt/SDFFX2_RVT                                     u_YCrCb2RGB/X_int_reg[15]
+
+---------------------------------------------------------------------------------------
+Warning: There are clocks with no sinks (CTS-905)
+---------------------------------------------------------------------------------------
+Check         Clock              Mode
+---------------------------------------------------------------------------------------
+CTS-905       i2c_scl            func
+CTS-905       panel_clk_dly      func
+CTS-905       sdram_clk          func
+
+---------------------------------------------------------------------------------------
+Warning: Balance point constraints are defined downstream of another balance point or ignore point constraint (CTS-910)
+---------------------------------------------------------------------------------------
+Check         Balance point                    Upstream constraint     Upstream pin
+CTS-910       u_register_map_control/choice_44_reg[12]/CLK ignore_point u_clk_gen/u_clock_gen/C383/ctmi_32/S0
+
+---------------------------------------------------------------------------------------
+Warning: set_input_transition on clock ports exceeds the max transition limit (CTS-914)
+---------------------------------------------------------------------------------------
+Check         Port                             Input transition        Max transition
+---------------------------------------------------------------------------------------
+CTS-914       pll1_clk_in                      0.15                    0.08
+CTS-914       pll2_clk_in                      0.15                    0.08
+CTS-914       pixel_clk                        0.15                    0.08
+CTS-914       test_clk                         0.15                    0.08
+CTS-914       system_clk                       0.15                    0.08
+CTS-914       comp_clk                         0.15                    0.08
+1

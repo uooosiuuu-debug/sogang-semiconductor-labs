@@ -1,0 +1,67 @@
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/CONTROL2[0]' to 'u_clk_gen/u_clock_gen/C383/Z[0]' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top.nlib:fsc_top/setup.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Design Average RC for design fsc_top  (NEX-011)
+Information: r = 1.790775 ohm/um, via_r = 0.505975 ohm/cut, c = 0.075223 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785715 ohm/um, via_r = 0.616812 ohm/cut, c = 0.086669 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'fsc_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 104616, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 9527. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:50:39 2026
+****************************************
+
+  Startpoint: u_main_controller_top/u_main_controller/red_reg (rising edge-triggered flip-flop clocked by pll2_clk_div2)
+  Endpoint: r_en (output port clocked by pixel_comp_clk_pix)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: **reg2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pll2_clk_div2 (rise edge)                1831.94   1831.94
+  clock network delay (ideal)                      0.00    1831.94
+
+  u_main_controller_top/u_main_controller/red_reg/clocked_on (*SEQGEN.1839103_120_2)
+                                                   0.00    1831.94 r
+  u_main_controller_top/u_main_controller/red_reg/Q (*SEQGEN.1839103_120_2)
+                                                   0.00    1831.94 r ~
+  u_test_logic/u_test_mux/C112/Z[0] (*SELECT_OP.3_1_3_1_1_33)
+                                                   0.00    1831.94 r ~
+  r_en (out)                                       0.25    1832.19 r
+  data arrival time                                        1832.19
+
+  clock pixel_comp_clk_pix (rise edge)           1832.30   1832.30
+  clock network delay (ideal)                      0.00    1832.30
+  output external delay                          -12.12    1820.18
+  data required time                                       1820.18
+  ------------------------------------------------------------------------
+  data required time                                       1820.18
+  data arrival time                                        -1832.19
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                         -12.01
+
+
+1

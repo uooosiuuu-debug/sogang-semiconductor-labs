@@ -1,0 +1,59 @@
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:compile_initial_opto.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Design Average RC for design compile_initial_opto  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.072665 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.085217 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'fsc_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 38765, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 37598, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Fri Jun 26 15:23:45 2026
+****************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+  Startpoint: u_clk_gen/u_pll_mux/pll1_ld_q2_reg (rising edge-triggered flip-flop clocked by pll1_clk_in)
+  Endpoint: u_clk_gen/u_pll_mux/pll1_ld_q3_reg (rising edge-triggered flip-flop clocked by pll1_clk_in')
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: R2R
+  Path Type: max
+  Sigma:   3.00
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pll1_clk_in (rise edge)                    0.00      0.00
+  clock network delay (ideal)                     -0.04     -0.04
+
+  u_clk_gen/u_pll_mux/pll1_ld_q2_reg/CLK (DFFARX1_LVT)
+                                                   0.00     -0.04 r
+  u_clk_gen/u_pll_mux/pll1_ld_q2_reg/Q (DFFARX1_LVT)
+                                                   0.12      0.08 r
+  u_clk_gen/u_pll_mux/pll1_ld_q3_reg/D (SDFFARX1_LVT)
+                                                   0.00      0.08 r
+  data arrival time                                          0.08
+
+  clock pll1_clk_in' (rise edge)                   3.79      3.79
+  clock network delay (ideal)                      0.00      3.79
+  u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK (SDFFARX1_LVT)
+                                                   0.00      3.79 r
+  clock uncertainty                               -1.51      2.27
+  path margin                                     -1.00      1.27
+  library setup time                              -0.10      1.17
+  data required time                                         1.17
+  ------------------------------------------------------------------------
+  data required time                                         1.17
+  data arrival time                                         -0.08
+  ------------------------------------------------------------------------
+  statistical adjustment                           0.00      1.09
+  slack (MET)                                                1.09
+
+
+1

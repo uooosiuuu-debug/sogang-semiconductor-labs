@@ -1,0 +1,89 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : lcos_cont
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 14:55:39 2026
+****************************************
+Information: Activity propagation will be performed for scenario ss0p95v125c.func.
+Information: Doing activity propagation for mode 'func' and corner 'ss0p95v125c' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario ss0p95v125c.func (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation with 8 threads!
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: func
+Corner: ss0p95v125c
+Scenario: ss0p95v125c.func
+Voltage: 0.95
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_xtal1 for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_pixelclk for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_testclk for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_pll1_clk for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_pll2_clk for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_compclk for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port DOUT on cell u_scl for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port PADIO on cell u_xtal2 for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port PADIO on cell u_xtal2 for parameter Cout. Lowest table value = 2.500000, highest table value = 80.000000, value = 0.000002 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port PADIO on cell u_sdramclk for parameter Tinp. Lowest table value = 0.100000, highest table value = 3.200000, value = 0.000000 (POW-046)
+Warning: Rise-Fall toggles on pin u_dq31/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq30/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq29/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq28/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq27/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq26/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq25/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq24/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq23/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: Rise-Fall toggles on pin u_dq22/PADIO are impossible given input states; converted to zero toggles. (POW-069)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVDD_L1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVDD_B1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVDD_R1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVDD_T1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVSS_L1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVSS_B1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVSS_R1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/IOVSS_T1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/VDD_L1', mismatches in operating condition settings have been found in the design. (POW-039)
+Warning: While computing leakage for instance 'U_IOPOWER/VDD_L2', mismatches in operating condition settings have been found in the design. (POW-039)
+Note - message 'POW-039' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 7.54e+09 pW ( 40.6%)
+  Net Switching Power    = 1.10e+10 pW ( 59.4%)
+Total Dynamic Power      = 1.86e+10 pW (100.0%)
+
+Cell Leakage Power       = 4.42e+09 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    3.18e+09               2.96e+07               4.23e+09               7.44e+09    ( 32.4%)         
+memory                    2.32e+09               0.00e+00               0.00e+00               2.32e+09    ( 10.1%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             9.08e+06               7.66e+09               5.10e+06               7.68e+09    ( 33.4%)        i
+register                  3.58e+06               7.38e+05               4.02e+07               4.45e+07    (  0.2%)         
+sequential                2.01e+09               1.52e+05               7.16e+06               2.02e+09    (  8.8%)         
+combinational             1.38e+07               3.32e+09               1.38e+08               3.48e+09    ( 15.1%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     7.54e+09 pW            1.10e+10 pW            4.42e+09 pW            2.30e+10 pW
+1

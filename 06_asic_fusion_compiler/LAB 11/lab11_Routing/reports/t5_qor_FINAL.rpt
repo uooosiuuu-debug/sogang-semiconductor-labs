@@ -1,0 +1,33 @@
+Information: Freeing timing information from routing. (ZRT-574)
+****************************************
+Report : qor
+        -summary
+        -pba_mode path
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 13:02:37 2026
+****************************************
+Information: The RC mode used is DR for design 'fsc_top'. (NEX-022)
+Extracting design: fsc_top 
+Information: coupling capacitance is created explicitly. (NEX-029)
+Information: 69157 nets are successfully extracted. (NEX-028)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, PBA Mode Path'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)          -989.72    -6466779.98          16632
+Design             (Setup)          -989.72    -6466779.98          16632
+
+ss0p95v125c.func   (Hold)            -30.95       -1335.32           4265
+Design             (Hold)            -30.95       -1335.32           4265
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         668403.41
+Cell Area (netlist and physical only):       674330.55
+Nets with DRC Violations:      691
+1

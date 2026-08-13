@@ -1,0 +1,15 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+        -groups R2R
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 09:31:13 2026
+****************************************
+Warning: Nothing implicitly matched 'R2R' (SEL-003)
+Error: Nothing matched for path_group_list (SEL-005)
+No paths.
+1

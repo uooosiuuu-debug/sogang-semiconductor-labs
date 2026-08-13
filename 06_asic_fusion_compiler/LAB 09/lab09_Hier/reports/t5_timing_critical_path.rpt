@@ -1,0 +1,253 @@
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 5
+        -report_by design
+        -nosplit
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 14:57:39 2026
+****************************************
+
+  Startpoint: hsync (input port clocked by pixel_comp_clk_pix)
+  Endpoint: ycrcb_pad_tx[9] (output port clocked by pixel_comp_clk_pix)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: **in2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pixel_comp_clk_pix (rise edge)             0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                            12.12     12.12 r
+  hsync (in)                                       0.00     12.12 r
+  ctmi_731/Y (MUX41X1_HVT)                         0.26     12.38 r
+  ctmi_726/Y (OA221X1_HVT)                         0.14     12.52 r
+  HFSBUF_4_27387/Y (NBUFFX4_HVT)                   0.11     12.63 r
+  ycrcb_pad_tx[9] (out)                            0.01     12.64 r
+  data arrival time                                         12.64
+
+  clock pixel_comp_clk_pix (rise edge)            25.10     25.10
+  clock network delay (ideal)                      0.00     25.10
+  output external delay                          -12.12     12.98
+  data required time                                        12.98
+  ------------------------------------------------------------------------
+  data required time                                        12.98
+  data arrival time                                        -12.64
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.34
+
+
+
+  Startpoint: i2c_sda_in (input port clocked by pixel_comp_clk_pix)
+  Endpoint: ycrcb_pad_tx[2] (output port clocked by pixel_comp_clk_pix)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: **in2out_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock pixel_comp_clk_pix (rise edge)             0.00      0.00
+  clock network delay (ideal)                      0.00      0.00
+  input external delay                            12.12     12.12 r
+  i2c_sda_in (in)                                  0.00     12.12 r
+  ctmi_795/Y (AO221X1_HVT)                         0.19     12.31 r
+  ctmi_794/Y (AO221X2_HVT)                         0.17     12.49 r
+  HFSBUF_4_27392/Y (NBUFFX2_HVT)                   0.15     12.64 r
+  ycrcb_pad_tx[2] (out)                            0.00     12.64 r
+  data arrival time                                         12.64
+
+  clock pixel_comp_clk_pix (rise edge)            25.10     25.10
+  clock network delay (ideal)                      0.00     25.10
+  output external delay                          -12.12     12.98
+  data required time                                        12.98
+  ------------------------------------------------------------------------
+  data required time                                        12.98
+  data arrival time                                        -12.64
+  ------------------------------------------------------------------------
+  slack (MET)                                                0.34
+
+
+
+  Startpoint: u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[0] (rising edge-triggered flip-flop clocked by panel_clk_gate)
+  Endpoint: u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_err_sr_d1kx32_f233_reg (rising edge-triggered flip-flop clocked by panel_clk_gate)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: panel_clk_gate
+  Path Type: max
+
+  Point                                                                                                                                        Incr      Path  
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock panel_clk_gate (rise edge)                                                                                                             0.00      0.00
+  clock network delay (ideal)                                                                                                                  0.00      0.00
+
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[0]/CLK (SDFFARX2_HVT)             0.00      0.00 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[0]/Q (SDFFARX2_HVT)               0.32      0.32 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_878/Y (NAND3X0_HVT)                        0.13      0.45 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/phfnr_buf_25971/Y (INVX0_HVT)                                         0.10      0.54 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_882/Y (NAND3X0_HVT)                        0.11      0.65 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/phfnr_buf_25976/Y (INVX0_HVT)                                         0.09      0.74 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_886/Y (NAND3X0_HVT)                        0.11      0.85 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/phfnr_buf_25978/Y (INVX0_HVT)                                         0.10      0.95 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_890/Y (NAND3X0_HVT)                        0.12      1.07 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/phfnr_buf_25980/Y (INVX0_HVT)                                         0.07      1.14 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/A23388/Y (NAND2X0_HVT)                                                0.13      1.27 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_65/Y (INVX0_HVT)                                                 0.12      1.39 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_768/Y (NAND2X0_HVT)                        0.13      1.52 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/phfnr_buf_25981/Y (INVX0_HVT)                                         0.08      1.60 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_767/Y (NAND3X4_HVT)                        0.23      1.83 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_773/Y (NAND2X4_HVT)                        0.18      2.02 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/HFSINV_935_29351/Y (INVX0_HVT)                                        0.13      2.15 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_312/Y (OR2X2_HVT)                                                0.12      2.27 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_49/Y (INVX0_HVT)                                                 0.06      2.33 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_output_fifo_mem/O2[12] (SRAM2RW128x32)               0.20      2.53 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/ctmi_329/Y (AO22X1_HVT)                                               0.21      2.74 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_795/Y (NOR4X1_HVT)                         0.14      2.88 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_793/Y (NAND3X0_HVT)                        0.11      2.99 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_790/Y (AO222X1_HVT)                        0.18      3.17 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_786/Y (AO221X1_HVT)                        0.08      3.25 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_780/Y (AOI221X1_HVT)                       0.11      3.36 r
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_779/Y (NAND4X0_HVT)                        0.16      3.52 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_776/Y (AO22X1_HVT)                         0.13      3.64 f
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_err_sr_d1kx32_f233_reg/D (SDFFARX1_HVT)    0.00      3.64 f
+  data arrival time                                                                                                                                      3.64
+
+  clock panel_clk_gate (rise edge)                                                                                                             6.06      6.06
+  clock network delay (ideal)                                                                                                                  0.00      6.06
+  u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_err_sr_d1kx32_f233_reg/CLK (SDFFARX1_HVT)   0.00     6.06 r
+  library setup time                                                                                                                          -0.18      5.88
+  data required time                                                                                                                                     5.88
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                                                     5.88
+  data arrival time                                                                                                                                     -3.64
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                                                            2.24
+
+
+
+  Startpoint: u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[0] (rising edge-triggered flip-flop clocked by panel_clk_gate)
+  Endpoint: u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_err_sr_d1kx32_f233_reg (rising edge-triggered flip-flop clocked by panel_clk_gate)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: panel_clk_gate
+  Path Type: max
+
+  Point                                                                                                                                        Incr      Path  
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock panel_clk_gate (rise edge)                                                                                                             0.00      0.00
+  clock network delay (ideal)                                                                                                                  0.00      0.00
+
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[0]/CLK (SDFFARX2_HVT)             0.00      0.00 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[0]/Q (SDFFARX2_HVT)               0.32      0.32 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_878/Y (NAND3X0_HVT)                        0.12      0.43 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/phfnr_buf_25998/Y (INVX0_HVT)                                         0.09      0.53 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_882/Y (NAND3X0_HVT)                        0.11      0.64 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/phfnr_buf_26003/Y (INVX0_HVT)                                         0.10      0.74 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_886/Y (NAND3X0_HVT)                        0.13      0.87 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/phfnr_buf_26005/Y (INVX0_HVT)                                         0.10      0.96 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_890/Y (NAND3X0_HVT)                        0.12      1.08 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/phfnr_buf_26007/Y (INVX0_HVT)                                         0.07      1.15 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/A23392/Y (NAND2X0_HVT)                                                0.14      1.29 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_66/Y (INVX0_HVT)                                                 0.14      1.43 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_768/Y (NAND2X0_HVT)                        0.15      1.58 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/phfnr_buf_26008/Y (INVX0_HVT)                                         0.08      1.66 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_767/Y (NAND3X4_HVT)                        0.23      1.89 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_23770/Y (NAND2X4_HVT)                                            0.18      2.07 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/HFSINV_1157_29353/Y (INVX0_HVT)                                       0.15      2.22 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_312/Y (OR2X1_HVT)                                                0.11      2.33 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_49/Y (INVX0_HVT)                                                 0.06      2.39 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_output_fifo_mem/O2[27] (SRAM2RW128x32)               0.08      2.47 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/ctmi_344/Y (AO22X1_HVT)                                               0.14      2.61 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_795/Y (NOR4X1_HVT)                         0.19      2.80 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_793/Y (NAND3X0_HVT)                        0.06      2.87 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_790/Y (AO222X1_HVT)                        0.21      3.08 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_786/Y (AO221X1_HVT)                        0.13      3.20 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_780/Y (AOI221X1_HVT)                       0.14      3.35 f
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_779/Y (NAND4X1_HVT)                        0.15      3.50 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/ctmi_776/Y (AO22X1_HVT)                         0.10      3.60 r
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_err_sr_d1kx32_f233_reg/D (SDFFARX2_HVT)    0.00      3.60 r
+  data arrival time                                                                                                                                      3.60
+
+  clock panel_clk_gate (rise edge)                                                                                                             6.06      6.06
+  clock network delay (ideal)                                                                                                                  0.00      6.06
+  u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_err_sr_d1kx32_f233_reg/CLK (SDFFARX2_HVT)   0.00     6.06 r
+  library setup time                                                                                                                          -0.16      5.90
+  data required time                                                                                                                                     5.90
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                                                     5.90
+  data arrival time                                                                                                                                     -3.60
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                                                            2.30
+
+
+
+  Startpoint: u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/bist_addr_reg[1] (rising edge-triggered flip-flop clocked by sdram_clk_gate)
+  Endpoint: u_datapath/u_gamma_correction/current_change_value5_a_reg[1] (rising edge-triggered flip-flop clocked by sdram_clk_gate)
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: sdram_clk_gate
+  Path Type: max
+
+  Point                                                                                                                                        Incr      Path  
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  clock sdram_clk_gate (rise edge)                                                                                                             0.00      0.00
+  clock network delay (ideal)                                                                                                                  0.00      0.00
+
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/bist_addr_reg[1]/CLK (SDFFARX1_HVT)         0.00      0.00 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/bist_addr_reg[1]/Q (SDFFARX1_HVT)           0.28      0.28 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/HFSBUF_197_28511/Y (NBUFFX2_HVT)                                   0.13      0.41 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/ctmi_621/Y (NAND3X0_HVT)                    0.15      0.56 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/phfnr_buf_25732/Y (INVX0_HVT)                                      0.09      0.65 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/ctmi_625/Y (NAND3X0_HVT)                    0.17      0.82 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/phfnr_buf_25737/Y (INVX2_HVT)                                      0.12      0.94 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_23856/Y (AND3X1_HVT)                                          0.15      1.09 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/ctmi_633/Y (NAND3X0_HVT)                    0.12      1.21 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/phfnr_buf_25741/Y (INVX0_HVT)                                      0.08      1.29 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/A23429/Y (NAND2X0_HVT)                                             0.21      1.50 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_88/Y (INVX2_HVT)                                              0.14      1.64 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/ctmi_520/Y (NAND2X0_HVT)                    0.14      1.78 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/phfnr_buf_25742/Y (INVX0_HVT)                                      0.10      1.88 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/ctmi_519/Y (NAND3X0_HVT)                    0.18      2.06 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/HFSBUF_336_28942/Y (NBUFFX8_HVT)                                   0.16      2.22 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/ctmi_525/Y (NAND2X2_RVT)                    0.14      2.36 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/HFSINV_110_29154/Y (INVX4_HVT)                                     0.08      2.45 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_167/Y (OR2X1_HVT)                                             0.11      2.55 f
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/ctmi_69/Y (INVX0_HVT)                                              0.06      2.61 r
+  u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_rf_d128x16/O2[5] (SRAM2RW128x16)                                 0.21      2.82 r
+  u_datapath/u_gamma_correction/ctmi_17084/Y (OA21X1_HVT)                                                                                      0.17      2.99 r
+  u_datapath/u_gamma_correction/ctmi_17083/Y (AO22X1_HVT)                                                                                      0.12      3.11 r
+  u_datapath/u_gamma_correction/ctmi_17082/Y (OA222X1_HVT)                                                                                     0.18      3.29 r
+  u_datapath/u_gamma_correction/ctmi_17081/Y (OA222X1_HVT)                                                                                     0.16      3.45 r
+  u_datapath/u_gamma_correction/ctmi_17079/Y (OA222X1_HVT)                                                                                     0.13      3.58 r
+  u_datapath/u_gamma_correction/ctmi_17077/Y (OA222X1_HVT)                                                                                     0.14      3.72 r
+  u_datapath/u_gamma_correction/ctmi_17076/Y (OA222X1_HVT)                                                                                     0.22      3.94 r
+  u_datapath/u_gamma_correction/ctmi_17075/Y (OA221X2_HVT)                                                                                     0.26      4.20 r
+  u_datapath/u_gamma_correction/HFSINV_252_28653/Y (INVX0_HVT)                                                                                 0.11      4.30 f
+  u_datapath/u_gamma_correction/ctmi_17087/Y (AO22X1_HVT)                                                                                      0.14      4.44 f
+  u_datapath/u_gamma_correction/current_change_value5_a_reg[1]/D (SDFFARX1_HVT)                                                                0.00      4.44 f
+  data arrival time                                                                                                                                      4.44
+
+  clock sdram_clk_gate (rise edge)                                                                                                             7.57      7.57
+  clock network delay (ideal)                                                                                                                  0.00      7.57
+  u_datapath/u_gamma_correction/current_change_value5_a_reg[1]/CLK (SDFFARX1_HVT)                                                              0.00      7.57 r
+  library setup time                                                                                                                          -0.18      7.39
+  data required time                                                                                                                                     7.39
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  data required time                                                                                                                                     7.39
+  data arrival time                                                                                                                                     -4.44
+  --------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  slack (MET)                                                                                                                                            2.95
+
+
+1

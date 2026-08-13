@@ -1,0 +1,99 @@
+****************************************
+Report : power
+        -hier
+        -significant_digits 2
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 12:25:51 2026
+****************************************
+Information: Activity for scenario ss0p95v125c.func was cached, no propagation required. (POW-005)
+Mode: func
+Corner: ss0p95v125c
+Scenario: ss0p95v125c.func
+Voltage: 0.95
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+vdd (power) probability 1.00 (default)
+vss (ground) probability 1.00 (default)
+
+
+Hierarchy                                                  Internal Power        Switching Power          Leakage Power            Total Power       %
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+fsc_top                                                          1.73e+09               1.28e+11               6.81e+10               1.98e+11    100.00
+  u_clk_gen (clk_gen)                                           -3.31e+08               1.27e+11               9.99e+08               1.28e+11     64.62
+    u_clock_gen (clock_gen)                                     -3.41e+08               1.27e+11               1.08e+08               1.27e+11     99.29
+    u_panel_clk_by2 (panel_clk_by2)                              2.80e+05               8.73e+04               1.65e+06               2.02e+06      0.00
+  u_datapath (datapath)                                          1.56e+09               7.38e+08               3.02e+10               3.25e+10     16.42
+    u_pixel_in_buffer (pixel_in_buffer)                          4.93e+07               1.08e+07               6.51e+08               7.11e+08      2.19
+    u_color_interleaver (color_interleaver)                      1.43e+08               4.57e+06               2.56e+08               4.03e+08      1.24
+    u_gamma_flash_fifo_control (gamma_flash_fifo_control)
+                                                                 2.36e+07               2.38e+06               4.35e+08               4.61e+08      1.42
+      u_load_mem_fifo (load_mem_fifo)                            1.35e+07               1.26e+06               2.42e+08               2.57e+08     55.63
+    u_gamma_correction (gamma_correction)                        7.37e+08               2.31e+08               1.37e+10               1.47e+10     45.06
+      u_sr_d1kx16_f166g_gamma_wrap (sr_d1kx16_f166g_wrap)
+                                                                -1.57e+07               1.19e+07               2.99e+08               2.95e+08      2.01
+      u_sr_d1kx16_f166c_compensation_table_0_wrap (sr_d1kx16_f166c_wrap_0)
+                                                                -5.41e+07               1.50e+07               3.33e+08               2.94e+08      2.01
+      u_sr_d1kx16_f166c_compensation_table_1_wrap (sr_d1kx16_f166c_wrap_1)
+                                                                -2.07e+07               1.80e+07               4.40e+08               4.37e+08      2.99
+      u_sr_d1kx16_f166c_compensation_table_2_wrap (sr_d1kx16_f166c_wrap)
+                                                                -2.51e+07               1.14e+07               2.35e+08               2.21e+08      1.51
+    u_input_line_buffer_control (input_line_buffer_control)
+                                                                -4.38e+08               1.41e+08               4.21e+09               3.91e+09     12.02
+      u_input_line_buffer_r (input_line_buffer_0)               -2.37e+08               2.68e+07               6.85e+08               4.75e+08     12.14
+        u_sr_d1kx16_f166_wrap0 (sr_d1kx16_f166_wrap0_0)
+                                                                -1.27e+08               1.16e+07               3.10e+08               1.95e+08     41.15
+        u_sr_d1kx16_f166_wrap1 (sr_d1kx16_f166_wrap1_0)
+                                                                -1.12e+08               1.25e+07               3.63e+08               2.63e+08     55.43
+      u_input_line_buffer_g (input_line_buffer_1)               -1.83e+08               1.95e+07               5.39e+08               3.75e+08      9.59
+        u_sr_d1kx16_f166_wrap0 (sr_d1kx16_f166_wrap0_1)
+                                                                -1.06e+08               1.02e+07               2.79e+08               1.83e+08     48.77
+        u_sr_d1kx16_f166_wrap1 (sr_d1kx16_f166_wrap1_1)
+                                                                -7.80e+07               7.23e+06               2.55e+08               1.84e+08     49.04
+      u_input_line_buffer_b (input_line_buffer)                 -2.44e+08               2.48e+07               7.06e+08               4.87e+08     12.45
+        u_sr_d1kx16_f166_wrap0 (sr_d1kx16_f166_wrap0)
+                                                                -1.02e+08               7.91e+06               3.14e+08               2.20e+08     45.17
+        u_sr_d1kx16_f166_wrap1 (sr_d1kx16_f166_wrap1)
+                                                                -1.43e+08               1.43e+07               3.82e+08               2.53e+08     52.01
+    u_output_fifo_control (output_fifo_control)                 -2.49e+07               4.48e+07               1.63e+09               1.65e+09      5.07
+      u_output_fifo_0 (output_fifo_alt3_0)                      -4.42e+07               1.62e+07               5.85e+08               5.57e+08     33.74
+        u_sr_d1kx32_f233_wrap (sr_d1kx32_f233_wrap_0)
+                                                                -8.80e+07               1.52e+07               2.83e+08               2.10e+08     37.79
+      u_output_fifo_1 (output_fifo_alt3)                        -4.44e+07               2.15e+07               6.63e+08               6.40e+08     38.82
+        u_sr_d1kx32_f233_wrap (sr_d1kx32_f233_wrap)
+                                                                -8.85e+07               2.03e+07               3.61e+08               2.93e+08     45.76
+  u_main_controller_top (main_controller_top)                    2.70e+08               5.65e+07               1.82e+10               1.85e+10      9.35
+    u_main_controller (main_controller)                          2.63e+08               5.55e+07               1.72e+10               1.75e+10     94.45
+      u_fifo_sync_d64x14_f116_line_mem (fifo_sync_d64x14_f116)
+                                                                -6.54e+05               1.97e+05               1.14e+08               1.14e+08      0.65
+      u_fifo_sync_d256x11_f116_ewa_mem (fifo_sync_d256x11_f116)
+                                                                 7.50e+06               1.30e+06               3.90e+08               3.99e+08      2.28
+        u_rf_d256x11_f116_wrap (rf_d256x11_f116_wrap)
+                                                                 7.22e+06               1.14e+06               2.02e+08               2.11e+08     52.77
+      u_fifo_sync_d64x29_f116_ctrl_fifo (fifo_sync_d64x29_f116)
+                                                                 1.20e+07               3.74e+05               1.07e+08               1.19e+08      0.68
+      u_sr_d512x72f116_MMS0_wrap (sr_d512x72f116_MMS0_wrap)
+                                                                 7.93e+06               1.28e+06               2.08e+08               2.17e+08      1.24
+      u_sr_d512x72f116_MMS1_wrap (sr_d512x72f116_MMS1_wrap)
+                                                                 1.08e+07               2.52e+06               2.67e+08               2.81e+08      1.60
+      u_sr_d512x72f116_MMS2_wrap (sr_d512x72f116_MMS2_wrap)
+                                                                 9.98e+06               3.37e+06               2.84e+08               2.97e+08      1.70
+      u_sr_d512x72f116_MM0_wrap (sr_d512x72f116_MM0_wrap)
+                                                                -1.97e+05               1.59e+06               2.46e+08               2.48e+08      1.42
+      u_fifo_sync_d16x50_f116_ptr_ud_fifo (fifo_sync_d16x50_f116)
+                                                                 1.18e+07               5.23e+05               9.03e+07               1.03e+08      0.59
+      u_address_fifo (address_fifo)                              6.26e+06               1.36e+06               5.95e+08               6.02e+08      3.44
+        u_rf_d256x17_f166_wrap (rf_d256x17_f166_wrap)
+                                                                -9.69e+06               1.08e+06               1.87e+08               1.78e+08     29.54
+1

@@ -1,0 +1,27 @@
+****************************************
+Report : qor
+        -summary
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:31:35 2026
+****************************************
+Information: Timer using 'POCV-Slew_Variation'. (TIM-050)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)            -1.85          -3.66              2
+ss0p95v125c.test   (Setup)             9.97           0.00              0
+Design             (Setup)            -1.85          -3.66              2
+
+ss0p95v125c.func   (Hold)            -29.65         -65.13             10
+Design             (Hold)            -29.65         -65.13             10
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         568016.78
+Cell Area (netlist and physical only):       573943.93
+Nets with DRC Violations:      228
+1

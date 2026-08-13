@@ -1,0 +1,14 @@
+****************************************
+Report : app_option
+Design : compile_initial_opto
+Version: V-2023.12-SP5
+Date   : Fri Jun 26 15:19:43 2026
+****************************************
+Name             Type       Value      User-value   User-default System-default Scope      Status     Source
+---------------- ---------- ---------- ------------ ------------ -------------- ---------- ---------- -----------------------------------------------------------
+ccd.max_postpone string     400        400          --           auto           block      normal     /DATA/home/edu004/LCOS_FC_LAB/lab07_ccd/run_all_ccd.tcl:156
+ccd.max_prepone  string     auto       --           --           auto           block      normal     --
+---------------- ---------- ---------- ------------ ------------ -------------- ---------- ---------- -----------------------------------------------------------
+
+There are additional internal differences.
+1

@@ -1,0 +1,56 @@
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+        -pba_mode path
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 12:42:36 2026
+****************************************
+Information: Timer using 'PrimeTime Delay Calculation, SI, Timing Window Analysis, AWP, PBA Mode Path'. (TIM-050)
+
+  Startpoint: test (input port clocked by test_clk)
+  Endpoint: u_clk_gen/u_clock_gen/flash_clk_q1_reg (recovery check against rising-edge clock clocked by test_clk')
+  Mode: func
+  Corner: ss0p95v125c
+  Scenario: ss0p95v125c.func
+  Path Group: **in2reg_default**
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock test_clk (rise edge)                       0.00      0.00
+  clock network delay (propagated)                 0.58      0.58
+  input external delay                            40.00     40.58 r
+  test (in)                                        0.00     40.58 r
+  u_clk_gen/u_clock_gen/A43593/Y (OR2X1_LVT)       0.14     40.71 r
+  u_clk_gen/u_clock_gen/CTS_A43593_Y_vtd59101/Y (INVX4_LVT)
+                                                   0.02     40.73 f
+  u_clk_gen/u_clock_gen/CTS_A43593_Y_vtd59100/Y (INVX8_LVT)
+                                                   0.02     40.75 r
+  u_clk_gen/u_clock_gen/CDIBUF_104_f_44566/Y (NBUFFX32_LVT)
+                                                   0.05     40.80 r
+  u_clk_gen/A43591/Y (OR2X2_LVT)                   0.06     40.86 r
+  ZINV_111_inst_55173/Y (INVX8_LVT)                0.03     40.88 f
+  ZINV_93_inst_51354/Y (INVX16_LVT)                0.03     40.91 r
+  u_clk_gen/u_clock_gen/flash_clk_q1_reg/RSTB (SDFFARX1_HVT)
+                                                   0.00     40.92 r
+  data arrival time                                         40.92
+
+  clock test_clk' (rise edge)                     50.00     50.00
+  clock network delay (propagated)                 1.05     51.05
+  u_clk_gen/u_clock_gen/flash_clk_q1_reg/CLK (SDFFARX1_HVT)
+                                                   0.00     51.05 r
+  clock uncertainty                              -1000.00  -948.95
+  library setup time                               0.14    -948.80
+  data required time                                       -948.80
+  ------------------------------------------------------------------------
+  data required time                                       -948.80
+  data arrival time                                        -40.92
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                         -989.72
+
+
+1

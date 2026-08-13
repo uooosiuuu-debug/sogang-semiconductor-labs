@@ -1,0 +1,32 @@
+
+****************************************
+Report : clock_gating
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 12:01:17 2026
+****************************************
+
+
+                             Clock Gating Summary
+          ------------------------------------------------------------------
+          |  Number of Clock gating elements         |           516       |
+          |                                          |                     |
+          |  Number of Tool-Inserted Clock gates     |       513  (99.42%) |
+          |                                          |                     |
+          |  Number of Pre-Existing Clock gates      |         3   (0.58%) |
+          |                                          |                     |
+          |  Number of Gated registers               |      7808  (58.32%) |
+          |                                          |                     |
+          |  Number of Tool-Inserted Gated registers |      7788  (58.17%) |
+          |                                          |                     |
+          |  Number of Pre-Existing Gated registers  |        20   (0.15%) |
+          |                                          |                     |
+          |  Number of Ungated registers             |      5581  (41.68%) |
+          |                                          |                     |
+          |  Total number of registers               |         13389       |
+          |                                          |                     |
+          |  Max number of Clock Gate Levels         |             2       |
+          ------------------------------------------------------------------
+
+
+1

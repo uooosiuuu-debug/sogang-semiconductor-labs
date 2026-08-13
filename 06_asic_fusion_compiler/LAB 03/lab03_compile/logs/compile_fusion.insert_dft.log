@@ -1,0 +1,100 @@
+Warning: application option <dft.insertion_post_logic_opto> is deprecated and scheduled for removal in a future release. See the man page for this  application option for migration assistance. (NDMUI-441)
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Accepted scan configuration in partition 'default_partition' for mode: all_dft 
+Information: Accepted TestMode dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted Constant dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataIn dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataOut dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataIn dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataOut dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataIn dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataOut dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataIn dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanDataOut dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanEnable dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted ScanClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted RefClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted RefClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted RefClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted RefClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted RefClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted RefClock dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Information: Accepted Reset dft signal specification in partition 'default_partition' for modes: all_dft (DFT-1405)
+Accepted scan configuration in partition 'default_partition' for mode: all_dft 
+Information: Starting 'create_test_protocol' (FLW-8000)
+Information: Time: 2026-07-01 08:59:30 / Session:  00:20:02 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2032 MB (FLW-8100)
+Information: Starting test protocol creation. (DFT-3219)
+  ...reading user specified clock signals...
+Information: Identified system/test clock port "test_clk" ( 45.0, 55.0). (DFT-3265)
+  ...reading user specified asynchronous signals...
+Information: Identified active low asynchronous control port "reset_n". (DFT-3266)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Ending   'create_test_protocol' (FLW-8001)
+Information: Time: 2026-07-01 08:59:31 / Session:  00:20:02 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2032 MB (FLW-8100)
+Information: Starting 'dft_drc' (FLW-8000)
+Information: Time: 2026-07-01 08:59:31 / Session:  00:20:02 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2032 MB (FLW-8100)
+Information: The command 'dft_drc' cleared the undo history. (UNDO-016)
+Information: Connecting Test Enable signals of Clock Gating cells. (DFT-1318)
+Information: Start conversion of design for Test Design Rule Checking tool. (DFT-6540)
+Information: End conversion of design for Test Design Rule Checking tool. (DFT-6541)
+Information: Start conversion of synthesis libraries for Test Design Rule Checking tool. (DFT-6542)
+Information: End conversion of synthesis libraries for Test Design Rule Checking tool. (DFT-6543)
+Information: Start writing of test protocol for Test Design Rule Checking tool. (DFT-6544)
+Information: End writing of test protocol for Test Design Rule Checking tool. (DFT-6545)
+Information: Start writing of TetraMAX script for Test Design Rule Checking tool. (DFT-6546)
+Information: End writing of TetraMAX script for Test Design Rule Checking tool. (DFT-6547)
+Information: Running Pre-DFT DRC for all_dft mode
+Information: Start running TetraMAX Design Rule Checking. (DFT-6548)
+Information: End running TetraMAX Design Rule Checking. (DFT-6549)
+------------------------------------------------------------------------------
+ Begin prescan design rules checking...
+ ------------------------------------------------------------------------------
+ Begin reading test protocol file /tmp/fsc_top_728968.1047.spf...
+ Warning: Rule V14 (missing state) was violated 1 times.
+ End parsing STIL file /tmp/fsc_top_728968.1047.spf with 7 errors.
+ Error: Design rules checking failed: cannot exit DRC command mode. (M100)
+Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "multiclock_capture"). (V10-1)
+ Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "allclock_capture"). (V10-2)
+ Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "allclock_launch"). (V10-3)
+ Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "allclock_launch_capture"). (V10-4)
+ Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "capture_test_clk"). (V10-5)
+ Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "capture_reset_n"). (V10-6)
+ Error: Line 744 (/tmp/fsc_top_728968.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "capture"). (V10-7)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Ending   'dft_drc' (FLW-8001)
+Information: Time: 2026-07-01 08:59:33 / Session:  00:20:04 / Command:  00:00:01 / CPU:  00:00:01 / Memory: 2032 MB (FLW-8100)
+Information: Starting 'preview_dft' (FLW-8000)
+Information: Time: 2026-07-01 08:59:33 / Session:  00:20:04 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2032 MB (FLW-8100)
+Information: Connecting Test Enable signals of Clock Gating cells. (DFT-1318)
+Information: Start conversion of design for Test Design Rule Checking tool. (DFT-6540)
+Information: End conversion of design for Test Design Rule Checking tool. (DFT-6541)
+Information: Start conversion of synthesis libraries for Test Design Rule Checking tool. (DFT-6542)
+Information: End conversion of synthesis libraries for Test Design Rule Checking tool. (DFT-6543)
+Information: Start writing of test protocol for Test Design Rule Checking tool. (DFT-6544)
+Information: End writing of test protocol for Test Design Rule Checking tool. (DFT-6545)
+Information: Start writing of TetraMAX script for Test Design Rule Checking tool. (DFT-6546)
+Information: End writing of TetraMAX script for Test Design Rule Checking tool. (DFT-6547)
+Information: Running Pre-DFT DRC for all_dft mode
+Information: Start running TetraMAX Design Rule Checking. (DFT-6548)
+Information: End running TetraMAX Design Rule Checking. (DFT-6549)
+------------------------------------------------------------------------------
+ Begin prescan design rules checking...
+ ------------------------------------------------------------------------------
+ Begin reading test protocol file /tmp/fsc_top_748530.1047.spf...
+ Warning: Rule V14 (missing state) was violated 1 times.
+ End parsing STIL file /tmp/fsc_top_748530.1047.spf with 7 errors.
+ Error: Design rules checking failed: cannot exit DRC command mode. (M100)
+Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "multiclock_capture"). (V10-1)
+ Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "allclock_capture"). (V10-2)
+ Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "allclock_launch"). (V10-3)
+ Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "allclock_launch_capture"). (V10-4)
+ Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "capture_test_clk"). (V10-5)
+ Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "capture_reset_n"). (V10-6)
+ Error: Line 744 (/tmp/fsc_top_748530.1047.spf), miscounted items (Force primary inputs has 84 values instead of 91 in procedure "capture"). (V10-7)
+Error: Test DRC failed. (DFT-1800)
+Error: Unsuccessful DFT Architect (DFT-2021)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Ending   'preview_dft' (FLW-8001)
+Information: Time: 2026-07-01 08:59:35 / Session:  00:20:07 / Command:  00:00:02 / CPU:  00:00:02 / Memory: 2032 MB (FLW-8100)
+Error: 0
+      	Use error_info for more info. (CMD-013)

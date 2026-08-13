@@ -1,0 +1,2269 @@
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: Starting 'compile_fusion -from initial_opto -to initial_opto' (FLW-8000)
+Information: Time: 2026-07-01 09:07:34 / Session:  00:28:06 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB
+****************************************
+Report : report_tbcs
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 09:07:34 2026
+****************************************
+INFO: Start environment monitoring: recipes
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+Warning: The app option 'compile.flow.high_effort_timing' will be changed to Boolean type in the future.  To ensure compatibility, this app option should only be set to a value of 0 or 1 for now (FLW-3502)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Information: Change threshold for extractor is reset. (FLW-1300)
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_opto (FLW-8000)
+Information: Time: 2026-07-01 09:07:36 / Session:  00:28:08 / Command:  00:00:01 / CPU:  00:00:02 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------------------------------------------------
+flowStepUpsInPbo:: using optEnvMonitor()
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without NPLDRC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0694 seconds to build cellmap data
+INFO: compile_fusion is running in balanced flow mode
+INFO: Leakage Power Aware Optimization Enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+INFO: disable CRPR-based timing. 
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (8000 8000) (932008 930944)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+compile command begin                   CPU:   575 s (  0.16 hr )  ELAPSE:  1689 s (  0.47 hr )  MEM-PEAK:  2195 MB
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Info: update em.
+
+compile timing update complete          CPU:   579 s (  0.16 hr )  ELAPSE:  1690 s (  0.47 hr )  MEM-PEAK:  2195 MB
+
+compile initial QoR
+___________________
+Scenario Mapping Table
+1: ss0p95v125c.func
+2: ss0p95v125c.test
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: pll1_clk_in
+8: pll2_clk_in
+9: pixel_clk
+10: system_clk
+11: comp_clk
+12: i2c_scl
+13: system_clk_div2
+14: pll2_clk_div2
+15: panel_clk_inv_gate
+16: panel_clk_dly
+17: panel_clk_gate
+18: system_clk_int
+19: flash_clk_gate
+20: i2c_clk
+21: sdram_clk_gate
+22: sdram_clk
+23: pixel_comp_clk_pix
+24: test_clk
+25: system_clk_div2_test
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATHGROUP QOR 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV
+    1   1   0.0000     0.0000      0        -          -      -
+    1   2   0.0000     0.0000      0        -          -      -
+    1   3   0.0000     0.0000      0        -          -      -
+    1   4   0.0000     0.0000      0        -          -      -
+    1   5   0.0000     0.0000      0        -          -      -
+    1   6   1.8511     3.6598      2        -          -      -
+    1   7   0.0000     0.0000      0        -          -      -
+    1   8   0.0000     0.0000      0        -          -      -
+    1   9   0.0000     0.0000      0        -          -      -
+    1  10   0.0000     0.0000      0        -          -      -
+    1  11   0.0000     0.0000      0        -          -      -
+    1  12   0.0000     0.0000      0        -          -      -
+    1  13   0.0000     0.0000      0        -          -      -
+    1  14   0.0000     0.0000      0        -          -      -
+    1  15   0.0000     0.0000      0        -          -      -
+    1  16   0.0000     0.0000      0        -          -      -
+    1  17   0.0000     0.0000      0        -          -      -
+    1  18   0.0000     0.0000      0        -          -      -
+    1  19   0.0000     0.0000      0        -          -      -
+    1  20   0.0000     0.0000      0        -          -      -
+    1  21   0.0000     0.0000      0        -          -      -
+    1  22   0.0000     0.0000      0        -          -      -
+    1  23   0.0000     0.0000      0        -          -      -
+    2   1   0.0000     0.0000      0        -          -      -
+    2   2   0.0000     0.0000      0        -          -      -
+    2   3   0.0000     0.0000      0        -          -      -
+    2   4   0.0000     0.0000      0        -          -      -
+    2   5   0.0000     0.0000      0        -          -      -
+    2   6   0.0000     0.0000      0        -          -      -
+    2  24   0.0000     0.0000      0        -          -      -
+    2  25   0.0000     0.0000      0        -          -      -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCENARIO QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   1.8511     3.6598   0.0000      2        -          -      -        4     0.0152      222      6.581
+    2   *   0.0000     0.0000   0.0000      0        -          -      -        4     0.0152      222          -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESIGN QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   1.8511     3.6598   0.0000      2   0.0000     0.0000      0        4     0.0152      222      6.581    568016.75      36513       2494       2817
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+compile initial QoR Summary       WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+compile initial QoR Summary    1.8511     3.6598   0.0000      2   0.0000     0.0000      0        4      222      6.581    568016.75      36513
+Information: The netlist change observers are disabled for incremental extraction. (TIM-126)
+INFO: using 8 threads
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+compile initialization complete         CPU:   585 s (  0.16 hr )  ELAPSE:  1691 s (  0.47 hr )  MEM-PEAK:  2195 MB
+compile optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Information: The netlist change observers are enabled for incremental extraction. (TIM-127)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : false
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0632 seconds to build cellmap data
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+Total 0.2868 seconds to load 48144 cell instances into cellmap
+Moveable cells: 36483; Application fixed cells: 0; Macro cells: 0; User fixed cells: 11661
+Average cell width 3.0071, cell height 1.6720, cell area 5.0279 for total 36483 placed and application fixed cells
+Information: Starting compile_fusion / initial_opto / Optimization (1) (FLW-8000)
+Information: Time: 2026-07-01 09:07:41 / Session:  00:28:12 / Command:  00:00:06 / CPU:  00:00:19 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Optimization (1) / Timing Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:07:41 / Session:  00:28:13 / Command:  00:00:06 / CPU:  00:00:21 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Disable clock slack update for ideal clocks
+ Iter  1                                             5.21        0.00         -         -     563996.75        4.03       36513              0.47      2195
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+Information: Using default layer M5 (OPT-079)
+ Iter  1                                             5.17        0.00         -         -     563996.75        4.03       36513              0.47      2195
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Disable clock slack update for ideal clocks
+ Iter  1                                             5.12        0.00         -         -     563996.75        4.03       36513              0.47      2195
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.59        0.00         -      2364     563996.75           -       36513              0.47      2195
+Information: Ending   compile_fusion / initial_opto / Optimization (1) / Timing Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:07:44 / Session:  00:28:15 / Command:  00:00:09 / CPU:  00:00:28 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.59        0.00         -      2364     563996.75           -       36513              0.47      2195
+Information: Ending   compile_fusion / initial_opto / Optimization (1) (FLW-8001)
+Information: Time: 2026-07-01 09:07:44 / Session:  00:28:15 / Command:  00:00:09 / CPU:  00:00:28 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------
+running create_placement
+Corner Scaling is off, multiplier is 1.000000
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: timingScenario ss0p95v125c.func timingCorner ss0p95v125c.  Using corner ss0p95v125c for worst leakage corner. (OPT-078)
+Information: Using default layer M5 (OPT-079)
+Information: Nominal = 0.0353099  Design MT = 0.400000  Target = 0.1379810  MaxRC = 0.096804 Fast Target = 0.044405 (OPT-081)
+nplLib: default vr hor dist = 1155
+nplLib: default vr ver dist = 1155
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1154.78
+Pin density aware placement mode.
+Automatically computed max pin density per square micron = 1.25646
+Info: ICG auto bound skipping extra processing.
+Info: ICG AutoBound found 510 ICGs
+Info: ICG AutoBound created 0 group bounds 
+
+Placement Options:
+Effort:                        medium_effort       
+Timing Driven:                 false               
+Buffering Aware Timing Driven: false               
+Seed locs:                     true                
+Incremental:                   false               
+Congestion:                    false               
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.auto_density_control                       :	 enhanced            
+place.coarse.cong_restruct_effort                       :	 low                 
+place.coarse.cong_restruct_iterations                   :	 1                   
+place.coarse.congestion_expansion_direction             :	 both                
+place.coarse.enable_enhanced_soft_blockages             :	 true                
+place.coarse.icg_auto_bound                             :	 true                
+place.coarse.increased_cell_expansion                   :	 true                
+place.coarse.pin_density_aware                          :	 true                
+
+Start transferring placement data.
+Added 5 bounds for preserving balanced registers
+****** Net weight manager: report ******
+Weights included: Timing  
+Number of nets with non-default weights: 37028
+Timing factor = 1
+Non-default weight range: (0.962573, 2.88749)
+                             Min         Max         Avg       Stdev        Skew
+     Timing Weights     0.962573     2.88749           1    0.139449     4.28542
+      Final Weights     0.962573     2.88749           1    0.139449     4.28542
+Information: Automatic repeater spreading is enabled.
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Completed transferring placement data.
+Running placement using 8 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.50, congestion_driven_max_util 0.87. (PLACE-027)
+Information: HFW control 'off' invoked.
+coarse place 43% done.
+coarse place 57% done.
+coarse place 71% done.
+coarse place 86% done.
+coarse place 100% done.
+Information: Coarse placer wire length estimate = 1.4063e+06
+Information: Coarse placer active wire length estimate = 0
+Information: Coarse placer weighted wire length estimate = 1.42701e+06
+Information: Extraction observers are detached as design net change threshold is reached.
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+----------------------------------------------------------------
+Non-default App Option report
+All App Options have their default value.
+Information: Starting compile_fusion / initial_opto / Timing and Congestion Driven Placement (FLW-8000)
+Information: Time: 2026-07-01 09:07:49 / Session:  00:28:20 / Command:  00:00:14 / CPU:  00:00:42 / Memory: 2196 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------
+----------------------------------------------------------------
+Running congestion-aware direct-timing-driven placement
+Information: Current block utilization is '0.37780', effective utilization is '0.43015'. (OPT-055)
+chip utilization before DTDP: 0.43
+Start transferring placement data.
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without NPLDRC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_allowable_orient : false
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : true
+        place.legalize.max_legality_check_range : 50
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0631 seconds to build cellmap data
+Information: Creating advanced legalizer rule checker.
+Information: user defined min VT filler size is 2. The smallest size of filler cells should be 2.
+Information: Setting bounds and VA for block 'fsc_top'...
+Information: Setting up voltage area 'DEFAULT_VA'.
+Information: checking lib cells power/ground pins
+Information: Lib cells of site unit have their ground pins at bottom 
+
+Information: Legalizer threading is enabled with high effort (LGL-130)
+
+Information: Setting up cell instances...
+Information: All fillers in the reference libraries will be considered during legalization/check legality
+Information: Initializing site map 'unit' at {8 8} {932.008 930.944}.
+Information: Init siteMap unit with 6079 sites x 552 rows
+Adding rule engine Basic Rules version 1.0.0...
+Adding rule engine VT Implant Rules version 1.0.0...
+Adding rule engine OD Rules version 1.0.0...
+Adding rule engine TPO Rules version 1.0.0...
+Information: place.legalize.enable_pin_extension_for_pin_access is false.
+Adding rule engine Pin Access Rules version 1.0.0...
+Adding rule engine Span Rules version 1.0.0...
+Adding rule engine Index Rules version 1.0.0...
+Adding rule engine Color Rules version 1.0.0...
+Adding rule engine Inbound Rules version 1.0.0...
+Adding rule engine PG DRC Rules version 1.0.0...
+Adding rule engine Exp Rules version 1.0.0...
+Adding rule engine Under PG Rules version 1.0.0...
+Adding rule engine Chipfin Rules version 1.0.0...
+Adding rule engine Density Rules version 1.0.0...
+Adding rule engine User Rules version 1.0.0...
+Adding rule engine Back Side Rules version 1.0.0...
+Adding rule engine NP-Well Rules version 1.0.0...
+Adding rule engine Route-aware Pin Access Rules version 1.0.0...
+Adding rule engine Safety Register Rules version 1.0.0...
+Adding rule engine Soft Rules version 1.0.0...
+Information: extended cellmap search is on; max legality trials is 5000
+Information: Apply spacing rule on full inbound edge (place.legalize.apply_spacing_rule_full_inbound_edge): no
+Information: Use base site row as spacing rule sub row (for uni-row only) (place.legalize.use_base_site_row_as_spacing_rule_sub_row): no
+Information: Initializing CTS constraints...
+Information: User specified layer M3 will check pin color alignment
+Constructing pin color alignment legality info...
+Information: Reading Vertical abutment prohibit pattern from app option (place.legalize.vertical_abutment_forbidden_pairs)...
+	Format 1: label1-label2
+	Format 2: label1-label2-minConsecutivePairs
+	Format 3: label1-label2-minVertDist-maxVertDist
+	Format 4: label1-label2-minVertDist-maxVertDist-minConsecutivePairs
+Information: App option (place.legalize.vertical_abutment_forbidden_pairs) is empty.
+Information: Reading Vertical abutment prohibit pattern from PRF...
+Information: Is mixed-row flow: no
+Information: Enabling hard placement rule pin_color_align...
+Information: Adjusting SRAM1RW64x32 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW32x32 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW16x32 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW128x16 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW128x32 to a multi-height library cell. (LGL-336)
+Snapped 36483 standard cells to the nearest cellrow to improve the accuracy of congestion analysis.
+Information: Dynamic Rule Ordering (DRO): true
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Coarse placer is using floating point demand from GR.
+INFO: wire-opt feature for router enabled
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    7  Alloctr    7  Proc 13509 
+Printing options for 'route.common.*'
+common.connect_within_pins_by_layer_name                :	 {M1 via_all_pins}   
+common.extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name:	 {M1 0.1}            
+common.wire_on_grid_by_layer_name                       :	 {M1 false}          
+
+Printing options for 'route.global.*'
+global.deterministic                                    :	 on                  
+global.timing_driven                                    :	 false               
+
+Begin global routing.
+Warning: Cell contains tie connections which are not connected to real PG. (ZRT-511)
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M7
+Turn off antenna since no rule is specified
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Skipping 1 internal pins that are not physical. Set route.common.verbose_level to > 0 and run routing command to get skipped pin names.
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Information: AutoNdr rule can't be found. Check the settings.
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Warning: The value of route.common.extra_nonpreferred_direction_wire_cost_multiplier_by_layer_name is different from default value or mega switch value. Please make sure the value is expected. (ZRT-704)
+Warning: Standard cell pin MUX41X2_HVT/S0 has no valid via regions. (ZRT-044)
+Warning: Cell u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/u_rf_d256x17_f166_bist/phfnr_buf_42358 is placed overlapping with other cells at {{123.520 73.208} {124.280 74.880}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_address_fifo/rdata2_reg[15] is placed overlapping with other cells at {{222.168 69.864} {227.640 71.536}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A16161 is placed overlapping with other cells at {{365.656 19.704} {366.872 21.376}}. (ZRT-763)
+Warning: Cell u_YCrCb2RGB/largecounter1/count_reg[13] is placed overlapping with other cells at {{484.216 16.360} {489.688 18.032}}. (ZRT-763)
+Warning: Cell u_YCrCb2RGB/X_int_reg[2] is placed overlapping with other cells at {{572.072 23.048} {577.240 24.720}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/sum_table_write_data_reg[8] is placed overlapping with other cells at {{657.800 9.672} {662.056 11.344}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap/A32026 is placed overlapping with other cells at {{736.840 9.672} {738.056 11.344}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/phfnr_buf_41112 is placed overlapping with other cells at {{839.592 69.864} {840.352 71.536}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/DOUT_D1_reg[66] is placed overlapping with other cells at {{122.608 143.432} {128.080 145.104}}. (ZRT-763)
+Warning: Cell u_datapath/u_SDR_controller/write_enable2_delays_reg[5] is placed overlapping with other cells at {{218.520 146.776} {223.992 148.448}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_output_buf/ptr_shiftout_reg[45] is placed overlapping with other cells at {{376.752 83.240} {382.224 84.912}}. (ZRT-763)
+Warning: Cell u_datapath/u_SDR_controller/u_counter1/count_reg[12] is placed overlapping with other cells at {{401.072 83.240} {406.544 84.912}}. (ZRT-763)
+Warning: Cell u_YCrCb2RGB/B1_int_reg[1] is placed overlapping with other cells at {{508.536 83.240} {513.704 84.912}}. (ZRT-763)
+Warning: Cell u_datapath/u_pixel_in_buffer/A27515 is placed overlapping with other cells at {{595.176 143.432} {596.696 145.104}}. (ZRT-763)
+Warning: Cell u_YCrCb2RGB/hs_os_reg is placed overlapping with other cells at {{658.408 93.272} {663.880 94.944}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap/u_sr_d1kx16_f166c_bist/A29098 is placed overlapping with other cells at {{736.840 79.896} {739.424 81.568}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/u_sr_d1kx16_f166c_bist/A28997 is placed overlapping with other cells at {{836.248 96.616} {837.312 98.288}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/u_rf_d256x17_f166_bist/compile_HFSBUF_2_44301 is placed overlapping with other cells at {{123.064 208.640} {124.280 210.312}}. (ZRT-763)
+Warning: Cell u_datapath/u_SDR_controller/address_fifo_empty_s3_reg is placed overlapping with other cells at {{385.872 196.936} {390.432 198.608}}. (ZRT-763)
+Warning: Cell u_datapath/u_SDR_controller/u_counter2/count_reg[6] is placed overlapping with other cells at {{416.272 163.496} {421.744 165.168}}. (ZRT-763)
+Warning: Cell u_YCrCb2RGB/X_int_reg[1] is placed overlapping with other cells at {{508.536 176.872} {513.704 178.544}}. (ZRT-763)
+Warning: Cell u_datapath/u_pixel_in_buffer/A27509 is placed overlapping with other cells at {{594.872 158.480} {596.392 160.152}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap/u_sr_d1kx16_f166g_bist/current_state_reg[3] is placed overlapping with other cells at {{736.840 233.720} {742.312 235.392}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap/A32087 is placed overlapping with other cells at {{839.136 161.824} {840.352 163.496}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/compile_HFSBUF_4_44284 is placed overlapping with other cells at {{63.480 262.144} {65.000 263.816}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_address_fifo/u_rf_d256x17_f166_wrap/A33391 is placed overlapping with other cells at {{81.112 267.160} {82.632 268.832}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_fifo_sync_d256x11_f116_ewa_mem/u_rf_d256x11_f116_wrap/u_rf_d256x11_f116_bist/bist_addr_reg[1] is placed overlapping with other cells at {{174.288 303.944} {179.760 305.616}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A16785 is placed overlapping with other cells at {{301.208 252.112} {304.552 253.784}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/current_outorder2_reg[2] is placed overlapping with other cells at {{386.480 245.424} {391.952 247.096}}. (ZRT-763)
+Warning: Cell u_freq_detect/A31163 is placed overlapping with other cells at {{415.208 240.408} {416.728 242.080}}. (ZRT-763)
+Warning: Cell phfnr_buf_40821 is placed overlapping with other cells at {{486.344 243.752} {487.104 245.424}}. (ZRT-763)
+Warning: Cell u_datapath/u_pixel_in_buffer/blanking_pixels_reg[5] is placed overlapping with other cells at {{562.648 238.736} {568.120 240.408}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/ctmi_42708 is placed overlapping with other cells at {{647.312 305.616} {649.440 307.288}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap/u_sr_d1kx16_f166g_bist/current_state_reg[2] is placed overlapping with other cells at {{736.840 247.096} {742.312 248.768}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap/u_sr_d1kx16_f166c_bist/A29249 is placed overlapping with other cells at {{838.376 242.080} {840.352 243.752}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_address_fifo/u_wptr_full_address_fifo/wptr_reg[8] is placed overlapping with other cells at {{104.824 318.992} {110.296 320.664}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A38608 is placed overlapping with other cells at {{191.160 325.680} {193.744 327.352}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A16581 is placed overlapping with other cells at {{256.216 322.336} {257.736 324.008}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/ctmi_43103 is placed overlapping with other cells at {{330.240 325.680} {332.064 327.352}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/iram_word_reg[9] is placed overlapping with other cells at {{397.880 330.696} {403.352 332.368}}. (ZRT-763)
+Warning: Cell u_DE_generator/u_hsync_count/count_reg[0] is placed overlapping with other cells at {{530.880 320.664} {536.352 322.336}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/u_video_synthesis/A28389 is placed overlapping with other cells at {{576.936 327.352} {578.456 329.024}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/phfnr_buf_40995 is placed overlapping with other cells at {{655.520 324.008} {656.280 325.680}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/current_line_num3_b_reg[3] is placed overlapping with other cells at {{794.904 318.992} {799.160 320.664}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/A20736 is placed overlapping with other cells at {{804.936 325.680} {806.456 327.352}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/A22072 is placed overlapping with other cells at {{921.520 320.664} {923.344 322.336}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/DOUT_STATIC_NEXTCOLOR_reg[63] is placed overlapping with other cells at {{78.072 461.112} {83.544 462.784}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/ctmi_37726 is placed overlapping with other cells at {{93.424 402.592} {94.792 404.264}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A18762 is placed overlapping with other cells at {{187.512 410.952} {188.880 412.624}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/init_done_lc_reg[7] is placed overlapping with other cells at {{241.928 412.624} {247.400 414.296}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A19885 is placed overlapping with other cells at {{319.448 409.280} {320.968 410.952}}. (ZRT-763)
+Warning: Cell u_register_map_control/choice_53_reg[20] is placed overlapping with other cells at {{463.544 399.248} {469.016 400.920}}. (ZRT-763)
+Warning: Cell u_i2c_control/A25881 is placed overlapping with other cells at {{481.024 409.280} {483.000 410.952}}. (ZRT-763)
+Warning: Cell u_flash_control/A24944 is placed overlapping with other cells at {{567.664 404.264} {569.184 405.936}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/ms_pos_mem_a_reg[20][6] is placed overlapping with other cells at {{643.512 415.968} {648.984 417.640}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/ms_pos_mem_b_reg[20][1] is placed overlapping with other cells at {{736.688 404.264} {742.160 405.936}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/ctmi_22742 is placed overlapping with other cells at {{844.000 410.952} {844.760 412.624}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/ms_pos_mem_c_reg[25][6] is placed overlapping with other cells at {{891.272 404.264} {896.744 405.936}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A15905 is placed overlapping with other cells at {{148.448 514.616} {149.968 516.288}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/new_iram_del1_reg[8] is placed overlapping with other cells at {{158.024 484.520} {163.496 486.192}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/DOUT_STATIC_NEXTCOLOR_DLY1_reg[23] is placed overlapping with other cells at {{269.136 484.520} {273.392 486.192}}. (ZRT-763)
+Warning: Cell u_flash_control/rd_sched_addr_reg[1] is placed overlapping with other cells at {{327.200 482.848} {332.672 484.520}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/outorder_reg[10][2] is placed overlapping with other cells at {{400.768 492.880} {406.240 494.552}}. (ZRT-763)
+Warning: Cell u_flash_control/A24820 is placed overlapping with other cells at {{559.152 484.520} {560.064 486.192}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/phfnr_buf_41322 is placed overlapping with other cells at {{588.944 481.176} {589.704 482.848}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/wr_addr2_r_reg[7] is placed overlapping with other cells at {{669.352 484.520} {674.824 486.192}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/A26557 is placed overlapping with other cells at {{720.424 481.176} {721.944 482.848}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/bist_addr_reg[6] is placed overlapping with other cells at {{848.408 484.520} {853.880 486.192}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/A29702 is placed overlapping with other cells at {{883.520 489.536} {884.736 491.208}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A15813 is placed overlapping with other cells at {{143.432 578.152} {144.952 579.824}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS1_wrap/u_sr_d512x72f116_MMS1_bist/A30551 is placed overlapping with other cells at {{186.448 564.776} {187.512 566.448}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/A15975 is placed overlapping with other cells at {{256.520 559.760} {257.736 561.432}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_rst_framesync/phfnr_buf_41614 is placed overlapping with other cells at {{321.576 563.104} {322.336 564.776}}. (ZRT-763)
+Warning: Cell u_datapath/u_gamma_correction/data_out_reg[10] is placed overlapping with other cells at {{463.544 561.432} {469.016 563.104}}. (ZRT-763)
+Warning: Cell u_datapath/u_output_fifo_control/out_count_reg[6] is placed overlapping with other cells at {{486.344 564.776} {491.816 566.448}}. (ZRT-763)
+Warning: Cell u_datapath/u_shiftout/buffer_in2_reg[9] is placed overlapping with other cells at {{598.216 566.448} {603.688 568.120}}. (ZRT-763)
+Warning: Cell u_datapath/u_output_fifo_control/u_output_fifo_1/u_sr_d1kx32_f233_wrap/A30314 is placed overlapping with other cells at {{654.000 624.968} {655.520 626.640}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/u_sr_d1kx16_f166_bist/A29521 is placed overlapping with other cells at {{736.840 561.432} {738.816 563.104}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/plane_group_g_reg[0] is placed overlapping with other cells at {{836.552 606.576} {842.024 608.248}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/parameters_reg[7] is placed overlapping with other cells at {{143.584 656.736} {149.056 658.408}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_fifo_sync_d64x29_f116_ctrl_fifo/status_pointer_reg[3] is placed overlapping with other cells at {{309.720 645.032} {315.192 646.704}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/red_parameters2_reg[8] is placed overlapping with other cells at {{323.704 645.032} {329.176 646.704}}. (ZRT-763)
+Warning: Cell u_datapath/u_rotating_cache_control/rc1/A22521 is placed overlapping with other cells at {{400.616 645.032} {402.136 646.704}}. (ZRT-763)
+Warning: Cell u_datapath/u_rotating_cache_control/rc2/A24346 is placed overlapping with other cells at {{546.992 643.360} {548.208 645.032}}. (ZRT-763)
+Warning: Cell u_datapath/u_rotating_cache_control/rc2/mem1_reg[11] is placed overlapping with other cells at {{558.544 643.360} {564.016 645.032}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/A26688 is placed overlapping with other cells at {{738.512 648.376} {740.640 650.048}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/A32277 is placed overlapping with other cells at {{836.400 646.704} {837.920 648.376}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/A31098 is placed overlapping with other cells at {{29.128 780.464} {30.344 782.136}}. (ZRT-763)
+Warning: Cell u_datapath/u_SDR_controller/write_enable2_delays_reg[3] is placed overlapping with other cells at {{143.584 755.384} {149.056 757.056}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/u_sr_d512x72f116_MMS2_bist/bist_wr_reg is placed overlapping with other cells at {{160.456 780.464} {165.928 782.136}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/mindx1_reg[2] is placed overlapping with other cells at {{290.416 760.400} {294.672 762.072}}. (ZRT-763)
+Warning: Cell u_datapath/u_rotating_cache_control/rc1/A23179 is placed overlapping with other cells at {{419.464 721.944} {422.808 723.616}}. (ZRT-763)
+Warning: Cell u_datapath/u_rotating_cache_control/rc2/A24149 is placed overlapping with other cells at {{489.536 723.616} {490.448 725.288}}. (ZRT-763)
+Warning: Cell u_datapath/u_SDR_controller/data_in1_reg[26] is placed overlapping with other cells at {{565.688 721.944} {571.160 723.616}}. (ZRT-763)
+Warning: Cell u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/A30217 is placed overlapping with other cells at {{646.856 780.464} {648.376 782.136}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/A29404 is placed overlapping with other cells at {{739.120 738.664} {740.336 740.336}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/bist_en_d2_reg is placed overlapping with other cells at {{834.728 730.304} {840.200 731.976}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_sr_d512x72f116_MMS2_wrap/u_sr_d512x72f116_MMS2_bist/ctmi_1157 is placed overlapping with other cells at {{143.432 847.344} {144.192 849.016}}. (ZRT-763)
+Warning: Cell u_main_controller_top/u_main_controller/u_sr_d512x72f116_MM0_wrap/u_sr_d512x72f116_MM0_bist/A30728 is placed overlapping with other cells at {{294.976 803.872} {296.952 805.544}}. (ZRT-763)
+Warning: Cell u_datapath/u_output_fifo_control/u_output_fifo_0/A28152 is placed overlapping with other cells at {{559.304 803.872} {560.824 805.544}}. (ZRT-763)
+Warning: Cell u_datapath/u_output_fifo_control/u_output_fifo_0/u_sr_d1kx32_f233_wrap/u_sr_d1kx32_f233_bist/bist_addr_reg[2] is placed overlapping with other cells at {{582.408 808.888} {587.880 810.560}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap1/A32474 is placed overlapping with other cells at {{739.424 802.200} {740.640 803.872}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/bist_3rd_reg is placed overlapping with other cells at {{836.552 827.280} {842.024 828.952}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_b/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/A29908 is placed overlapping with other cells at {{736.840 895.832} {739.576 897.504}}. (ZRT-763)
+Warning: Cell u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/u_sr_d1kx16_f166_bist/A29445 is placed overlapping with other cells at {{835.336 885.800} {837.312 887.472}}. (ZRT-763)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[End of Read DB] Stage (MB): Used   79  Alloctr   83  Proc  -32 
+[End of Read DB] Total (MB): Used   87  Alloctr   90  Proc 13477 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00um,0.00um,940.01um,938.94um)
+Number of routing layers = 10
+layer M1, dir Hor, min width = 0.05um, min space = 0.05um pitch = 0.152um
+layer M2, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.152um
+layer M3, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.304um
+layer M4, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.304um
+layer M5, dir Hor, min width = 0.056um, min space = 0.056um pitch = 0.608um
+layer M6, dir Ver, min width = 0.056um, min space = 0.056um pitch = 0.608um
+layer M7, dir Hor, min width = 0.056um, min space = 0.056um pitch = 1.216um
+layer M8, dir Ver, min width = 0.056um, min space = 0.056um pitch = 1.216um
+layer M9, dir Hor, min width = 0.16um, min space = 0.16um pitch = 2.432um
+layer MRDL, dir Ver, min width = 2um, min space = 2um pitch = 4.864um
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    9  Alloctr    8  Proc    0 
+[End of Build Tech Data] Total (MB): Used   96  Alloctr   99  Proc 13477 
+Net statistics:
+Total number of nets     = 37133
+Number of nets to route  = 36851
+Number of single or zero port nets = 5
+174 nets are fully connected,
+ of which 174 are detail routed and 0 are global routed.
+Net length statistics: 
+Net Count(Ignore Fully Rted) 36954, Total Half Perimeter Wire Length (HPWL) 1416789 microns
+HPWL   0 ~   50 microns: Net Count    29886	Total HPWL       370930 microns
+HPWL  50 ~  100 microns: Net Count     3337	Total HPWL       239597 microns
+HPWL 100 ~  200 microns: Net Count     2355	Total HPWL       331773 microns
+HPWL 200 ~  300 microns: Net Count      815	Total HPWL       196184 microns
+HPWL 300 ~  400 microns: Net Count      294	Total HPWL       100046 microns
+HPWL 400 ~  500 microns: Net Count       99	Total HPWL        44054 microns
+HPWL 500 ~  600 microns: Net Count       48	Total HPWL        26802 microns
+HPWL 600 ~  700 microns: Net Count       43	Total HPWL        27192 microns
+HPWL 700 ~  800 microns: Net Count       14	Total HPWL        10642 microns
+HPWL 800 ~  900 microns: Net Count        7	Total HPWL         5965 microns
+HPWL 900 ~ 1000 microns: Net Count       13	Total HPWL        12242 microns
+HPWL     > 1000 microns: Net Count       43	Total HPWL        51362 microns
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used   29  Alloctr   29  Proc    0 
+[End of Build All Nets] Total (MB): Used  125  Alloctr  129  Proc 13477 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 562 gCells x 562 gCells
+Average gCell capacity  3.79	 on layer (1)	 M1
+Average gCell capacity  5.30	 on layer (2)	 M2
+Average gCell capacity  2.98	 on layer (3)	 M3
+Average gCell capacity  3.03	 on layer (4)	 M4
+Average gCell capacity  1.46	 on layer (5)	 M5
+Average gCell capacity  2.63	 on layer (6)	 M6
+Average gCell capacity  1.09	 on layer (7)	 M7
+Average gCell capacity  0.61	 on layer (8)	 M8
+Average gCell capacity  0.00	 on layer (9)	 M9
+Average gCell capacity  0.00	 on layer (10)	 MRDL
+Average number of tracks per gCell 10.99	 on layer (1)	 M1
+Average number of tracks per gCell 11.01	 on layer (2)	 M2
+Average number of tracks per gCell 5.50	 on layer (3)	 M3
+Average number of tracks per gCell 5.51	 on layer (4)	 M4
+Average number of tracks per gCell 2.75	 on layer (5)	 M5
+Average number of tracks per gCell 2.75	 on layer (6)	 M6
+Average number of tracks per gCell 1.38	 on layer (7)	 M7
+Average number of tracks per gCell 1.38	 on layer (8)	 M8
+Average number of tracks per gCell 0.69	 on layer (9)	 M9
+Average number of tracks per gCell 0.35	 on layer (10)	 MRDL
+Number of gCells = 3158440
+Current Stage stats:
+[End of Build Congestion Map] Elapsed real time: 0:00:01 
+[End of Build Congestion Map] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:02
+[End of Build Congestion Map] Stage (MB): Used   43  Alloctr   44  Proc    0 
+[End of Build Congestion Map] Total (MB): Used  169  Alloctr  174  Proc 13477 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 562 gCells x 562 gCells
+Current Stage stats:
+[End of Add Nets Demand] Elapsed real time: 0:00:00 
+[End of Add Nets Demand] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Add Nets Demand] Stage (MB): Used    1  Alloctr    1  Proc    0 
+[End of Add Nets Demand] Total (MB): Used  171  Alloctr  175  Proc 13477 
+Number of user frozen nets = 0
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:01 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:02 total=0:00:02
+[End of Build Data] Stage (MB): Used   84  Alloctr   85  Proc    0 
+[End of Build Data] Total (MB): Used  171  Alloctr  175  Proc 13477 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 562 gCells x 562 gCells
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:01 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
+[End of Blocked Pin Detection] Stage (MB): Used  106  Alloctr  106  Proc   18 
+[End of Blocked Pin Detection] Total (MB): Used  278  Alloctr  282  Proc 13495 
+Information: Using 8 threads for routing. (ZRT-444)
+Information: Placement fast mode ON
+Information: Multiple gcell levels ON
+Information: Buffer distance is estimated to be ~862.0000um (515 gCells)
+
+Start GR phase 0
+Number of partitions: 1 (1 x 1)
+Size of partitions: 562 gCells x 562 gCells
+10% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+20% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+30% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+40% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+50% of nets complete Elapsed cpu time: 0:00:00 Elapsed real time: 0:00:00
+60% of nets complete Elapsed cpu time: 0:00:01 Elapsed real time: 0:00:01
+70% of nets complete Elapsed cpu time: 0:00:01 Elapsed real time: 0:00:01
+80% of nets complete Elapsed cpu time: 0:00:02 Elapsed real time: 0:00:02
+90% of nets complete Elapsed cpu time: 0:00:03 Elapsed real time: 0:00:03
+[rtAllBotParts] Elapsed real time: 0:00:09 
+[rtAllBotParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:09 total=0:00:09
+[rtTop] Elapsed real time: 0:00:00 
+[rtTop] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:09 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:09 total=0:00:09
+[End of Initial Routing] Stage (MB): Used   40  Alloctr   41  Proc   37 
+[End of Initial Routing] Total (MB): Used  319  Alloctr  324  Proc 13532 
+Initial. Routing result:
+Initial. Both Dirs: Dmd-Cap  =  5769 Max = 19 GRCs = 36712 (5.81%)
+Initial. H routing: Dmd-Cap  =  4950 Max =  4 (GRCs =  6) GRCs = 35771 (11.33%)
+Initial. V routing: Dmd-Cap  =   818 Max = 19 (GRCs =  1) GRCs =   941 (0.30%)
+Initial. Both Dirs: Overflow = 10849 Max = 21 GRCs = 44754 (7.08%)
+Initial. H routing: Overflow =  7638 Max =  5 (GRCs =  2) GRCs = 40597 (12.85%)
+Initial. V routing: Overflow =  3211 Max = 21 (GRCs =  1) GRCs =  4157 (1.32%)
+Initial. M1         Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =  2373 Max = 21 (GRCs =  1) GRCs =  1916 (0.61%)
+Initial. M3         Overflow =  2507 Max =  5 (GRCs =  2) GRCs =  2494 (0.79%)
+Initial. M4         Overflow =   226 Max =  3 (GRCs =  3) GRCs =   265 (0.08%)
+Initial. M5         Overflow =   334 Max =  3 (GRCs =  5) GRCs =   742 (0.23%)
+Initial. M6         Overflow =   611 Max =  3 (GRCs =  4) GRCs =  1976 (0.63%)
+Initial. M7         Overflow =  4796 Max =  3 (GRCs = 50) GRCs = 37361 (11.83%)
+Initial. M8         Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. MRDL       Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+
+
+Overflow over macro areas
+
+Initial. Both Dirs: Overflow =  5942 Max =  4 GRCs = 40743 (14.39%)
+Initial. H routing: Overflow =  5251 Max =  4 (GRCs =  8) GRCs = 38607 (27.27%)
+Initial. V routing: Overflow =   690 Max =  4 (GRCs =  3) GRCs =  2136 (1.51%)
+Initial. M1         Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =   115 Max =  4 (GRCs =  3) GRCs =   137 (0.10%)
+Initial. M3         Overflow =   336 Max =  4 (GRCs =  8) GRCs =   710 (0.50%)
+Initial. M4         Overflow =    70 Max =  3 (GRCs =  3) GRCs =   128 (0.09%)
+Initial. M5         Overflow =   131 Max =  3 (GRCs =  5) GRCs =   548 (0.39%)
+Initial. M6         Overflow =   505 Max =  3 (GRCs =  4) GRCs =  1871 (1.32%)
+Initial. M7         Overflow =  4784 Max =  3 (GRCs = 50) GRCs = 37349 (26.38%)
+Initial. M8         Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. MRDL       Overflow =     0 Max =  0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 1545019.68
+Initial. Layer M1 wire length = 116.98
+Initial. Layer M2 wire length = 467124.68
+Initial. Layer M3 wire length = 449676.21
+Initial. Layer M4 wire length = 195244.63
+Initial. Layer M5 wire length = 158495.49
+Initial. Layer M6 wire length = 143746.44
+Initial. Layer M7 wire length = 130615.25
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Layer MRDL wire length = 0.00
+Initial. Total Number of Contacts = 300414
+Initial. Via VIA12SQ_C count = 136161
+Initial. Via VIA23SQ_C count = 131651
+Initial. Via VIA34SQ_C count = 12518
+Initial. Via VIA45SQ_C count = 9211
+Initial. Via VIA56SQ_C count = 5112
+Initial. Via VIA67SQ_C count = 5761
+Initial. Via VIA78SQ_C count = 0
+Initial. Via VIA89_C count = 0
+Initial. Via VIA9RDL count = 0
+Initial. completed.
+
+Start GR phase 1
+Wed Jul  1 09:08:04 2026
+Number of partitions: 16 (4 x 4)
+Size of partitions: 160 gCells x 160 gCells
+10% of nets complete Elapsed cpu time: 0:00:03 Elapsed real time: 0:00:01
+20% of nets complete Elapsed cpu time: 0:00:06 Elapsed real time: 0:00:02
+30% of nets complete Elapsed cpu time: 0:00:06 Elapsed real time: 0:00:02
+40% of nets complete Elapsed cpu time: 0:00:06 Elapsed real time: 0:00:02
+50% of nets complete Elapsed cpu time: 0:00:06 Elapsed real time: 0:00:02
+60% of nets complete Elapsed cpu time: 0:00:06 Elapsed real time: 0:00:02
+70% of nets complete Elapsed cpu time: 0:00:07 Elapsed real time: 0:00:02
+80% of nets complete Elapsed cpu time: 0:00:07 Elapsed real time: 0:00:02
+90% of nets complete Elapsed cpu time: 0:00:07 Elapsed real time: 0:00:02
+[rtAllParts] Elapsed real time: 0:00:02 
+[rtAllParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:08 total=0:00:08
+Number of partitions: 16 (4 x 4)
+Size of partitions: 160 gCells x 160 gCells
+[updNetsDmd] Elapsed real time: 0:00:00 
+[updNetsDmd] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:02 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:08 total=0:00:08
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    3  Proc    0 
+[End of Phase1 Routing] Total (MB): Used  319  Alloctr  327  Proc 13532 
+phase1. Routing result:
+phase1. Both Dirs: Dmd-Cap  =   561 Max = 14 GRCs =   447 (0.07%)
+phase1. H routing: Dmd-Cap  =   361 Max =  4 (GRCs =   2) GRCs =   312 (0.10%)
+phase1. V routing: Dmd-Cap  =   200 Max = 14 (GRCs =   1) GRCs =   135 (0.04%)
+phase1. Both Dirs: Overflow =  2475 Max = 15 GRCs =  2092 (0.33%)
+phase1. H routing: Overflow =  1700 Max =  5 (GRCs =   1) GRCs =  1443 (0.46%)
+phase1. V routing: Overflow =   775 Max = 15 (GRCs =   1) GRCs =   649 (0.21%)
+phase1. M1         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =   577 Max = 15 (GRCs =   1) GRCs =   452 (0.14%)
+phase1. M3         Overflow =  1342 Max =  5 (GRCs =   1) GRCs =  1092 (0.35%)
+phase1. M4         Overflow =    63 Max =  1 (GRCs =  63) GRCs =    63 (0.02%)
+phase1. M5         Overflow =   162 Max =  2 (GRCs =   7) GRCs =   155 (0.05%)
+phase1. M6         Overflow =   135 Max =  2 (GRCs =   1) GRCs =   134 (0.04%)
+phase1. M7         Overflow =   196 Max =  1 (GRCs = 196) GRCs =   196 (0.06%)
+phase1. M8         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. MRDL       Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+
+
+Overflow over macro areas
+
+phase1. Both Dirs: Overflow =   365 Max =  2 GRCs =   355 (0.13%)
+phase1. H routing: Overflow =   280 Max =  2 (GRCs =   8) GRCs =   272 (0.19%)
+phase1. V routing: Overflow =    85 Max =  2 (GRCs =   2) GRCs =    83 (0.06%)
+phase1. M1         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =    10 Max =  2 (GRCs =   1) GRCs =     9 (0.01%)
+phase1. M3         Overflow =    77 Max =  2 (GRCs =   8) GRCs =    69 (0.05%)
+phase1. M4         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. M5         Overflow =    20 Max =  1 (GRCs =  20) GRCs =    20 (0.01%)
+phase1. M6         Overflow =    75 Max =  2 (GRCs =   1) GRCs =    74 (0.05%)
+phase1. M7         Overflow =   183 Max =  1 (GRCs = 183) GRCs =   183 (0.13%)
+phase1. M8         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+phase1. MRDL       Overflow =     0 Max =  0 (GRCs =   0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 1564964.41
+phase1. Layer M1 wire length = 151.47
+phase1. Layer M2 wire length = 470947.74
+phase1. Layer M3 wire length = 453246.28
+phase1. Layer M4 wire length = 206924.68
+phase1. Layer M5 wire length = 162592.74
+phase1. Layer M6 wire length = 145270.00
+phase1. Layer M7 wire length = 125818.12
+phase1. Layer M8 wire length = 13.38
+phase1. Layer M9 wire length = 0.00
+phase1. Layer MRDL wire length = 0.00
+phase1. Total Number of Contacts = 306723
+phase1. Via VIA12SQ_C count = 136217
+phase1. Via VIA23SQ_C count = 133341
+phase1. Via VIA34SQ_C count = 15116
+phase1. Via VIA45SQ_C count = 10446
+phase1. Via VIA56SQ_C count = 5484
+phase1. Via VIA67SQ_C count = 6105
+phase1. Via VIA78SQ_C count = 14
+phase1. Via VIA89_C count = 0
+phase1. Via VIA9RDL count = 0
+phase1. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:16 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:22 total=0:00:23
+[End of Whole Chip Routing] Stage (MB): Used  232  Alloctr  236  Proc   55 
+[End of Whole Chip Routing] Total (MB): Used  319  Alloctr  327  Proc 13532 
+
+Congestion utilization per direction:
+Average vertical track utilization   = 17.06 %
+Peak    vertical track utilization   = 200.00 %
+Average horizontal track utilization = 17.57 %
+Peak    horizontal track utilization = 300.00 %
+
+[End of Global Routing] Elapsed real time: 0:00:16 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:22 total=0:00:23
+[End of Global Routing] Stage (MB): Used  181  Alloctr  185  Proc   55 
+[End of Global Routing] Total (MB): Used  268  Alloctr  276  Proc 13532 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[End of dbOut] Elapsed real time: 0:00:00 
+[End of dbOut] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of dbOut] Stage (MB): Used -123  Alloctr -131  Proc    0 
+[End of dbOut] Total (MB): Used   36  Alloctr   37  Proc 13532 
+Using per-layer congestion maps for congestion reduction.
+Information: 47.56% of design has horizontal routing density above target_routing_density of 0.80.
+Information: 43.05% of design has vertical routing density above target_routing_density of 0.80.
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Completed transferring placement data.
+Running placement using 8 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.60, congestion_driven_max_util 0.89. (PLACE-027)
+Information: HFW control 'off' invoked.
+coarse place 100% done.
+Warning: There is insufficient area available to achieve the target routing density of 0.80. Using a value of 0.81 instead. (PLACE-029)
+Information: Reducing cell density for 8.4% of the movable cells to alleviate congestion. This changes the average cell density in non-congested areas from 0.411 to 0.419. (PLACE-030)
+Completed Timing-driven placement, Elapsed time =   0: 0:19 
+Moved 0 out of 46739 cells, ratio = 0.000000
+----------------------------------------------------------------
+Information: 87 out of 92 LGL-336 messages were not printed due to limit 5  (MSG-3913)
+----------------------------------------------------------------
+----------------------------------------------------------------
+Running congestion-aware direct-timing-driven placement
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Corner Scaling is off, multiplier is 1.000000
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: timingScenario ss0p95v125c.func timingCorner ss0p95v125c.  Using corner ss0p95v125c for worst leakage corner. (OPT-078)
+Information: Using default layer M5 (OPT-079)
+Information: Nominal = 0.0353099  Design MT = 0.400000  Target = 0.1379810  MaxRC = 0.096804 Fast Target = 0.044405 (OPT-081)
+nplLib: default vr hor dist = 1155
+nplLib: default vr ver dist = 1155
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1154.78
+Pin density aware placement mode.
+Automatically computed max pin density per square micron = 1.25646
+
+Placement Options:
+Effort:                        medium_effort       
+Timing Driven:                 true                
+Buffering Aware Timing Driven: false               
+Seed locs:                     true                
+Incremental:                   false               
+Congestion:                    true                
+Congestion Effort:             medium              
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.auto_density_control                       :	 enhanced            
+place.coarse.cong_restruct_effort                       :	 low                 
+place.coarse.cong_restruct_iterations                   :	 1                   
+place.coarse.congestion_expansion_direction             :	 both                
+place.coarse.enable_enhanced_soft_blockages             :	 true                
+place.coarse.icg_auto_bound                             :	 true                
+place.coarse.increased_cell_expansion                   :	 true                
+place.coarse.pin_density_aware                          :	 true                
+
+Info: ICG auto bound skipping extra processing.
+Info: ICG AutoBound found 510 ICGs
+Info: ICG AutoBound created 0 group bounds 
+Information: Activity propagation will be performed for scenario ss0p95v125c.func.
+Information: Doing activity propagation for mode 'func' and corner 'ss0p95v125c' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario ss0p95v125c.func (POW-052)
+Information: Running switching activity propagation with 8 threads!
+
+ **** Information : No. of simulation cycles = 7 ****
+Warning: a large fraction of the nets have zero toggle rate (42.3004%)
+****** eLpp weights (with caps) (no lengths)
+Number of nets: 37028, of which 35844 non-clock nets
+Number of nets with 0 toggle rate: 15663 (42.3004%)
+Max toggle rate = 0.330033, average toggle rate = 0.00334264
+Max non-clock toggle rate = 0.0829485
+eLpp weight range = (0, 60.2388)
+*** 105 nets are filtered out
+Start transferring placement data.
+****** Net weight manager: report ******
+Weights included: eLpp  Timing  
+Number of nets with non-default weights: 37028
+Amt power = 0.1
+Timing factor = 1
+Non-default weight range: (0.865939, 6.88982)
+                             Min         Max         Avg       Stdev        Skew
+       Toggle Rates            0    0.330033  0.00334266   0.0156126     14.0659
+      Power Weights            0     60.2388    0.610114     2.84966     14.0659
+     Timing Weights     0.962154     2.88623           1    0.140957     4.24931
+      Final Weights     0.865939     6.88982    0.961011    0.315247      10.513
+Information: Automatic repeater spreading is enabled.
+Information: Automatic timing control is enabled.
+checking app option clockgate_objective_weight : none
+Information: Clock gate latency aware placement is enabled. (PLACE-085)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+DTDP placement: scenario=ss0p95v125c.func
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Factor(1) = 1
+Factor(BASE) = 1
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Completed transferring placement data.
+Running placement using 8 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.60, congestion_driven_max_util 0.89. (PLACE-027)
+Information: HFW control 'off' invoked.
+coarse place 50% done.
+coarse place 60% done.
+coarse place 70% done.
+coarse place 80% done.
+coarse place 90% done.
+coarse place 100% done.
+Information: Coarse placer wire length estimate = 1.326e+06
+Information: Coarse placer active wire length estimate = 8851.78
+Information: Coarse placer weighted wire length estimate = 1.43329e+06
+Information: Extraction observers are detached as design net change threshold is reached.
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Completed Timing-driven placement, Elapsed time =   0: 0:14 
+Moved 35041 out of 46739 cells, ratio = 0.749717
+Total displacement = 433553.156250(um)
+Max displacement = 318.445007(um), u_clk_gen/u_clock_gen/C377/ctmi_33 (525.106018, 280.713013, 4) => (600.400024, 523.864014, 4)
+Displacement histogram:
+  0 ~  10% cells displacement <=      3.56(um)
+  0 ~  20% cells displacement <=      5.50(um)
+  0 ~  30% cells displacement <=      7.15(um)
+  0 ~  40% cells displacement <=      8.84(um)
+  0 ~  50% cells displacement <=     10.57(um)
+  0 ~  60% cells displacement <=     12.43(um)
+  0 ~  70% cells displacement <=     14.54(um)
+  0 ~  80% cells displacement <=     17.19(um)
+  0 ~  90% cells displacement <=     21.81(um)
+  0 ~ 100% cells displacement <=    318.44(um)
+----------------------------------------------------------------
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without NPLDRC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_allowable_orient : false
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : true
+        place.legalize.max_legality_check_range : 50
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0731 seconds to build cellmap data
+Information: Creating advanced legalizer rule checker.
+Information: user defined min VT filler size is 2. The smallest size of filler cells should be 2.
+Information: Setting bounds and VA for block 'fsc_top'...
+Information: Setting up voltage area 'DEFAULT_VA'.
+Information: checking lib cells power/ground pins
+Information: Lib cells of site unit have their ground pins at bottom 
+
+Information: Legalizer threading is enabled with high effort (LGL-130)
+
+Information: Setting up cell instances...
+Information: All fillers in the reference libraries will be considered during legalization/check legality
+Information: Initializing site map 'unit' at {8 8} {932.008 930.944}.
+Information: Init siteMap unit with 6079 sites x 552 rows
+Adding rule engine Basic Rules version 1.0.0...
+Adding rule engine VT Implant Rules version 1.0.0...
+Adding rule engine OD Rules version 1.0.0...
+Adding rule engine TPO Rules version 1.0.0...
+Information: place.legalize.enable_pin_extension_for_pin_access is false.
+Adding rule engine Pin Access Rules version 1.0.0...
+Adding rule engine Span Rules version 1.0.0...
+Adding rule engine Index Rules version 1.0.0...
+Adding rule engine Color Rules version 1.0.0...
+Adding rule engine Inbound Rules version 1.0.0...
+Adding rule engine PG DRC Rules version 1.0.0...
+Adding rule engine Exp Rules version 1.0.0...
+Adding rule engine Under PG Rules version 1.0.0...
+Adding rule engine Chipfin Rules version 1.0.0...
+Adding rule engine Density Rules version 1.0.0...
+Adding rule engine User Rules version 1.0.0...
+Adding rule engine Back Side Rules version 1.0.0...
+Adding rule engine NP-Well Rules version 1.0.0...
+Adding rule engine Route-aware Pin Access Rules version 1.0.0...
+Adding rule engine Safety Register Rules version 1.0.0...
+Adding rule engine Soft Rules version 1.0.0...
+Information: extended cellmap search is on; max legality trials is 5000
+Information: Apply spacing rule on full inbound edge (place.legalize.apply_spacing_rule_full_inbound_edge): no
+Information: Use base site row as spacing rule sub row (for uni-row only) (place.legalize.use_base_site_row_as_spacing_rule_sub_row): no
+Information: Initializing CTS constraints...
+Information: User specified layer M3 will check pin color alignment
+Constructing pin color alignment legality info...
+Information: Reading Vertical abutment prohibit pattern from app option (place.legalize.vertical_abutment_forbidden_pairs)...
+	Format 1: label1-label2
+	Format 2: label1-label2-minConsecutivePairs
+	Format 3: label1-label2-minVertDist-maxVertDist
+	Format 4: label1-label2-minVertDist-maxVertDist-minConsecutivePairs
+Information: App option (place.legalize.vertical_abutment_forbidden_pairs) is empty.
+Information: Reading Vertical abutment prohibit pattern from PRF...
+Information: Is mixed-row flow: no
+Information: Enabling hard placement rule pin_color_align...
+Information: Adjusting SRAM1RW64x32 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW32x32 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW16x32 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW128x16 to a multi-height library cell. (LGL-336)
+Information: Adjusting SRAM2RW128x32 to a multi-height library cell. (LGL-336)
+Snapped 36483 standard cells to the nearest cellrow to improve the accuracy of congestion analysis.
+Information: Dynamic Rule Ordering (DRO): true
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: 87 out of 92 LGL-336 messages were not printed due to limit 5  (MSG-3913)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     563996.75           -       36513              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Timing and Congestion Driven Placement (FLW-8001)
+Information: Time: 2026-07-01 09:08:24 / Session:  00:28:56 / Command:  00:00:49 / CPU:  00:02:06 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Scan Reordering (FLW-8000)
+Information: Time: 2026-07-01 09:08:24 / Session:  00:28:56 / Command:  00:00:49 / CPU:  00:02:06 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Warning: SCANDEF based Optimization skipped: No ScanDEF chains found. (DFT-1991)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     563996.75           -       36513              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Scan Reordering (FLW-8001)
+Information: Time: 2026-07-01 09:08:24 / Session:  00:28:56 / Command:  00:00:49 / CPU:  00:02:06 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Structural Congestion Optimization technology (Post-DTDP SCO) has been enabled. (SCO-0001)
+Information: Starting compile_fusion / initial_opto / Optimization (2) (FLW-8000)
+Information: Time: 2026-07-01 09:08:24 / Session:  00:28:56 / Command:  00:00:49 / CPU:  00:02:06 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     563996.75           -       36513              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (2) (FLW-8001)
+Information: Time: 2026-07-01 09:08:25 / Session:  00:28:56 / Command:  00:00:50 / CPU:  00:02:07 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Scan Synthesis (FLW-8000)
+Information: Time: 2026-07-01 09:08:25 / Session:  00:28:56 / Command:  00:00:50 / CPU:  00:02:07 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     563996.75           -       36513              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Scan Synthesis (FLW-8001)
+Information: Time: 2026-07-01 09:08:25 / Session:  00:28:56 / Command:  00:00:50 / CPU:  00:02:07 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / DRC Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:08:25 / Session:  00:28:56 / Command:  00:00:50 / CPU:  00:02:07 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Corner Scaling is off, multiplier is 1.000000
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without NPLDRC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_allowable_orient : false
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.legalize.max_legality_check_range : 500
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0633 seconds to build cellmap data
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+Total 0.2814 seconds to load 48144 cell instances into cellmap
+Moveable cells: 36483; Application fixed cells: 0; Macro cells: 0; User fixed cells: 11661
+Average cell width 2.9412, cell height 1.6720, cell area 4.9177 for total 36483 placed and application fixed cells
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: timingScenario ss0p95v125c.func timingCorner ss0p95v125c.  Using corner ss0p95v125c for worst leakage corner. (OPT-078)
+Information: Using default layer M5 (OPT-079)
+Information: Nominal = 0.0353099  Design MT = 0.400000  Target = 0.1379810  MaxRC = 0.096804 Fast Target = 0.044405 (OPT-081)
+Collecting Drivers ...  
+Design max_transition = 0.400
+Design max_capacitance = inf
+Using layer M5 for buffering distances
+GRE layer bins: None, M4
+Found 2159 buffer-tree drivers
+
+Roi-HfsDrc SN: 1798569713 435980330 0 67108865 (1214.229004)
+
+Processing Buffer Trees Incrementally (ROI) ... 
+
+    [216]  10% ...
+    [432]  20% ...
+    [648]  30% ...
+    [864]  40% ...
+    [1080]  50% ...
+    [1296]  60% ...
+    [1512]  70% ...
+    [1728]  80% ...
+    [1944]  90% ...
+    [2159] 100% Done
+
+                  Deleted        Added
+------------ ------------ ------------
+    Buffers:            0          786
+  Inverters:            0           31
+------------ ------------ ------------
+      Total:            0          817
+------------ ------------ ------------
+
+Number of Drivers Sized: 1393 [64.52%]
+
+                      P: 1362 [63.08%]
+                      N: 31 [1.44%]
+
+Found 24 net drivers
+
+Processing Buffer Trees Incrementally (ROI-INCR) ... 
+
+    [3]  10% ...
+    [6]  20% ...
+    [9]  30% ...
+    [12]  40% ...
+    [15]  50% ...
+    [18]  60% ...
+    [21]  70% ...
+    [24]  80% ...
+    [24] 100% Done
+
+                  Deleted        Added
+------------ ------------ ------------
+    Buffers:            0            9
+  Inverters:            0            1
+------------ ------------ ------------
+      Total:            0           10
+------------ ------------ ------------
+
+Number of Drivers Sized: 3 [12.50%]
+
+                      P: 2 [8.33%]
+                      N: 1 [4.17%]
+
+Zbuf-RUNTIME (Hr:Min:Sec)  CPU 0 hr : 0 min : 11.21 sec ELAPSE 0 hr : 0 min : 2.40 sec
+Zbuf-RUNTIME         (Min) CPU 0 min ELAPSE 0 min
+ZBuf-MEM(max-mem) total 2305228 K / inuse 2030252 K
+Information: Result of compile_fusion / initial_opto / DRC Optimization (FLW-8500)
+Information: Top 10 transition violators after high fanout synthesis (HFS-1000)
+Slack     Fanout  Scenario    Driver                                                       
+
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     567132.38        4.25       37340              0.48      2251
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     567132.38           -       37340              0.48      2251
+Information: Ending   compile_fusion / initial_opto / DRC Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:08:28 / Session:  00:29:00 / Command:  00:00:53 / CPU:  00:02:24 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Incremental High Fanout Synthesis (FLW-8000)
+Information: Time: 2026-07-01 09:08:28 / Session:  00:29:00 / Command:  00:00:53 / CPU:  00:02:24 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without NPLDRC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_allowable_orient : false
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : true
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.legalize.max_legality_check_range : 500
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0762 seconds to build cellmap data
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+Total 0.2891 seconds to load 48971 cell instances into cellmap
+Moveable cells: 37310; Application fixed cells: 0; Macro cells: 0; User fixed cells: 11661
+Average cell width 2.9263, cell height 1.6720, cell area 4.8927 for total 37310 placed and application fixed cells
+Warning: Skipping pin tapfiller!tap_cell!TAP02!0/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_0/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_1/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_2/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_3/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_4/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_5/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_6/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_7/VDD. Reason - Power/Ground pin. (OPT-069)
+Warning: Skipping pin boundarycell_ENDCAP02_8/VDD. Reason - Power/Ground pin. (OPT-069)
+Note - message 'OPT-069' limit (10) exceeded. Remainder will be suppressed.
+INFO: total number of constant pins: 26250
+INFO: constant pins which are scan-pins: 23496
+INFO: constant pins that are not scan-pins: 2754
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     568195.94           -       38177              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Incremental High Fanout Synthesis (FLW-8001)
+Information: Time: 2026-07-01 09:08:31 / Session:  00:29:03 / Command:  00:00:56 / CPU:  00:02:29 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Optimization (3) (FLW-8000)
+Information: Time: 2026-07-01 09:08:31 / Session:  00:29:03 / Command:  00:00:56 / CPU:  00:02:29 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Disable clock slack update for ideal clocks
+ Iter  1                                             5.06        0.00         -         -     568195.94        4.25       38177              0.48      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Information: Starting compile_fusion / initial_opto / Optimization (3) / Global Sizing and Buffering (FLW-8000)
+Information: Time: 2026-07-01 09:08:31 / Session:  00:29:03 / Command:  00:00:56 / CPU:  00:02:30 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Disable clock slack update for ideal clocks
+bmap: stepx = stepy = 18801
+creating bmap
+DB units per micron : 1000
+ Iter  1                                             5.06        0.00         -         -     568195.94        4.25       38177              0.48      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     568195.94           -       38177              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (3) / Global Sizing and Buffering (FLW-8001)
+Information: Time: 2026-07-01 09:08:32 / Session:  00:29:03 / Command:  00:00:57 / CPU:  00:02:31 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Optimization (3) / Macro Skewing (FLW-8000)
+Information: Time: 2026-07-01 09:08:32 / Session:  00:29:03 / Command:  00:00:57 / CPU:  00:02:31 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     568195.94        4.25       38177              0.48      2251
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     568195.94           -       38177              0.48      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (3) / Macro Skewing (FLW-8001)
+Information: Time: 2026-07-01 09:08:32 / Session:  00:29:03 / Command:  00:00:57 / CPU:  00:02:31 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     568195.94        4.25       38177              0.48      2251
+Information: Result of compile_fusion / initial_opto / Clock Gate Re-structuring (FLW-8500)
+--------------------------------------------------------------------------------
+|                             Clock Gating Options                             |
+--------------------------------------------------------------------------------
+|         Objects         |    Minimum Bitwidth     |      Maximum Fanout      |
+--------------------------+-------------------------+---------------------------
+|   top-level (design)    |          3 (d)          |      Unlimited (d)       |
+--------------------------------------------------------------------------------
+
+Number of Pre-Existing Clock Gates with dont touch attribute: 0
+Number of ICG library cells with CTS purpose: 6
+---------------------------------------------------------------------------------------------
+                          Tool Gated Register Summary                                        
+---------------------------------------------------------------------------------------------
+Clock Gating Type                   | Number of   | Register Count | Equivalent | % of Gated 
+                                    | Clock Gates |                | Bitwidth   | Bits       
+---------------------------------------------------------------------------------------------
+Regular Clock Gating                |         510 |           7778 |       7778 |    58.09%
+---------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+                 Regular Clock Gating Ungated Register Summary                  
+--------------------------------------------------------------------------------
+ Ungated Reason                                            | Count | Bitwidth   
+--------------------------------------------------------------------------------
+ Enable is Constant One.                                   |  5016 |     5016
+ Enable is Constant Zero.                                  |   363 |      363
+ Minimum Bitwidth Not Met.                                 |   199 |      199
+ Partial Minimum Bitwidth Not Met.                         |     6 |        6
+ Register Model Issue.                                     |    27 |       27
+--------------------------------------------------------------------------------
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Starting compile_fusion / initial_opto / Optimization (3) / Timing Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:08:33 / Session:  00:29:05 / Command:  00:00:58 / CPU:  00:02:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Optimization (3) / Timing Optimization / Clock and Data Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:08:33 / Session:  00:29:05 / Command:  00:00:58 / CPU:  00:02:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+INFO: Leakage Power Aware Optimization Enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : false
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0657 seconds to build cellmap data
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+Total 0.2931 seconds to load 49808 cell instances into cellmap
+Moveable cells: 38147; Application fixed cells: 0; Macro cells: 0; User fixed cells: 11661
+Average cell width 2.8787, cell height 1.6720, cell area 4.8132 for total 38147 placed and application fixed cells
+Number of Site types in the design = 1
+INFO: Skipping activation of hold scenarios prior to CUS.
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+Uskew Characterizer: corner: ss0p95v125c, scalingFactor: 1.000
+@ CG solver holdWeight = 0.500000
+@ CG solver setupWeight = 1.000000
+@ CG solver delayCostWeight = 5.000000
+@ CG solver zeroDirWeight = 5.000000
+@ CG solver wnsWeight = 400.000000
+Information: Skip i2c_scl, reason 'pin is not in the balance portion of the clock tree'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C373/ctmi_28/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C389/ctmi_31/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C388/ctmi_34/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C375/ctmi_30/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C377/ctmi_33/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/ctmi_156/A3, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/ctmi_157/A3, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip pll2_clk_div2_reg/CLK, reason 'pin is not in the balance portion of the clock tree'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/compile_CDIBUF_12_f_43599/A, reason 'pin is not in the balance portion of the clock tree'. (CCD-001)
+Note - message 'CCD-001' limit (10) exceeded. Remainder will be suppressed.
+Information: There were 29 objects skipped by CCD due to the reason 'pin is not in the balance portion of the clock tree'. (CCD-002)
+Information: There were 10 objects skipped by CCD due to the reason 'sink is cts-ignore in at least one mode'. (CCD-002)
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+INFO: Skipping deactivation of hold scenarios after CUS.
+Number of Site types in the design = 1
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: 29 out of 39 CCD-001 messages were not printed due to limit 10  (MSG-3913)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     568195.94           -       38177              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (3) / Timing Optimization / Clock and Data Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:08:41 / Session:  00:29:13 / Command:  00:01:06 / CPU:  00:03:08 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Disable clock slack update for ideal clocks
+ Iter  1                                             5.06        0.00         -         -     568195.94        4.25       38177              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+ Iter  1                                             5.06        0.00         -         -     568195.94        4.25       38177              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -       170     568195.94           -       38177              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (3) / Timing Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:08:42 / Session:  00:29:13 / Command:  00:01:07 / CPU:  00:03:10 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Optimization (3) / Area Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:08:42 / Session:  00:29:13 / Command:  00:01:07 / CPU:  00:03:10 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 1%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+ Iter  1                                             5.06        0.00         -         -     568195.94        4.25       38177              0.49      2251
+Warning: Restoring scoped app option 'xform.commit_density_threshold' to original value 'unset' (from current value '1.1', which is different from the scoped value '1.100000'). (FLW-2892)
+Warning: Restoring scoped app option 'ropt.rutil_density_threshold' to original value 'unset' (from current value '1.1', which is different from the scoped value '1.100000'). (FLW-2892)
+Warning: Restoring scoped app option 'opt.internal.levfilter_arec_slack' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (3) / Area Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (3) (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Additional Preconditioning Placement (FLW-8000)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Additional Preconditioning Placement (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Additional Timing Driven Placement (FLW-8000)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Additional Timing Driven Placement (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Additional Incremental High Fanout Synthesis (FLW-8000)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Additional Incremental High Fanout Synthesis (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_opto / Additional Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:34 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25        6.95       37957              0.49      2251
+Information: Starting compile_fusion / initial_opto / Additional Optimization / Timing Optimization (FLW-8000)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:35 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Additional Optimization / Timing Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:35 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00         -      2604     565286.25           -       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Additional Optimization (FLW-8001)
+Information: Time: 2026-07-01 09:08:46 / Session:  00:29:18 / Command:  00:01:11 / CPU:  00:03:35 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Information: Timer using 8 threads
+INFO: Leakage Power Aware Optimization Enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            pocv
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    enabled
+************************************************************
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+Information: Useful skew copied/scaled 0 balance points and 11 clock latencies. (CCD-103)
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+INFO: Skipping FTB cleanup in end of npo flow.
+Enable dominated scenarios
+Co-efficient Ratio Summary:
+compile command statistics  CPU=221 sec (0.06 hr) ELAPSED=73 sec (0.02 hr) MEM-PEAK=2.198 GB
+INFO: compile_fusion is running in balanced flow mode
+INFO: Leakage Power Aware Optimization Enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+INFO: disable CRPR-based timing. 
+Number of Site types in the design = 1
+Setting up Chip Core
+Chip Core shape: (8000 8000) (932008 930944)
+Number of VARs = 1
+Number of unique PDs = 1
+Number of Power Domains = 1
+Number of Voltage Areas = 1
+Number of supply Nets = 2
+Number of used supplies = 0
+Blocked VAs: 
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario ss0p95v125c.func pathgroup **clock_gating_default**
+Target path group: scenario ss0p95v125c.test pathgroup **clock_gating_default**
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario ss0p95v125c.func pathgroup **clock_gating_default**
+Target path group: scenario ss0p95v125c.test pathgroup **clock_gating_default**
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+Information: Useful skew copied/scaled 0 balance points and 9 clock latencies. (CCD-103)
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Compile-fusion command begin                   CPU:   800 s (  0.22 hr )  ELAPSE:  1764 s (  0.49 hr )  MEM-PEAK:  2251 MB
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Info: update em.
+
+Compile-fusion timing update complete          CPU:   804 s (  0.22 hr )  ELAPSE:  1764 s (  0.49 hr )  MEM-PEAK:  2251 MB
+
+Compile-fusion initial QoR
+__________________________
+Scenario Mapping Table
+1: ss0p95v125c.func
+2: ss0p95v125c.test
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: pll1_clk_in
+8: pll2_clk_in
+9: pixel_clk
+10: system_clk
+11: comp_clk
+12: i2c_scl
+13: system_clk_div2
+14: pll2_clk_div2
+15: panel_clk_inv_gate
+16: panel_clk_dly
+17: panel_clk_gate
+18: system_clk_int
+19: flash_clk_gate
+20: i2c_clk
+21: sdram_clk_gate
+22: sdram_clk
+23: pixel_comp_clk_pix
+24: test_clk
+25: system_clk_div2_test
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATHGROUP QOR 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV
+    1   1   0.0000     0.0000      0        -          -      -
+    1   2   0.0000     0.0000      0        -          -      -
+    1   3   0.0000     0.0000      0        -          -      -
+    1   4   0.0000     0.0000      0        -          -      -
+    1   5   0.0000     0.0000      0        -          -      -
+    1   6   1.8254     3.5586      2        -          -      -
+    1   7   0.0000     0.0000      0        -          -      -
+    1   8   0.0000     0.0000      0        -          -      -
+    1   9   0.0000     0.0000      0        -          -      -
+    1  10   0.0000     0.0000      0        -          -      -
+    1  11   0.0000     0.0000      0        -          -      -
+    1  12   0.0000     0.0000      0        -          -      -
+    1  13   0.0000     0.0000      0        -          -      -
+    1  14   0.0000     0.0000      0        -          -      -
+    1  15   0.0000     0.0000      0        -          -      -
+    1  16   0.0000     0.0000      0        -          -      -
+    1  17   0.0000     0.0000      0        -          -      -
+    1  18   0.0000     0.0000      0        -          -      -
+    1  19   0.0000     0.0000      0        -          -      -
+    1  20   0.0000     0.0000      0        -          -      -
+    1  21   0.0000     0.0000      0        -          -      -
+    1  22   0.0000     0.0000      0        -          -      -
+    1  23   0.0000     0.0000      0        -          -      -
+    2   1   0.0000     0.0000      0        -          -      -
+    2   2   0.0000     0.0000      0        -          -      -
+    2   3   0.0000     0.0000      0        -          -      -
+    2   4   0.0000     0.0000      0        -          -      -
+    2   5   0.0000     0.0000      0        -          -      -
+    2   6   0.0000     0.0000      0        -          -      -
+    2  24   0.0000     0.0000      0        -          -      -
+    2  25   0.0000     0.0000      0        -          -      -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCENARIO QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   1.8254     3.5586   0.0000      2        -          -      -        1     0.0053     2593      6.953
+    2   *   0.0000     0.0000   0.0000      0        -          -      -        1     0.0053     2593          -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESIGN QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   1.8254     3.5586   0.0000      2   0.0000     0.0000      0        1     0.0053     2593      6.953    565286.25      37957       3085       2885
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Compile-fusion initial QoR Summary       WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+Compile-fusion initial QoR Summary    1.8254     3.5586   0.0000      2   0.0000     0.0000      0        1     2593      6.953    565286.25      37957
+Information: The netlist change observers are disabled for incremental extraction. (TIM-126)
+INFO: using 8 threads
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Compile-fusion initialization complete         CPU:   810 s (  0.23 hr )  ELAPSE:  1766 s (  0.49 hr )  MEM-PEAK:  2251 MB
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Information: The netlist change observers are enabled for incremental extraction. (TIM-127)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Information: Starting compile_fusion / initial_opto / Optimization (4) (FLW-8000)
+Information: Time: 2026-07-01 09:08:54 / Session:  00:29:25 / Command:  00:01:19 / CPU:  00:04:00 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.56        0.00      0.00      2593     565286.25        6.95       37957              0.49      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (4) (FLW-8001)
+Information: Time: 2026-07-01 09:08:54 / Session:  00:29:26 / Command:  00:01:19 / CPU:  00:04:01 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Information: Starting compile_fusion / initial_opto / Optimization (5) (FLW-8000)
+Information: Time: 2026-07-01 09:08:54 / Session:  00:29:26 / Command:  00:01:19 / CPU:  00:04:01 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Information: Initializing advanced legalizer cellmap without advanced rules enabled and without PDC enabled
+Information: The following app options are used in cellmap
+        place.legalize.enable_color_aware_placement : false
+        place.legalize.use_nll_query_cm : false
+        place.legalize.enable_advanced_legalizer : true
+        place.legalize.enable_prerouted_net_check : false
+        place.legalize.enable_advanced_prerouted_net_check : true
+        place.legalize.always_continue : true
+        place.legalize.limit_legality_checks : false
+        place.common.pnet_aware_density : 1.0000
+        place.common.pnet_aware_min_width : 0.0000
+        place.common.pnet_aware_layers : {}
+        place.common.use_placement_model : false
+        place.common.enable_advanced_placement_model : true
+        cts.placement.cell_spacing_rule_style : maximum
+Total 0.0699 seconds to build cellmap data
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+INFO: creating 188(r) x 188(c) GridCells YDim 5.016 XDim 5.016
+INFO: number of GridCells (fsc_top): 35344
+Total 0.2898 seconds to load 49588 cell instances into cellmap
+Moveable cells: 37927; Application fixed cells: 0; Macro cells: 0; User fixed cells: 11661
+Average cell width 2.8495, cell height 1.6720, cell area 4.7644 for total 37927 placed and application fixed cells
+Compile-fusion optimization Phase 5 Iter  1          3.56        0.00      0.00      2593     565286.25        6.95       37957              0.49      2251
+INFO: total number of constant pins: 26250
+INFO: constant pins which are scan-pins: 23496
+INFO: constant pins that are not scan-pins: 2754
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 6 Iter  1          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+Isolated 0 ports, skipped 0 ports
+Already Isolated 0 ports, Deleted 0 existing Isolation cells 
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 7 Iter  1          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 8 Iter  1          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+Information: Using default layer M5 (OPT-079)
+bmap: stepx = stepy = 18801
+creating bmap
+DB units per micron : 1000
+Compile-fusion optimization Phase 8 Iter  2          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization Phase 8 Iter  3          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+Compile-fusion optimization Phase 8 Iter  4          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+Compile-fusion optimization Phase 8 Iter  5          3.56        0.00      0.00      2593     565898.75        6.95       38439              0.49      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 9 Iter  1          3.56        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 9 Iter  2          3.56        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization Phase 9 Iter  3          3.56        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Number of Site types in the design = 1
+INFO: Skipping activation of hold scenarios prior to CUS.
+CCD app option: ccd.targeted_ccd_path_groups:  **clock_gating_default**
+Target path group: scenario ss0p95v125c.func pathgroup **clock_gating_default**
+Target path group: scenario ss0p95v125c.test pathgroup **clock_gating_default**
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+Uskew Characterizer: corner: ss0p95v125c, scalingFactor: 1.000
+@ CG solver holdWeight = 0.500000
+@ CG solver setupWeight = 1.000000
+@ CG solver delayCostWeight = 5.000000
+@ CG solver zeroDirWeight = 5.000000
+@ CG solver wnsWeight = 400.000000
+Information: Skip i2c_scl, reason 'pin is not in the balance portion of the clock tree'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C373/ctmi_28/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C389/ctmi_31/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C388/ctmi_34/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C375/ctmi_30/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/C377/ctmi_33/A1, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/ctmi_156/A3, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/ctmi_157/A3, reason 'sink is cts-ignore in at least one mode'. (CCD-001)
+Information: Skip pll2_clk_div2_reg/CLK, reason 'pin is not in the balance portion of the clock tree'. (CCD-001)
+Information: Skip u_clk_gen/u_clock_gen/compile_CDIBUF_12_f_43599/A, reason 'pin is not in the balance portion of the clock tree'. (CCD-001)
+Information: There were 29 objects skipped by CCD due to the reason 'pin is not in the balance portion of the clock tree'. (CCD-002)
+Information: There were 10 objects skipped by CCD due to the reason 'sink is cts-ignore in at least one mode'. (CCD-002)
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+INFO: Skipping deactivation of hold scenarios after CUS.
+Number of Site types in the design = 1
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: 29 out of 39 CCD-001 messages were not printed due to limit 10  (MSG-3913)
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion optimization Phase 10 Iter  1         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 11 Iter  1         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 12 Iter  1         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+INFO: New Levelizer turned on
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 13 Iter  1         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+Information: Using default layer M5 (OPT-079)
+bmap: stepx = stepy = 18801
+creating bmap
+DB units per micron : 1000
+Compile-fusion optimization Phase 13 Iter  2         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization Phase 13 Iter  3         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Compile-fusion optimization Phase 13 Iter  4         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter  5         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter  6         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter  7         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter  8         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter  9         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 10         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 11         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 12         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 13         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 14         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 15         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 16         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+Compile-fusion optimization Phase 13 Iter 17         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 14 Iter  1         3.55        0.00      0.00      2593     565898.75        6.96       38439              0.49      2251
+INFO: New Levelizer turned on
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 15 Iter  1         3.55        0.00      0.00      2563     565192.00        6.36       38053              0.49      2251
+INFO: New Levelizer turned on
+Compile-fusion optimization Phase 15 Iter  2         3.55        0.00      0.00      2563     565173.69        6.36       38053              0.50      2251
+INFO: New Levelizer turned on
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 16 Iter  1         3.55        0.00      0.00      2563     565172.94        6.36       38053              0.50      2251
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 17 Iter  1         3.55        0.00      0.00      2563     565125.38        6.35       38053              0.50      2251
+Compile-fusion optimization Phase 17 Iter  2         3.55        0.00      0.00      2563     565125.38        6.35       38053              0.50      2251
+Warning: Restoring scoped app option 'xform.commit_density_threshold' to original value 'unset' (from current value '1.1', which is different from the scoped value '1.100000'). (FLW-2892)
+Warning: Restoring scoped app option 'ropt.rutil_density_threshold' to original value 'unset' (from current value '1.1', which is different from the scoped value '1.100000'). (FLW-2892)
+Warning: Restoring scoped app option 'opt.internal.levfilter_arec_slack' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Compile-fusion optimization Phase 18 Iter  1         3.55        0.00      0.00      2563     564924.38        6.36       37936              0.50      2251
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 19 Iter  1         3.55        0.00      0.00      2563     564963.00        6.34       37936              0.50      2251
+[ISR-TRACE] Potential Bucket: Pass 1  Index 0  #Total-cands   1832 ( 7.84%) SumPotEst 3.08427382 (94.60%) 
+[ISR-TRACE] Potential Bucket: Pass 1  Index 1  #Total-cands   2611 (11.18%) SumPotEst 0.17594182 ( 5.40%) 
+[ISR-TRACE] Potential Bucket: Pass 1  Index 2  #Total-cands  18917 (80.98%) SumPotEst 0.00000919 ( 0.00%) 
+[ISR-TRACE] Pass 1  Bucket 1  #Batches    8  #Initial-Cands   1832  #PostFilter-Cands   1832  #Comitted  161 ( 8.79%)
+[ISR-TRACE] Pass 1  Bucket 2  #Batches    4  #Initial-Cands   2611  #PostFilter-Cands    513  #Comitted  442 (86.16%)  #isDownsizable-filter   800  #lowRoi-filter  1298
+[ISR-TRACE] Pass 1    Filter stats     #static   #dynamic
+[ISR-TRACE]            bufrem-filter       0 |      0 
+[ISR-TRACE]          holdviol-filter       0 |      0 
+[ISR-TRACE]     isDownsizable-filter       0 |  19717 
+[ISR-TRACE]            lowRoi-filter       0 |   1298 
+[ISR-TRACE]         ok-driver-filter   39761 |      0 
+[ISR-TRACE]             slack-filter       0 |      0 
+
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 20 Iter  1         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+LAO is disable, refresh para
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion optimization Phase 21 Iter  1         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+INFO: New Levelizer turned on
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 22 Iter  1         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+Corner Scaling is off, multiplier is 1.000000
+Information: Using default layer M5 (OPT-079)
+Compile-fusion optimization Phase 23 Iter  1         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Warning: Restoring scoped app option 'ropt.rbuf_subtree_crit_range' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
+Warning: Restoring scoped app option 'ropt.lr_estimation_composite_factor_area_leakage' to original value 'unset' (from current value '1', which is different from the scoped value '1.0'). (FLW-2892)
+Compile-fusion optimization Phase 23 Iter  2         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+bmap: stepx = stepy = 18801
+creating bmap
+DB units per micron : 1000
+Compile-fusion optimization Phase 23 Iter  3         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Compile-fusion optimization Phase 23 Iter  4         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Compile-fusion optimization Phase 23 Iter  5         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Compile-fusion optimization Phase 23 Iter  6         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Compile-fusion optimization Phase 23 Iter  7         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Compile-fusion optimization Phase 23 Iter  8         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Disable clock slack update for ideal clocks
+INFO:  SEQ DEL WNS is protecting TNS
+INFO:  SEQ DEL WNS is protecting TNS
+Compile-fusion optimization Phase 24 Iter  1         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 25 Iter  1         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+INFO: New Levelizer turned on
+Compile-fusion optimization Phase 25 Iter  2         3.55        0.00      0.00      2563     564963.00        6.19       37936              0.50      2251
+Compile-fusion optimization Phase 25 Iter  3         3.55        0.00      0.00       414     566527.50        4.54       37936              0.50      2251
+Compile-fusion optimization Phase 25 Iter  4         3.55        0.00      0.00       412     566531.06        4.54       37936              0.50      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization Phase 26 Iter  1         3.55        0.00      0.00       400     566531.06        4.54       37936              0.50      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                       3.55        0.00      0.00       400     566531.06        4.54       37936              0.50      2251
+Information: Ending   compile_fusion / initial_opto / Optimization (5) (FLW-8001)
+Information: Time: 2026-07-01 09:09:30 / Session:  00:30:01 / Command:  00:01:55 / CPU:  00:06:16 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Compile-fusion optimization Phase 28 Iter  1         3.55        0.00      0.00       412     566531.06        4.54       37936              0.50      2251
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+
+Compile-fusion optimization complete                 3.55        0.00      0.00       400     566531.06        4.54       37936              0.50      2251
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Co-efficient Ratio Summary:
+4.193421787684  6.578038428594  2.479639287277  7.744187740401  0.485050000353  3.179565833784  5.567214754587  2.894454487461  6.565921217395  9.017186805874  3.104670495252  9.819957124851  6.071818664085  2.744506841123  8.318393104907
+9.699225108512  2.464623205828  1.382370221226  9.387184229619  3.142429406669  0.968752789964  6.613180723294  4.146578893224  7.876358918644  2.191384403696  0.963734736313  2.756666068881  3.843145764440  3.750504553169  7.663636342299
+6.212201249489  7.759678728721  7.862243056717  0.402387177150  0.032845095897  0.596111512371  4.701287396892  7.205135612169  8.278351398790  1.183974490997  3.334436093563  5.813127356622  7.176589085364  9.669117499761  7.591665847087
+7.632106475795  7.679078318180  9.831314288630  1.878805017928  3.230072343539  1.226270037326  7.050450494780  2.403928273631  6.139852544586  4.100469366110  1.274718174974  4.526264278063  5.627563508820  7.826155753678  4.759311918263
+5.409027008806  2.609823907698  0.626142538674  6.381676852919  9.187474022495  0.513656796621  5.027570618562  6.119813546103  6.181472312639  1.581824665776  7.486041417426  9.530041234756  2.044560287119  3.921468367338  0.650666182345
+9.472458084938  3.368484649758  4.897111549020  6.860149444452  2.000104051691  9.095345907689  2.197041709512  0.915900167443  5.466092308958  8.142849355883  4.607193850543  8.290942569567  3.507613605451  1.682014512888  7.173611218510
+9.939562880802  3.617852027447  8.946772637652  1.169969732707  4.529946656262  3.090979409795  5.580726136993  1.131397863510  0.721709625786  7.515196717690  0.649322894690  1.063510818513  5.814352566269  5.826038383342  4.349561792435
+0.216216099778  9.612142776203  7.311156782104  0.823519341628  0.356161286693  8.022019569284  2.603132585844  5.024802651363  1.359359521885  5.407712751201  2.804123062027  1.211889827200  0.410503213533  1.833170965081  6.448735237188
+4.848373293909  2.936801309719  8.671494124225  4.212305516610  9.007627270112  3.308107178452  5.607471109985  8.514743740423  2.764676979966  9.324465238770  1.551199574406  2.356087077625  0.757428930179  1.961729911696  2.781581841418
+3.355375236011  9.437909147388  9.136702642545  9.020209408464  9.978471495117  7.467457734047  3.171274721421  9.815920840044  4.331414637660  0.413773284361  3.309910783128  7.408277071103  1.905660824529  5.623705759547  7.269541508696
+3.367403284145  7.093641869488  7.411336156476  6.944246176650  5.239565921087  4.802189647382  3.894401463832  4.531610519342  1.605155657335  8.173989547963  9.287277369927  7.596980813505  0.003196217956  5.833082056721  4.754765789445
+4.387461737953  1.217863255479  7.505874310467  0.800933186343  9.509851607812  3.964085274420  8.341123831811  5.604907069922  5.026083246994  3.950213438237  0.221226523227  4.075198189242  9.409402996875  2.789262161318  0.723472914657
+8.793224868096  8.918112563899  5.103696096373  4.141094470014  8.443881384045  0.064440375020  6.053169766345  8.842299721220  1.167950775499  8.473116086224  3.056717635747  7.923639878284  5.098630959611  1.512679970128  7.396070220513
+5.512169908296  1.398268462058  5.190997333443  6.408244786760  9.731622717389  4.385364966981  9.999761759148  7.347087863210  6.393266767437  8.063572283131  4.288630712583  5.863437523007  2.346334422627  0.037597005045  0.494967340392
+8.173631794346  2.544054764707  0.066110127471  8.589655657074  6.653063562487  8.808820782685  7.253678475913  3.418263640902  7.926377260412  3.652080362614  2.538674263677  6.608426101497  4.025290351365  6.796892802757  0.618749711981
+3.446103799508  2.312107402843  5.365776748604  1.822107158456  2.469756204172  7.387119392116  0.867338065048  8.682345447245  8.902409351408  4.394141689711  1.549020211081  9.290964737510  4.054496209534  5.907850519704  1.709799191590
+0.067443627060  2.308426168945  0.055883460719  3.265224024446  3.794567350487  0.705451168271  6.012888717343  3.718510493956  2.708373386345  2.772830294677  2.637652741437  9.588199889494  6.659955909097  9.409953858072  6.136162513139
+7.763510153531  9.625254005270  7.417690064932  2.209371301703  1.043513581151  9.666269582673  0.883342434938  3.292435521621  6.918317986874  2.422774431115  6.782104616419  9.197014335616  1.289386402201  9.569442560313  2.585013902480
+2.551363216396  9.521353894432  3.451201280412  3.477518326530  0.052200041776  0.313533183387  2.465081644855  7.737188984837  3.112548218240  1.055280567149  4.124225039125  5.362006200762  7.273805930810  7.178610860747  1.109154251474
+3.640423357805  6.979434286192  6.938770155119  9.989997430050  8.202625075468  5.030179196142  1.411696278130  3.341418935537  5.155650968510  9.893859713670  2.642545510915  9.254850297847  1.498800346745  7.734205617127  4.721690381592
+0.740044514589  4.637138395023  4.984361330991  0.198619945279  8.206103190282  7.924529562340  7.259547726936  3.008696936740  3.103784724184  1.515959541133  6.156476202319  6.922046823956  5.924770080218  9.647540689440  1.463001853161
+0.419342241953  5.657803161044  0.247963928727  7.774418954040  1.048505000035  3.317956583378  4.556721475458  7.289445038746  1.656592146506  3.901940550587  4.310467698988  3.932739250985  1.600505996408  5.274688134112  3.831080960490
+7.969922683036  3.246462649767  4.138237022122  6.938718602961  9.314242940666  9.096875278996  4.661318072329  4.414657479322  4.787635816631  2.219360310369  6.096373022094  4.226400144388  1.387738606444  0.375288905316  9.766514284229
+9.621220297123  0.775967191057  7.786224305671  7.040238997715  0.003284509589  7.059611151237  1.470128739689  2.720513151216  9.827835154646  8.118529319099  7.333443258719  4.532156273162  2.710072038536  4.966149299976  1.759317134708
+7.763210710754  6.767907150093  6.983131428863  0.187880781792  8.323007234353  9.122627003732  6.705045049478  0.240392317363  1.613985279078  4.410050606611  0.127471202943  5.403627761556  3.565170480882  0.782843025367  8.475182741826
+3.540902873065  7.260982619944  4.062614253867  4.638167865291  9.918747402249  5.051365679662  1.502757061856  2.611981844610  3.618147256883  7.158196136577  6.748604536298  7.904009342125  6.207865338711  9.392374386733  8.065217268234
+5.947245971678  9.336848783150  4.489711154902  0.686014124445  2.200010405169  1.909534590768  9.219704170951  2.091590506744  3.546609255415  6.814298605588  3.460719770500  4.870099475606  7.353170670545  1.168439901288  8.717512771851
+0.993956351265  3.361785521929  3.894677263765  2.116996153270  7.452994665626  2.309097940979  5.558072613699  3.113139276351  0.072170987198  4.751523341769  0.064932674915  1.157356200501  3.584844566626  9.582831388334  2.434107729243
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+Compile-fusion final QoR
+________________________
+Scenario Mapping Table
+1: ss0p95v125c.func
+2: ss0p95v125c.test
+
+Pathgroup Mapping Table
+1: **default**
+2: **async_default**
+3: **clock_gating_default**
+4: **in2reg_default**
+5: **reg2out_default**
+6: **in2out_default**
+7: pll1_clk_in
+8: pll2_clk_in
+9: pixel_clk
+10: system_clk
+11: comp_clk
+12: i2c_scl
+13: system_clk_div2
+14: pll2_clk_div2
+15: panel_clk_inv_gate
+16: panel_clk_dly
+17: panel_clk_gate
+18: system_clk_int
+19: flash_clk_gate
+20: i2c_clk
+21: sdram_clk_gate
+22: sdram_clk
+23: pixel_comp_clk_pix
+24: test_clk
+25: system_clk_div2_test
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+PATHGROUP QOR 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS    NSV      WHV        THV    NHV
+    1   1   0.0000     0.0000      0        -          -      -
+    1   2   0.0000     0.0000      0        -          -      -
+    1   3   0.0000     0.0000      0        -          -      -
+    1   4   0.0000     0.0000      0        -          -      -
+    1   5   0.0000     0.0000      0        -          -      -
+    1   6   1.8144     3.5476      2        -          -      -
+    1   7   0.0000     0.0000      0        -          -      -
+    1   8   0.0000     0.0000      0        -          -      -
+    1   9   0.0000     0.0000      0        -          -      -
+    1  10   0.0000     0.0000      0        -          -      -
+    1  11   0.0000     0.0000      0        -          -      -
+    1  12   0.0000     0.0000      0        -          -      -
+    1  13   0.0000     0.0000      0        -          -      -
+    1  14   0.0000     0.0000      0        -          -      -
+    1  15   0.0000     0.0000      0        -          -      -
+    1  16   0.0000     0.0000      0        -          -      -
+    1  17   0.0000     0.0000      0        -          -      -
+    1  18   0.0000     0.0000      0        -          -      -
+    1  19   0.0000     0.0000      0        -          -      -
+    1  20   0.0000     0.0000      0        -          -      -
+    1  21   0.0000     0.0000      0        -          -      -
+    1  22   0.0000     0.0000      0        -          -      -
+    1  23   0.0000     0.0000      0        -          -      -
+    2   1   0.0000     0.0000      0        -          -      -
+    2   2   0.0000     0.0000      0        -          -      -
+    2   3   0.0000     0.0000      0        -          -      -
+    2   4   0.0000     0.0000      0        -          -      -
+    2   5   0.0000     0.0000      0        -          -      -
+    2   6   0.0000     0.0000      0        -          -      -
+    2  24   0.0000     0.0000      0        -          -      -
+    2  25   0.0000     0.0000      0        -          -      -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SCENARIO QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage
+    1   *   1.8144     3.5476   0.0000      2        -          -      -        5     0.2568      396      4.541
+    2   *   0.0000     0.0000   0.0000      0        -          -      -        5     0.2568      396          -
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+DESIGN QOR 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV   MaxTranC  MaxCapV    Leakage         Area    InstCnt     BufCnt     InvCnt
+    *   *   1.8144     3.5476   0.0000      2   0.0000     0.0000      0        5     0.2568      396      4.541    566531.06      37936       2683       2794
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Compile-fusion final QoR Summary         WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
+Compile-fusion final QoR Summary      1.8144     3.5476   0.0000      2   0.0000     0.0000      0        5      396      4.541    566531.06      37936
+
+Compile-fusion command complete                CPU:   956 s (  0.27 hr )  ELAPSE:  1804 s (  0.50 hr )  MEM-PEAK:  2251 MB
+Compile-fusion command statistics  CPU=156 sec (0.04 hr) ELAPSED=40 sec (0.01 hr) MEM-PEAK=2.198 GB
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Total 2 MV-099 violations. (MV-080)
+Information: Please run check_mv_design for more details. (UPF-535)
+Information: Summary of UPF Cells (UPF-532)
+*******************************************************************************
+                            Summary of UPF Cells                               
+*******************************************************************************
+This is a UPF design.
+UPF is loaded.
+UPF is committed.
+-------------------------------------------------------------------------------
+Number of power domains:        1
+Number of supply nets:          2
+-------------------------------------------------------------------------------
+                             Voltage Area Info                                 
+-------------------------------------------------------------------------------
+Name                            X           Y           Power Domain Name
+-------------------------------------------------------------------------------
+DEFAULT_VA                                              TOP
+                                8.0000      8.0000
+                                8.0000      930.9440
+                                932.0080    930.9440
+                                932.0080    8.0000
+
+-------------------------------------------------------------------------------
+MV Cells                        Total Number
+-------------------------------------------------------------------------------
+Level Shifter:                  0
+Enable Level Shifter:           0
+Isolation Cell:                 0
+Retention Cell:                 0
+Retention Clamp Cell:           0
+Switch Cell:                    0
+Always-On Cell:                 0
+Repeater Cell:                  0
+
+-------------------------------------------------------------------------------
+Unmapped MV Cells
+-------------------------------------------------------------------------------
+No unmapped MV cell found
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+
+Information: Runtime Summary (compile_fusion / initial_opto)  (FLW-9001)
+----------------------------------------------------------------------------
+     Elapse(Hr:Min:Sec)     Elapse(%)     Category
+----------------------------------------------------------------------------
+       00:00:00              0.5%         Optimization (1) 
+       00:00:02              2.0%         Optimization (1)/Timing Optimization 
+       00:00:35             30.3%         Timing and Congestion Driven Placement 
+       00:00:00              0.0%         Scan Reordering 
+       00:00:00              0.4%         Optimization (2) 
+       00:00:00              0.0%         Scan Synthesis 
+       00:00:03              3.0%         DRC Optimization 
+       00:00:02              2.4%         Incremental High Fanout Synthesis 
+       00:00:01              1.6%         Optimization (3) 
+       00:00:00              0.3%         Optimization (3)/Global Sizing and Buffering 
+       00:00:00              0.1%         Optimization (3)/Macro Skewing 
+       00:00:00              0.7%         Optimization (3)/Timing Optimization 
+       00:00:07              6.6%         Optimization (3)/Timing Optimization/Clock and Data Optimization 
+       00:00:04              3.6%         Optimization (3)/Area Optimization 
+       00:00:00              0.0%         Additional Preconditioning Placement 
+       00:00:00              0.0%         Additional Timing Driven Placement 
+       00:00:00              0.0%         Additional Incremental High Fanout Synthesis 
+       00:00:00              0.1%         Additional Optimization 
+       00:00:00              0.0%         Additional Optimization/Timing Optimization 
+       00:00:00              0.1%         Optimization (4) 
+       00:00:35             30.4%         Optimization (5) 
+       00:00:21             18.0%         Other 
+----------------------------------------------------------------------------
+       00:01:56            100.0%         Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 8
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6548Y+ / 128 CPUs  
+Sockets: 2, Cores: 32, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   compile_fusion / initial_opto (FLW-8001)
+Information: Time: 2026-07-01 09:09:33 / Session:  00:30:05 / Command:  00:01:58 / CPU:  00:06:27 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+Information: >>>>>>> 9 unique error and warning message tags while observing compile_fusion / initial_opto: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     1     1  0 DFT-1991  WARNING   Warning: SCANDEF based Optimization skipped: No ScanDEF chai... (MSG-3032)
+Information:    22    22  0 FLW-2892  WARNING   Warning: Restoring scoped app option 'ropt.lr_estimation_com... (MSG-3032)
+Information:     2     1  0 ZRT-704   WARNING   Warning: The value of route.common.extra_nonpreferred_direct... (MSG-3032)
+Information:     2     1  0 ZRT-511   WARNING   Warning: Cell contains tie connections which are not connect... (MSG-3032)
+Information:     2     1  0 ZRT-022   WARNING   Warning: Cannot find a default contact code for layer CO. (Z... (MSG-3032)
+Information:     1     1  0 PLACE-029 WARNING   Warning: There is insufficient area available to achieve the... (MSG-3032)
+Information:    10    10  0 OPT-069   WARNING   Warning: Skipping pin boundarycell_ENDCAP02_8/VDD. Reason - ... (MSG-3032)
+Information:   205   105  0 ZRT-763   WARNING   Warning: Cell u_datapath/u_input_line_buffer_control/u_input... (MSG-3032)
+Information:    22     1  0 GRF-013   WARNING   Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32... (MSG-3032)
+Information:   267   143  0        9  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 143 error&warning MSGs observed during compile_fusion / initial_opto (MSG-3103)
+
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 5 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 11 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     5     1  0 FLW-3502  WARNING   Warning: The app option 'compile.flow.high_effort_timing' wi... (MSG-3032)
+Information:     0     1 10 SQM-1061  WARNING   Cannot infer functionality of libcell '%s' and will be exclu... (MSG-3032)
+Information:     1     1  0 DFT-1991  WARNING   Warning: SCANDEF based Optimization skipped: No ScanDEF chai... (MSG-3032)
+Information:    22    22  0 FLW-2892  WARNING   Warning: Restoring scoped app option 'ropt.lr_estimation_com... (MSG-3032)
+Information:     2     1  0 ZRT-704   WARNING   Warning: The value of route.common.extra_nonpreferred_direct... (MSG-3032)
+Information:     2     1  0 ZRT-511   WARNING   Warning: Cell contains tie connections which are not connect... (MSG-3032)
+Information:     2     1  0 ZRT-022   WARNING   Warning: Cannot find a default contact code for layer CO. (Z... (MSG-3032)
+Information:     1     1  0 PLACE-029 WARNING   Warning: There is insufficient area available to achieve the... (MSG-3032)
+Information:    10    10  0 OPT-069   WARNING   Warning: Skipping pin boundarycell_ENDCAP02_8/VDD. Reason - ... (MSG-3032)
+Information:   205   105  0 ZRT-763   WARNING   Warning: Cell u_datapath/u_input_line_buffer_control/u_input... (MSG-3032)
+Information:    22     1  0 GRF-013   WARNING   Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32... (MSG-3032)
+Information:   272   145  1       11  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 145 error&warning MSGs observed during fusion (MSG-3103)
+
+  Block: fsc_top_compile.nlib:fsc_top.design
+  Current State: is mapped; is placed; 
+  Events:
+	- initial_map             	07/01/26 08:47 -->     0.012 hours
+	- logic_opto              	07/01/26 08:51 -->     0.018 hours
+	- insert_dft              	07/01/26 08:59 -->     0.001 hours
+	- initial_place           	07/01/26 09:03 -->     0.007 hours
+	- initial_drc             	07/01/26 09:06 -->     0.009 hours
+	- initial_opto            	07/01/26 09:07 -->     0.033 hours
+
+Information: Ending   'compile_fusion -from initial_opto -to initial_opto' (FLW-8001)
+Information: Time: 2026-07-01 09:09:33 / Session:  00:30:05 / Command:  00:01:58 / CPU:  00:06:28 / Memory: 2251 MB (FLW-8100)
+Information: CPU Load: 2%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+1

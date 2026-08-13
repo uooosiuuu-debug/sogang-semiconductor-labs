@@ -1,0 +1,103 @@
+****************************************
+Report : check_mv_design
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:50:31 2026
+****************************************
+
+---------- Power domain rule ----------
+No errors or warnings.
+
+---------- Supply set rule ----------
+No errors or warnings.
+
+---------- Supply net rule ----------
+Warning: Supply state(s) has not been defined on the supply net 'vdd'. (MV-099)
+Warning: Supply state(s) has not been defined on the supply net 'vss'. (MV-099)
+Information: Total 2 MV-099 violations. (MV-080)
+---------- Supply port rule ----------
+No errors or warnings.
+
+---------- Isolation strategy rule ----------
+No errors or warnings.
+
+---------- Level shifter strategy rule ----------
+No errors or warnings.
+
+---------- Retention strategy rule ----------
+No errors or warnings.
+
+---------- Power switch strategy rule ----------
+No errors or warnings.
+
+---------- Repeater rule ----------
+No errors or warnings.
+
+---------- Terminal boundary rule ----------
+No errors or warnings.
+
+---------- Isolation cell rule ----------
+No errors or warnings.
+
+---------- Level shifter cell rule ----------
+No errors or warnings.
+
+---------- Retention cell rule ----------
+No errors or warnings.
+
+---------- Switch cell rule ----------
+No errors or warnings.
+
+---------- PGMUX rule ----------
+No errors or warnings.
+
+---------- Diode cell rule ----------
+No errors or warnings.
+
+---------- Model rule ----------
+No errors or warnings.
+
+---------- Isolation rule ----------
+No errors or warnings.
+
+---------- Voltage shifting rule ----------
+No errors or warnings.
+
+---------- Tie-off connection rule ----------
+Warning: The tie-off connection 'u_datapath/u_pixel_in_buffer/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_pixel_in_buffer/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_color_interleaver/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_color_interleaver/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_flash_fifo_control/u_load_mem_fifo/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_correction/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_correction/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_correction/u_sr_d1kx16_f166g_gamma_wrap/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_0_wrap/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_1_wrap/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_gamma_correction/u_sr_d1kx16_f166c_compensation_table_2_wrap/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap0/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap0/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_r/u_sr_d1kx16_f166_wrap1/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap0/*Logic1*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/*Logic0*' has not been implemented. (MV-027)
+Warning: The tie-off connection 'u_datapath/u_input_line_buffer_control/u_input_line_buffer_g/u_sr_d1kx16_f166_wrap1/*Logic1*' has not been implemented. (MV-027)
+Information: Message 'MV-027' limit (20) exceeded. Remainder will be suppressed. The limit can be changed with '-max_message_count' option. (MV-079)
+Information: Total 41 MV-027 violations. (MV-080)
+---------- Analog net rule ----------
+No errors or warnings.
+
+---------- Physical block pin rule ----------
+No errors or warnings.
+
+---------- PG pin rule ----------
+No errors or warnings.
+
+---------- Signal pin rule ----------
+No errors or warnings.
+
+---------- Summary ----------
+Information: Total 0 error(s) and 43 warning(s) from check_mv_design. (MV-082)
+1

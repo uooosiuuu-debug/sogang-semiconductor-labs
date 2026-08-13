@@ -1,0 +1,197 @@
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_CTS.nlib:fsc_top/clock_opt_build_clock.design'. (TIM-125)
+Information: Design fsc_top has 40445 nets, 0 global routed, 1661 detail routed. (NEX-024)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: The RC mode used is CTO for design 'fsc_top'. (NEX-022)
+Information: Design Average RC for design fsc_top  (NEX-011)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.073850 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.086059 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 40443, routed nets = 1661, across physical hierarchy nets = 0, parasitics cached nets = 40443, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    disabled
+************************************************************
+****************************************
+Report : clock timing
+        -type skew
+        -nworst 1
+        -setup
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Thu Jul  2 10:09:27 2026
+****************************************
+
+  Mode: func
+  Clock: pll1_clk_in
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_pll_mux/pll1_ld_q2_reg/CLK                0.63              rp-+   ss0p95v125c
+  u_clk_gen/u_pll_mux/pll1_ld_q3_reg/CLK                0.41      0.23    rpi-+  ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: pll2_clk_in
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/panel_clk_en_reg/CLK            0.60              rp-+   ss0p95v125c
+  u_clk_gen/u_clock_gen/panel_clk_q_reg/CLK             0.57      0.04    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: pixel_clk
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/pixel_comp_clk_enq_reg/CLK      3.04              rp-+   ss0p95v125c
+  u_clk_gen/u_clock_gen/pixel_comp_clk_en_reg/CLK       2.00      1.04    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: system_clk
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/sdram_clk_en_reg/CLK            0.93              rp-+   ss0p95v125c
+  u_clk_gen/u_clock_gen/sdram_clk_q_reg/CLK             0.42      0.51    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: comp_clk
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_clock_gen/pixel_comp_clk_enq_reg/CLK      3.30              rp-+   ss0p95v125c
+  u_clk_gen/u_clock_gen/pixel_comp_clk_en_reg/CLK       2.26      1.04    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: i2c_scl
+
+  No local skews.
+
+
+  Mode: func
+  Clock: test_clk
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_main_controller_top/u_main_controller/init_done_reg/CLK
+                                                        1.00              rp-+   ss0p95v125c
+  u_main_controller_top/u_main_controller/init_done_os_reg/CLK
+                                                        0.74      0.27    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: system_clk_div2
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_main_controller_top/u_main_controller/init_done_reg/CLK
+                                                        2.53              rp-+   ss0p95v125c
+  u_main_controller_top/u_main_controller/init_done_os_reg/CLK
+                                                        1.18      1.35    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: panel_clk_inv_gate
+
+  No local skews.
+
+
+  Mode: func
+  Clock: panel_clk_dly
+
+  No local skews.
+
+
+  Mode: func
+  Clock: panel_clk_gate
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_datapath/u_shiftout/out_r1_reg[10]/CLK              1.46              rp-+   ss0p95v125c
+  u_datapath/u_shiftout/out_r2_reg[11]/CLK              0.98      0.49    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: system_clk_int
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_clk_gen/u_power_manager/count_reg[14]/CLK           1.68              rp-+   ss0p95v125c
+  u_clk_gen/u_power_manager/current_state_reg[1]/CLK
+                                                        0.41      1.28    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: flash_clk_gate
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_flash_control/u_flash_control_counter/count_reg[1]/CLK
+                                                        1.17              rp-+   ss0p95v125c
+  u_flash_control/fcc_count_d1_reg[1]/CLK               0.88      0.29    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: i2c_clk
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_register_map_control/choice_D_reg[4]/CLK            0.90              rp-+   ss0p95v125c
+  u_main_controller_top/u_main_controller/cur_static_mem_in_reg[4]/CLK
+                                                        0.64      0.26    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: sdram_clk_gate
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_datapath/u_rotating_cache_control/rc1/mem3_reg[9]/CLK
+                                                        1.97              rp-+   ss0p95v125c
+  u_datapath/u_rotating_cache_control/rc1/Do_reg[1]/CLK
+                                                        1.58      0.39    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+
+  Mode: func
+  Clock: sdram_clk
+
+  No local skews.
+
+
+  Mode: func
+  Clock: pixel_comp_clk_pix
+
+  Clock Pin                                          Latency      Skew             Corner
+---------------------------------------------------------------------------------------------------
+  u_datapath/u_pixel_in_buffer/pixel_count_reg[5]/CLK
+                                                        3.79              rp-+   ss0p95v125c
+  u_datapath/u_pixel_in_buffer/buffer0_write_enable_reg/CLK
+                                                        2.28      1.51    rp-+   ss0p95v125c
+
+---------------------------------------------------------------------------------------------------
+1

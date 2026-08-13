@@ -1,0 +1,33 @@
+****************************************
+Report : qor
+        -summary
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 14:33:06 2026
+****************************************
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Design Average RC for design fsc_top  (NEX-011)
+Information: r = 1.788986 ohm/um, via_r = 0.498417 ohm/cut, c = 0.070818 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.665284 ohm/um, via_r = 0.582596 ohm/cut, c = 0.083011 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: The RC mode used is VR for design 'fsc_top'. (NEX-022)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 32301, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 32299, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+
+Timing
+---------------------------------------------------------------------------
+Context                                 WNS            TNS            NVE
+---------------------------------------------------------------------------
+ss0p95v125c.func   (Setup)             0.34           0.00              0
+Design             (Setup)             0.34           0.00              0
+
+ss0p95v125c.func   (Hold)            -29.53         -58.91              4
+Design             (Hold)            -29.53         -58.91              4
+---------------------------------------------------------------------------
+
+Miscellaneous
+---------------------------------------------------------------------------
+Cell Area (netlist):                         530386.44
+Cell Area (netlist and physical only):       536313.59
+Nets with DRC Violations:      125
+1

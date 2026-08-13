@@ -1,0 +1,11 @@
+Name     WidthMltplr SpacingMltplr TaperDist DriverTaperDist TaperOverPinLayers TaperUnderPinLayers DriverTaperOverPinLayers DriverTaperUnderPinLayers ParallelWireLayers
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+_snps_autoNdr_delay_1w3s
+         1           1
+_snps_autoNdr_delay_2w3s
+         1           1
+cts_w1_s2
+         1           1
+cts_w2_s2_vlg
+         1           1
+1

@@ -1,0 +1,61 @@
+****************************************
+Report : clock_skew
+Design : fsc_top
+Mode   : func
+Version: V-2023.12-SP5
+Date   : Fri Jun 26 15:17:53 2026
+****************************************
+
+              Min Rise  Min Fall  Max Rise  Max Fall     Hold          Setup        Related
+Object          Delay     Delay     Delay     Delay   Uncertainty   Uncertainty      Clock          Scenario      Origin
+-----------------------------------------------------------------------------------------------------------------------------
+comp_clk            -         -         -         -             -          6.06         --          ss0p95v125c.func
+                                                                                                                    user
+flash_clk_gate
+                    -         -         -         -             -          6.06         --          ss0p95v125c.func
+                                                                                                                    user
+i2c_clk             -         -         -         -             -          6.06         --          ss0p95v125c.func
+                                                                                                                    user
+i2c_scl             -         -         -         -             -       2000.00         --          ss0p95v125c.func
+                                                                                                                    user
+panel_clk_dly       -         -         -         -             -          1.21         --          ss0p95v125c.func
+                                                                                                                    user
+panel_clk_gate
+                    -         -         -         -             -          1.21         --          ss0p95v125c.func
+                                                                                                                    user
+panel_clk_inv_gate
+                    -         -         -         -             -          1.21         --          ss0p95v125c.func
+                                                                                                                    user
+pixel_clk           -         -         -         -             -          5.02         --          ss0p95v125c.func
+                                                                                                                    user
+pixel_comp_clk_pix
+                    -         -         -         -             -          5.02         --          ss0p95v125c.func
+                                                                                                                    user
+pll1_clk_in         -         -         -         -             -          1.51         --          ss0p95v125c.func
+                                                                                                                    user
+pll2_clk_div2       -         -         -         -             -          3.03         --          ss0p95v125c.func
+                                                                                                                    user
+pll2_clk_in         -         -         -         -             -          1.51         --          ss0p95v125c.func
+                                                                                                                    user
+sdram_clk           -         -         -         -             -          1.51         --          ss0p95v125c.func
+                                                                                                                    user
+sdram_clk_gate
+                    -         -         -         -             -          1.51         --          ss0p95v125c.func
+                                                                                                                    user
+system_clk          -         -         -         -             -          6.06         --          ss0p95v125c.func
+                                                                                                                    user
+system_clk_div2
+                    -         -         -         -             -         12.12         --          ss0p95v125c.func
+                                                                                                                    user
+system_clk_int
+                    -         -         -         -             -          6.06         --          ss0p95v125c.func
+                                                                                                                    user
+
+                Min Condition Source Latency      Max Condition Source Latency
+--------------------------------------------------------------------------------
+Object         Early_r Early_f  Late_r  Late_f   Early_r Early_f  Late_r  Late_f    Rel_clk         Scenario
+---------------------------------------------------------------------------------------------------------------
+comp_clk          1.50    1.50    2.50    2.50      1.50    1.50    2.50    2.50         --         ss0p95v125c.func
+pixel_clk         1.50    1.50    2.50    2.50      1.50    1.50    2.50    2.50         --         ss0p95v125c.func
+
+1

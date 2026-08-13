@@ -1,0 +1,504 @@
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+Information: Timer using 8 threads
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: Starting 'compile_fusion -from initial_place -to initial_place' (FLW-8000)
+Information: Time: 2026-07-01 09:03:22 / Session:  00:23:54 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB
+****************************************
+Report : report_tbcs
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 09:03:22 2026
+****************************************
+INFO: Start environment monitoring: recipes
+Information: Enabling runtime flow for U-2022 (FLW-3600)
+Warning: The app option 'compile.flow.high_effort_timing' will be changed to Boolean type in the future.  To ensure compatibility, this app option should only be set to a value of 0 or 1 for now (FLW-3502)
+INFO: compile_fusion is running in balanced flow mode.
+INFO: EIO v5 is enabled
+Information: The automatic clock gate timing flow is activated. Clock latencies set on clock gate cells will be automatically adjusted by an estimate for latency. (CGT-4005)
+Warning: Timing Arc from 'u_clk_gen/u_clock_gen/C383/ctmi_32/S0' to 'u_clk_gen/u_clock_gen/C383/ctmi_32/Y' has been disabled to break loops in network of clock 'system_clk' (GRF-013)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            pocv
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+Smart Arc Optimization:                    enabled
+************************************************************
+Information: CCD will use corner ss0p95v125c for honoring max prepone/postpone limits
+
+Summary of messages during CTS:
+===============================================================
+  Tag   Count  Type           Description
+---------------------------------------------------------------
+ No error or warning message.
+Information: Change threshold for extractor is reset. (FLW-1300)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Structural Congestion Optimization technology (Early SCO) has been enabled. (SCO-0001)
+Information: The net parasitics of block fsc_top are cleared. (TIM-123)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_place (FLW-8000)
+Information: Time: 2026-07-01 09:03:28 / Session:  00:23:59 / Command:  00:00:05 / CPU:  00:00:20 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------------------------------------------------
+Information: Starting compile_fusion / initial_place / Load Design (FLW-8000)
+Information: Time: 2026-07-01 09:03:28 / Session:  00:23:59 / Command:  00:00:05 / CPU:  00:00:20 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_place / Load Design / Incremental Auto-Floorplan (FLW-8000)
+Information: Time: 2026-07-01 09:03:28 / Session:  00:24:00 / Command:  00:00:05 / CPU:  00:00:21 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Shaping unshaped voltage areas (AFP-1011)
+Information: Placing unplaced pins (AFP-1007)
+Load DB...
+CPU Time for load db: 00:00:00.02u 00:00:00.00s 00:00:00.02e: 
+
+Min routing layer: M2
+Max routing layer: M7
+
+
+CPU Time for Top Level Pre-Route Processing: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+CPU Time for Leaf Level Pre-Route Processing: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of block ports: 206
+Number of block pin locations assigned from router: 0
+CPU Time for Pin Preparation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of PG ports on blocks: 0
+Number of pins created: 11
+CPU Time for Pin Creation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Total Pin Placement CPU Time: 00:00:00.06u 00:00:00.00s 00:00:00.06e: 
+Information: Result of compile_fusion / initial_place / Incremental Auto-Floorplan (FLW-8500)
+Information: Auto-Floorplan Summary (AFP-2023)
+-------------------------------------------------------------------------------
+              origin           area     boundary
+core            user         852808   { {8 8} {8 930.944} {932.008 930.944} {932.008 8} }
+die             user         882615   { {0 0} {0 938.944} {940.008 938.944} {940.008 0} }
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+objects             total        candidates          modified         preserved                 
+voltage areas           0                 0                 0                 0
+ios                     0                 0                 0                 0
+macros                 30                 0                 0                 0
+pins                  206                11                11                 0
+-------------------------------------------------------------------------------
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     557428.62           -       33804              0.40      2032
+Information: Ending   compile_fusion / initial_place / Load Design / Incremental Auto-Floorplan (FLW-8001)
+Information: Time: 2026-07-01 09:03:28 / Session:  00:24:00 / Command:  00:00:05 / CPU:  00:00:21 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     557428.62           -       33804              0.40      2032
+Information: Ending   compile_fusion / initial_place / Load Design (FLW-8001)
+Information: Time: 2026-07-01 09:03:28 / Session:  00:24:00 / Command:  00:00:05 / CPU:  00:00:21 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_place / pre-placement setup (FLW-8000)
+Information: Time: 2026-07-01 09:03:28 / Session:  00:24:00 / Command:  00:00:05 / CPU:  00:00:21 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     557469.81           -       33832              0.40      2032
+Information: Ending   compile_fusion / initial_place / pre-placement setup (FLW-8001)
+Information: Time: 2026-07-01 09:03:29 / Session:  00:24:00 / Command:  00:00:06 / CPU:  00:00:21 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Starting compile_fusion / initial_place / Initial Placement (FLW-8000)
+Information: Time: 2026-07-01 09:03:29 / Session:  00:24:00 / Command:  00:00:06 / CPU:  00:00:21 / Memory: 2032 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+----------------------------------------------------------------
+running create_placement
+Corner Scaling is off, multiplier is 1.000000
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: timingScenario ss0p95v125c.func timingCorner ss0p95v125c.  Using corner ss0p95v125c for worst leakage corner. (OPT-078)
+Information: Using default layer M5 (OPT-079)
+Information: Nominal = 0.0353099  Design MT = 0.400000  Target = 0.1379810  MaxRC = 0.096804 Fast Target = 0.044405 (OPT-081)
+nplLib: default vr hor dist = 1155
+nplLib: default vr ver dist = 1155
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1154.78
+Pin density aware placement mode.
+Automatically computed max pin density per square micron = 1.25073
+Info: ICG auto bound skipping extra processing.
+Info: ICG AutoBound found 510 ICGs
+Info: ICG AutoBound created 0 group bounds 
+Information: Activity propagation will be performed for scenario ss0p95v125c.func.
+Information: Doing activity propagation for mode 'func' and corner 'ss0p95v125c' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario ss0p95v125c.func (POW-052)
+Information: Running switching activity propagation with 8 threads!
+
+ **** Information : No. of simulation cycles = 7 ****
+Warning: a large fraction of the nets have zero toggle rate (43.1158%)
+****** eLpp weights (no caps) (no lengths)
+Number of nets: 34347, of which 33169 non-clock nets
+Number of nets with 0 toggle rate: 14809 (43.1158%)
+Max toggle rate = 0.330033, average toggle rate = 0.00334519
+Max non-clock toggle rate = 0.0828593
+eLpp weight range = (0, 98.6589)
+*** 105 nets are filtered out
+
+Placement Options:
+Effort:                        high_effort         
+Timing Driven:                 false               
+Buffering Aware Timing Driven: false               
+Seed locs:                     false               
+Incremental:                   false               
+Congestion:                    false               
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.auto_density_control                       :	 enhanced            
+place.coarse.cong_restruct_effort                       :	 low                 
+place.coarse.cong_restruct_iterations                   :	 1                   
+place.coarse.congestion_expansion_direction             :	 both                
+place.coarse.enable_enhanced_soft_blockages             :	 true                
+place.coarse.icg_auto_bound                             :	 true                
+place.coarse.increased_cell_expansion                   :	 true                
+place.coarse.pin_density_aware                          :	 true                
+
+Start transferring placement data.
+****** Net weight manager: report ******
+Weights included: eLpp  Timing  
+Number of nets with non-default weights: 34347
+Amt power = 0.1
+Timing factor = 1
+Non-default weight range: (0.869028, 10.7349)
+                             Min         Max         Avg       Stdev        Skew
+       Toggle Rates            0    0.330033  0.00334518    0.015939     13.8259
+      Power Weights            0     98.6589    0.999996     4.76475     13.8259
+     Timing Weights     0.965587     2.89659           1    0.121031     4.21985
+      Final Weights     0.869028     10.7349           1     0.49418     12.3586
+Information: Automatic repeater spreading is enabled.
+Completed transferring placement data.
+Running placement using 8 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.50, congestion_driven_max_util 0.87. (PLACE-027)
+Information: HFW control 'off' invoked.
+Creating placement from scratch.
+coarse place 0% done.
+coarse place 8% done.
+coarse place 15% done.
+coarse place 23% done.
+coarse place 31% done.
+coarse place 38% done.
+Information: Coarse placer wire length estimate = 1.21823e+06
+Information: Coarse placer active wire length estimate = 6779.61
+Information: Coarse placer weighted wire length estimate = 1.31275e+06
+Information: Extraction observers are detached as design net change threshold is reached.
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+----------------------------------------------------------------
+----------------------------------------------------------------
+running create_placement
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: The stitching and editing of coupling caps is turned OFF for design 'fsc_top_compile.nlib:fsc_top.design'. (TIM-125)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+CGRW: permuting timing equivalent pins only
+Corner Scaling is off, multiplier is 1.000000
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: timingScenario ss0p95v125c.func timingCorner ss0p95v125c.  Using corner ss0p95v125c for worst leakage corner. (OPT-078)
+Information: Using default layer M5 (OPT-079)
+Information: Nominal = 0.0353099  Design MT = 0.400000  Target = 0.1379810  MaxRC = 0.096804 Fast Target = 0.044405 (OPT-081)
+nplLib: default vr hor dist = 1155
+nplLib: default vr ver dist = 1155
+nplLib: default vr buf size = 6
+nplLib: default vr buf size = 2
+Placer using max_unbuffered_distance = 1154.78
+Pin density aware placement mode.
+Automatically computed max pin density per square micron = 1.25073
+Info: ICG auto bound skipping extra processing.
+Info: ICG AutoBound found 510 ICGs
+Info: ICG AutoBound created 0 group bounds 
+Info: e-eLpp used with low effort
+
+Placement Options:
+Effort:                        medium_effort       
+Timing Driven:                 true                
+Buffering Aware Timing Driven: true                
+Seed locs:                     true                
+Incremental:                   false               
+Congestion:                    false               
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+Printing options for 'place.coarse.*' (non-default only)
+place.coarse.auto_density_control                       :	 enhanced            
+place.coarse.cong_restruct_effort                       :	 low                 
+place.coarse.cong_restruct_iterations                   :	 1                   
+place.coarse.congestion_expansion_direction             :	 both                
+place.coarse.enable_enhanced_soft_blockages             :	 true                
+place.coarse.icg_auto_bound                             :	 true                
+place.coarse.increased_cell_expansion                   :	 true                
+place.coarse.pin_density_aware                          :	 true                
+
+Start transferring placement data.
+Warning: a large fraction of the nets have zero toggle rate (43.1129%)
+****** eLpp weights (no caps) (no lengths)
+Number of nets: 34347, of which 33169 non-clock nets
+Number of nets with 0 toggle rate: 14808 (43.1129%)
+Max toggle rate = 0.330033, average toggle rate = 0.00330368
+Max non-clock toggle rate = 0.0828593
+eLpp weight range = (0, 99.8986)
+*** 105 nets are filtered out
+****** Net weight manager: report ******
+Weights included: eLpp  Timing  
+Number of nets with non-default weights: 34347
+Amt power = 0.1
+Timing factor = 1
+Non-default weight range: (0.869028, 10.8589)
+                             Min         Max         Avg       Stdev        Skew
+       Toggle Rates            0    0.330033  0.00330366   0.0155996     13.9399
+      Power Weights            0     99.8986    0.999995     4.72188     13.9399
+     Timing Weights     0.965587     2.89659           1    0.121031     4.21985
+      Final Weights     0.869028     10.8589    0.999999    0.490195     12.4306
+Information: Automatic repeater spreading is enabled.
+Restructuring in 109 hierarchies
+CGRW: importing permutable pins & pairs, size 20 and above
+Information: Automatic timing control is enabled.
+checking app option clockgate_objective_weight : none
+Information: Clock gate latency aware placement is enabled. (PLACE-085)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Using worst RC corner 'ss0p95v125c' for buffer aware analysis.
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+DTDP placement: scenario=ss0p95v125c.func
+DEBUG FLOWMSGPRINTER: HANDLER IS NULL
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Factor(1) = 1
+Factor(BASE) = 1
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Completed transferring placement data.
+Running placement using 8 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.50, congestion_driven_max_util 0.87. (PLACE-027)
+Information: HFW control 'off' invoked.
+coarse place 0% done.
+Selected 7055 sequential cells for slack balancing.
+coarse place 10% done.
+coarse place 20% done.
+coarse place 30% done.
+coarse place 40% done.
+coarse place 50% done.
+coarse place 60% done.
+coarse place 70% done.
+coarse place 80% done.
+coarse place 90% done.
+coarse place 100% done.
+Information: Coarse placer wire length estimate = 1.32728e+06
+Information: Coarse placer active wire length estimate = 4848.97
+Information: Coarse placer weighted wire length estimate = 1.34119e+06
+Information: Extraction observers are detached as design net change threshold is reached.
+Stored 5 bounds for preserving balanced registers 
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+----------------------------------------------------------------
+Non-default App Option report
+All App Options have their default value.
+Compile-fusion optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
+Compile-fusion                                          -           -         -         -     557469.81           -       33832              0.41      2122
+Information: Ending   compile_fusion / initial_place / Initial Placement (FLW-8001)
+Information: Time: 2026-07-01 09:03:53 / Session:  00:24:25 / Command:  00:00:31 / CPU:  00:01:37 / Memory: 2122 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+Information: Placing unplaced pins (AFP-1007)
+Load DB...
+CPU Time for load db: 00:00:00.02u 00:00:00.00s 00:00:00.02e: 
+
+Min routing layer: M2
+Max routing layer: M7
+
+
+CPU Time for Top Level Pre-Route Processing: 00:00:00.01u 00:00:00.00s 00:00:00.01e: 
+CPU Time for Leaf Level Pre-Route Processing: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of block ports: 206
+Number of block pin locations assigned from router: 0
+CPU Time for Pin Preparation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Number of PG ports on blocks: 0
+Number of pins created: 11
+CPU Time for Pin Creation: 00:00:00.00u 00:00:00.00s 00:00:00.00e: 
+Total Pin Placement CPU Time: 00:00:00.06u 00:00:00.00s 00:00:00.06e: 
+
+Information: Runtime Summary (compile_fusion / initial_place)  (FLW-9001)
+----------------------------------------------------------------------------
+     Elapse(Hr:Min:Sec)     Elapse(%)     Category
+----------------------------------------------------------------------------
+       00:00:00              0.6%         Load Design 
+       00:00:00              0.3%         Load Design/Incremental Auto-Floorplan 
+       00:00:00              1.9%         pre-placement setup 
+       00:00:24             96.2%         Initial Placement 
+       00:00:00              1.1%         Other 
+----------------------------------------------------------------------------
+       00:00:25            100.0%         Total 
+----------------------------------------------------------------------------
+
+Host Options:
+-------------
+Max cores: 8
+
+Machine Spec:
+-------------
+INTEL(R) XEON(R) GOLD 6548Y+ / 128 CPUs  
+Sockets: 2, Cores: 32, HT/SMT, not-VM
+----------------------------------------------------------------------------
+
+Information: Ending   compile_fusion / initial_place (FLW-8001)
+Information: Time: 2026-07-01 09:03:54 / Session:  00:24:25 / Command:  00:00:31 / CPU:  00:01:37 / Memory: 2122 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+
+
+Information: Structural Congestion Optimization technology (Post-DTDP SCO) has been enabled. (SCO-0001)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.test'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Estimating clock gate latencies for scenario 'ss0p95v125c.func'. (OPT-909)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Orientation ETCH is using reference direction: VERTICAL. (NEX-032)
+Information: Total 2 MV-099 violations. (MV-080)
+Information: Total 103 MV-027 violations. (MV-080)
+Information: Please run check_mv_design for more details. (UPF-535)
+Information: Summary of UPF Cells (UPF-532)
+*******************************************************************************
+                            Summary of UPF Cells                               
+*******************************************************************************
+This is a UPF design.
+UPF is loaded.
+UPF is committed.
+-------------------------------------------------------------------------------
+Number of power domains:        1
+Number of supply nets:          2
+-------------------------------------------------------------------------------
+                             Voltage Area Info                                 
+-------------------------------------------------------------------------------
+Name                            X           Y           Power Domain Name
+-------------------------------------------------------------------------------
+DEFAULT_VA                                              TOP
+                                8.0000      8.0000
+                                8.0000      930.9440
+                                932.0080    930.9440
+                                932.0080    8.0000
+
+-------------------------------------------------------------------------------
+MV Cells                        Total Number
+-------------------------------------------------------------------------------
+Level Shifter:                  0
+Enable Level Shifter:           0
+Isolation Cell:                 0
+Retention Cell:                 0
+Retention Clamp Cell:           0
+Switch Cell:                    0
+Always-On Cell:                 0
+Repeater Cell:                  0
+
+-------------------------------------------------------------------------------
+Unmapped MV Cells
+-------------------------------------------------------------------------------
+No unmapped MV cell found
+*******************************************************************************
+                        End of Summary of UPF Cells                            
+*******************************************************************************
+Information: Timer using 8 threads
+INFO: End environment monitoring: recipes
+INFO: Restored 0 timer status, 5 app options, 0 tcl gvars, 0 env vars
+Information: >>>>>>> 2 unique error and warning message tags while observing fusion: (MSG-3100)
+Information: #prnt #trgr #lmt    Tag  Level     Format (or last printed message)                                (MSG-3036)
+Information:     3     1  0 FLW-3502  WARNING   Warning: The app option 'compile.flow.high_effort_timing' wi... (MSG-3032)
+Information:     0     1 10 SQM-1061  WARNING   Cannot infer functionality of libcell '%s' and will be exclu... (MSG-3032)
+Information:     3     2  1        2  <------   Total sum of messages (MSG-3038)
+Information: >>>>>>> Summary: 2 error&warning MSGs observed during fusion (MSG-3103)
+
+  Block: fsc_top_compile.nlib:fsc_top.design
+  Current State: is mapped; is placed; 
+  Events:
+	- initial_map             	07/01/26 08:47 -->     0.012 hours
+	- logic_opto              	07/01/26 08:51 -->     0.018 hours
+	- insert_dft              	07/01/26 08:59 -->     0.001 hours
+	- initial_place           	07/01/26 09:03 -->     0.007 hours
+
+Information: Ending   'compile_fusion -from initial_place -to initial_place' (FLW-8001)
+Information: Time: 2026-07-01 09:03:56 / Session:  00:24:28 / Command:  00:00:33 / CPU:  00:01:41 / Memory: 2122 MB (FLW-8100)
+Information: CPU Load: 0%, Ram Free: 158 GB, Swap Free: 13 GB, Work Disk Free: 5929 GB, Tmp Disk Free: 70 GB (MSG-3995)
+1

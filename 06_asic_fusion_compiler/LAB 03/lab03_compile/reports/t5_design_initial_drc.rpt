@@ -1,0 +1,75 @@
+****************************************
+Report : design
+Design : fsc_top
+Version: V-2023.12-SP5
+Date   : Wed Jul  1 11:31:35 2026
+****************************************
+
+Total number of std cells in library : 863
+Total number of dont_use lib cells   : 68
+Total number of dont_touch lib cells : 0
+Total number of buffers              : 33
+Total number of inverters            : 45
+Total number of flip-flops           : 318
+Total number of latches              : 36
+Total number of ICGs                 : 36
+
+Cell Instance Type  Count         Area
+--------------------------------------
+TOTAL LEAF CELLS    48174   573943.928
+unit                48144   189358.628
+Standard cells      48144   189358.628
+unit                48144   189358.628
+Hard macro cells       30   384585.299
+unit                48144   189358.628
+Soft macro cells        0        0.000
+unit                48144   189358.628
+Always on cells         0        0.000
+unit                48144   189358.628
+Physical only       11661     5927.146
+unit                48144   189358.628
+Fixed cells         11691   390512.446
+unit                48144   189358.628
+Moveable cells      36483   183431.482
+unit                48144   189358.628
+Placed cells        48144   189358.628
+unit                48144   189358.628
+Sequential          13929   507806.764
+unit                48144   189358.628
+Buffer/inverter      5311    13806.881
+unit                48144   189358.628
+ICG cells             510     3240.336
+unit                48144   189358.628
+
+Logic Hierarchies                    : 108
+Design Masters count                 : 177
+Total Flat nets count                : 37133
+Total FloatingNets count             : 103
+Total no of Ports                    : 208
+Number of Master Clocks in design    : 7
+Number of Generated Clocks in design : 12
+Number of Path Groups in design      : 31 (19 of them Non Default)
+Number of Scan Chains in design      : 0
+List of Modes                        : func, test
+List of Corners                      : ss0p95v125c
+List of Scenarios                    : ss0p95v125c.func, ss0p95v125c.test
+
+Core Area                            : 852807.640
+Chip Area                            : 882614.872
+Total Site Row Area                  : 852807.640
+Number of Blockages                  : 60
+Total area of Blockages              : 854408.735
+Number of Power Domains              : 1
+Number of Voltage Areas              : 1
+Number of Group Bounds               : 0
+Number of Exclusive MoveBounds       : 0
+Number of Hard or Soft MoveBounds    : 0
+Number of Multibit Registers         : 0
+Number of Multibit LS/ISO Cells      : 0
+Number of Top Level RP Groups        : 0
+Number of Tech Layers                : 71 (61 of them have unknown routing dir.)
+
+Total wire length                    : 0.00 micron
+Total number of wires                : 0
+Total number of contacts             : 111303
+1
