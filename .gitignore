@@ -1,0 +1,56 @@
+# ==============================
+# Vivado generated files
+# ==============================
+.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.str/
+*.ip_user_files/
+
+# Vivado logs / temporary
+vivado.log
+vivado.jou
+*.backup.log
+*.backup.jou
+
+# ==============================
+# Vitis / Eclipse generated
+# ==============================
+.metadata/
+Debug/
+Release/
+*.pdom
+
+# ==============================
+# Vitis HLS generated
+# ==============================
+solution*/
+.autopilot/
+csim/
+syn/
+impl/
+
+# ==============================
+# Python / Jupyter
+# ==============================
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ==============================
+# Models / large binaries
+# ==============================
+*.pt
+*.pth
+
+# ==============================
+# OS / editor
+# ==============================
+.DS_Store
+*.swp
+*~
