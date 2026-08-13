@@ -23,7 +23,7 @@
 | `03_arm_soc` | ARM SoC / AMBA | Windows 원본 순차 정리 예정 |
 | `04_fpga_basic` | FPGA 기초 설계 | Windows 원본 순차 정리 예정 |
 | `05_uart_spi_gpio` | UART / SPI / GPIO | Windows 원본 순차 정리 예정 |
-| `06_asic_fusion_compiler` | ASIC / Fusion Compiler | Windows 원본 순차 정리 예정 |
+| [`06_asic_fusion_compiler`](06_asic_fusion_compiler/) | Fusion Compiler Physical Design | Lab 03·06~11 및 취업용 포트폴리오 정리 완료 |
 | [`07_ppe_fpga_kv260`](07_ppe_fpga_kv260/) | PPE Monitoring FPGA 프로젝트 | 원본 및 포트폴리오 정리 중 |
 
 ## Featured Project
