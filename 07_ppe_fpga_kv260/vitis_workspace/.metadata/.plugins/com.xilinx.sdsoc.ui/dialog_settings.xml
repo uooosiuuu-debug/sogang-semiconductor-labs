@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="sdx.custom.platform.repository.locations" value="/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform;/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2"/>
+</section>

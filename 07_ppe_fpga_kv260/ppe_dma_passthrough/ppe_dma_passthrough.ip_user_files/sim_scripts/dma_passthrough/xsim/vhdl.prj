@@ -1,0 +1,6 @@
+vhdl xil_defaultlib  \
+"../../../bd/dma_passthrough/ip/dma_passthrough_axi_dma_0_0/sim/dma_passthrough_axi_dma_0_0.vhd" \
+"../../../bd/dma_passthrough/ip/dma_passthrough_proc_sys_reset_0_0/sim/dma_passthrough_proc_sys_reset_0_0.vhd" \
+"../../../bd/dma_passthrough/ip/dma_passthrough_smartconnect_1_0/bd_0/ip/ip_1/sim/bd_e2ba_psr_aclk_0.vhd" \
+
+nosort

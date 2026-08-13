@@ -1,0 +1,75 @@
+# Vivado 자동 생성 파일
+*.jou
+*.log
+*.str
+*.pb
+*.wdb
+*.wcfg
+*.dcp
+*.bit
+*.ltx
+*.mmi
+*.bin
+*.xsa
+*.hwh
+*.hwdef
+*.vdi
+*.rpx
+
+# Vivado 프로젝트 디렉토리
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.srcs/utils_1/
+*.xpr.backup/
+
+# Vitis / Vitis HLS / simulation
+.Xil/
+xsim.dir/
+*.vcd
+*.saif
+xelab.*
+xvlog.*
+xsim.*
+webtalk.*
+**/.autopilot/
+**/.apc/
+**/solution*/syn/
+**/solution*/sim/
+**/solution*/impl/
+dma_axis_passthrough/hls/build/
+vitis_workspace/.metadata/
+vitis_workspace/RemoteSystemsTempFiles/
+vitis_workspace/**/Debug/
+vitis_workspace/**/Release/
+vitis_workspace/**/_ide/
+vitis_workspace/**/export/
+
+# Generated compiler files
+*.o
+*.d
+*.elf
+BOOT.BIN
+__pycache__/
+*.py[cod]
+
+# Model weights are not required for the hardware build
+*.pt
+
+# OS/editor
+.DS_Store
+*~
+*.swp
+
+# Curated final hardware deliverables
+!dma_axis_passthrough/deliverables/*.bit
+!dma_axis_passthrough/deliverables/*.hwh
+!dma_axis_passthrough/deliverables/*.ltx
+!dma_axis_passthrough/deliverables/*.xsa
+
+# Curated verification data and reports
+!model6_hls/**/*.bin
+!dma_axis_passthrough/hls/reports/*.log

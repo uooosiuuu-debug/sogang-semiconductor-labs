@@ -1,0 +1,38 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.717936",
+   "Default View_TopLeft":"-60,265",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 890 -y 500 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 2 -x 890 -y 180 -defaultsOSRD
+preplace inst axis_passthrough_0 -pg 1 -lvl 1 -x 250 -y 140 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 250 -y 370 -defaultsOSRD
+preplace inst smartconnect_1 -pg 1 -lvl 2 -x 890 -y 670 -defaultsOSRD
+preplace inst reset_inverter_0 -pg 1 -lvl 2 -x 890 -y 350 -defaultsOSRD
+preplace inst reset_const_high -pg 1 -lvl 1 -x 250 -y -70 -defaultsOSRD
+preplace inst reset_const_low -pg 1 -lvl 2 -x 890 -y -60 -defaultsOSRD
+preplace inst axi_interconnect_0 -pg 1 -lvl 1 -x 250 -y 590 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 3 -40 780 550 780 1210
+preplace netloc zynq_ultra_ps_e_0_pl_resetn0 1 1 2 580 410 1200
+preplace netloc reset_inverter_0_Res 1 2 1 N 350
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 0 2 -30 -130 510
+preplace netloc proc_sys_reset_0_interconnect_aresetn 1 0 2 10 740 500
+preplace netloc reset_const_high_dout 1 0 2 0 750 490
+preplace netloc reset_const_low_dout 1 0 3 -30 760 540J 40 1200
+preplace netloc axi_dma_0_M_AXIS_MM2S 1 0 3 10 -10 570J 0 1220
+preplace netloc axis_passthrough_0_output_stream 1 1 1 520J 130n
+preplace netloc axi_dma_0_M_AXI_MM2S 1 1 2 560 50 1210
+preplace netloc axi_dma_0_M_AXI_S2MM 1 1 2 570 60 1200
+preplace netloc smartconnect_1_M00_AXI 1 1 2 580 760 1200
+preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_FPD 1 0 3 -10 770 N 770 1220
+preplace netloc axi_interconnect_0_M00_AXI 1 1 1 530 130n
+preplace netloc axi_interconnect_0_M01_AXI 1 0 2 -20 730 480
+levelinfo -pg 1 -60 250 890 1270
+pagesize -pg 1 -db -bbox -sgen -60 -140 1270 790
+"
+}
+{
+   "da_zynq_ultra_ps_e_cnt":"1"
+}

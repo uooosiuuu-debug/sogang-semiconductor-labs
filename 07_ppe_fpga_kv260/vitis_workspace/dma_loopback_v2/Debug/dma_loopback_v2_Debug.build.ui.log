@@ -1,0 +1,21 @@
+2026-07-31T15:34:21.9811700255-15:34:21 **** Build of configuration Debug for project dma_loopback_v2 ****
+000-make all 
+000-Building file: ../src/main.c
+000-Invoking: ARM v8 gcc compiler
+000-aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2/sw/ppe_dma_platform_v2/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+000-Finished building: ../src/main.c
+000- 
+000-Building target: dma_loopback_v2.elf
+000-Invoking: ARM v8 gcc linker
+000-aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2/sw/ppe_dma_platform_v2/standalone_domain/bsplib/lib -o "dma_loopback_v2.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-Finished building target: dma_loopback_v2.elf
+000- 
+000-Invoking: ARM v8 Print Size
+000-aarch64-none-elf-size dma_loopback_v2.elf  |tee "dma_loopback_v2.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  48176	   4232	  22820	  75228	  125dc	dma_loopback_v2.elf
+000-Finished building: dma_loopback_v2.elf.size
+000- 
+00255-
+15:34:22 Build Finished (took 275ms)
+

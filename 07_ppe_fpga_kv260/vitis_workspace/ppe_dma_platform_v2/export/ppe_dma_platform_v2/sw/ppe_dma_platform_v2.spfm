@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdx:platform sdx:vendor="xilinx.com"
+              sdx:library="sdx"
+              sdx:name="ppe_dma_platform_v2"
+              sdx:version="1.0"
+              sdx:schemaVersion="1.0"
+              xmlns:sdx="http://www.xilinx.com/sdx">
+    <sdx:description>
+ppe_dma_platform_v2
+    </sdx:description>
+    <sdx:systemConfigurations sdx:defaultConfiguration="ppe_dma_platform_v2">
+        <sdx:configuration sdx:name="ppe_dma_platform_v2"
+                           sdx:displayName="ppe_dma_platform_v2"
+                           sdx:defaultProcessorGroup="standalone_domain"
+                           sdx:runtimes="cpp">
+            <sdx:description>ppe_dma_platform_v2</sdx:description>
+            <sdx:bootImages sdx:default="standard">
+                <sdx:image sdx:name="standard"
+                            sdx:bif=""
+                            sdx:imageData=""
+                            sdx:readme="ppe_dma_platform_v2/boot/generic.readme"
+                            sdx:qemuArguments="ppe_dma_platform_v2/qemu/pmu_args.txt:ppe_dma_platform_v2/qemu/qemu_args.txt"
+                            />
+                <sdx:image sdx:name="standalone_domain"
+                            sdx:bif="ppe_dma_platform_v2/boot/ppe_dma_platform_v2.bif"
+                            sdx:readme="ppe_dma_platform_v2/boot/generic.readme"
+                            sdx:qemuArguments="ppe_dma_platform_v2/standalone_domain/qemu/pmu_args.txt:ppe_dma_platform_v2/standalone_domain/qemu/qemu_args.txt"
+                            />
+            </sdx:bootImages>
+            <sdx:processorGroup sdx:name="standalone_domain"
+                                sdx:displayName="standalone on psu_cortexa53_0"
+                                sdx:cpuType="cortex-a53"
+                                sdx:cpuInstance="psu_cortexa53_0">
+                <sdx:os sdx:name="standalone"
+                        sdx:displayName="standalone"
+                        sdx:bspLibraryPaths="ppe_dma_platform_v2/standalone_domain/bsplib/lib"
+                        sdx:bspIncludePaths="ppe_dma_platform_v2/standalone_domain/bspinclude/include"
+                        sdx:bspConfig="ppe_dma_platform_v2/standalone_domain/system.mss"
+                />
+            </sdx:processorGroup>
+        </sdx:configuration>
+    </sdx:systemConfigurations>
+</sdx:platform>

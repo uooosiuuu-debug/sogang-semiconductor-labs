@@ -1,0 +1,28 @@
+TRACE::2026-07-31.14:09:01::SCWBifWriter::Found the complete platform /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/ppe_dma_platform.xpfm
+TRACE::2026-07-31.14:09:01::SCWBifWriter::hardware databse : dma_passthrough_wrapper_3
+TRACE::2026-07-31.14:09:01::SCWBifWriter::bitstream found in the design
+TRACE::2026-07-31.14:09:01::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2026-07-31.14:09:01::SCWBifWriter::proc type : 
+TRACE::2026-07-31.14:09:01::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2026-07-31.14:09:01::SCWBifWriter::Device type is : zynqMP
+TRACE::2026-07-31.14:09:01::SCWBifWriter::Writing BIF to file : /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_system/Debug/system.bif
+TRACE::2026-07-31.14:09:01::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2026-07-31.14:09:01::SCWBifWriter::System Command Ran  /tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/sw/fsbl.elf
+TRACE::2026-07-31.14:09:01::SCWBifWriter:: Command result  
+TRACE::2026-07-31.14:09:01::SCWBifWriter::FSBL processor, command ran /tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/sw/fsbl.elf
+TRACE::2026-07-31.14:09:01::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2026-07-31.14:09:01::SCWBifWriter::Boot processor is :a53-0
+TRACE::2026-07-31.14:44:56::SCWBifWriter::Found the complete platform /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/ppe_dma_platform.xpfm
+TRACE::2026-07-31.14:44:56::SCWBifWriter::hardware databse : dma_passthrough_wrapper_3
+TRACE::2026-07-31.14:44:56::SCWBifWriter::bitstream found in the design
+TRACE::2026-07-31.14:44:56::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2026-07-31.14:44:56::SCWBifWriter::proc type : 
+TRACE::2026-07-31.14:44:56::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2026-07-31.14:44:56::SCWBifWriter::Device type is : zynqMP
+TRACE::2026-07-31.14:44:56::SCWBifWriter::Writing BIF to file : /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_system/Debug/system.bif
+TRACE::2026-07-31.14:44:56::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2026-07-31.14:44:57::SCWBifWriter::System Command Ran  /tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/sw/fsbl.elf
+TRACE::2026-07-31.14:44:57::SCWBifWriter:: Command result  
+TRACE::2026-07-31.14:44:57::SCWBifWriter::FSBL processor, command ran /tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin/aarch64-none-elf-readelf -A  /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/sw/fsbl.elf
+TRACE::2026-07-31.14:44:57::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2026-07-31.14:44:57::SCWBifWriter::Boot processor is :a53-0

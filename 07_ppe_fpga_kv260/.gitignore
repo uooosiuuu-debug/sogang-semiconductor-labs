@@ -1,0 +1,116 @@
+# Vivado transient and generated data
+.Xil/
+*.jou
+  GNU nano 6.2                                                             .gitignore *                                                                R   
+*.dcp
+*.vdi
+*.pb
+*.rpx
+*.wdb
+*.vcd
+*.hwdef
+
+**/*.cache/
+**/*.gen/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+
+# Vitis/Vitis HLS generated data
+vitis_workspace/.metadata/
+vitis_workspace/RemoteSystemsTempFiles/
+vitis_workspace/**/Debug/
+vitis_workspace/**/Release/
+vitis_workspace/**/_ide/
+vitis_workspace/**/export/
+
+**/.autopilot/
+**/.apc/
+**/solution*/syn/
+*.log
+*.str
+*.dcp
+*.vdi
+*.pb
+*.rpx
+*.wdb
+*.vcd
+*.hwdef
+
+**/*.cache/
+**/*.gen/
+**/*.hw/
+**/*.ip_user_files/
+**/*.runs/
+**/*.sim/
+
+# Vitis/Vitis HLS generated data
+vitis_workspace/.metadata/
+vitis_workspace/RemoteSystemsTempFiles/
+vitis_workspace/**/Debug/
+vitis_workspace/**/Release/
+vitis_workspace/**/_ide/
+vitis_workspace/**/export/
+
+**/.autopilot/
+**/.apc/
+**/solution*/syn/
+**/solution*/sim/
+**/solution*/impl/
+
+# Generated hardware binaries
+*.bit
+*.bin
+*.xsa
+*.elf
+BOOT.BIN
+
+# Python/editor temporary files
+__pycache__/
+*.py[cod]
+*~
+*.swp
+
+# Vivado generated
+.Xil/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.str/
+*.ip_user_files/
+
+# Vivado temporary
+*.jou
+*.log
+*.backup.jou
+*.backup.log
+
+# HLS generated
+solution*/
+*.autopilot/
+csim/
+syn/
+impl/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+*~
+*.swp
+
+# Large temporary artifacts
+tmp/
+build/
+
+

@@ -1,0 +1,21 @@
+15:34:21 **** Build of configuration Debug for project dma_loopback_v2 ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2/sw/ppe_dma_platform_v2/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: dma_loopback_v2.elf
+Invoking: ARM v8 gcc linker
+aarch64-none-elf-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2/sw/ppe_dma_platform_v2/standalone_domain/bsplib/lib -o "dma_loopback_v2.elf" ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: dma_loopback_v2.elf
+ 
+Invoking: ARM v8 Print Size
+aarch64-none-elf-size dma_loopback_v2.elf  |tee "dma_loopback_v2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  48176	   4232	  22820	  75228	  125dc	dma_loopback_v2.elf
+Finished building: dma_loopback_v2.elf.size
+ 
+
+15:34:22 Build Finished (took 275ms)
+

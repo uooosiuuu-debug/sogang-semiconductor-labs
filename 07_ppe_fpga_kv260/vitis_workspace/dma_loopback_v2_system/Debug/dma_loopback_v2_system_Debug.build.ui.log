@@ -1,0 +1,10 @@
+2026-07-31T15:34:22.68714400255-15:34:22 **** Build of configuration Debug for project dma_loopback_v2_system ****
+000-make all 
+000-Generating bif file for the system project
+000-Executing command '::scw::generate_bif -xpfm /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2/ppe_dma_platform_v2.xpfm -domains standalone_domain -bifpath /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_v2_system/Debug/system.bif' on XSCT
+000-sdcard_gen --xpfm /home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform_v2/export/ppe_dma_platform_v2/ppe_dma_platform_v2.xpfm --sys_config ppe_dma_platform_v2 --bif /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_v2_system/Debug/system.bif --bitstream /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_v2/_ide/bitstream/dma_passthrough.bit --elf /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_v2/Debug/dma_loopback_v2.elf,psu_cortexa53_0
+000-creating BOOT.BIN using /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_v2/_ide/bitstream/dma_passthrough.bit
+000-Running /tools/Xilinx/Vitis/2022.2/bin/bootgen -arch zynqmp -image /home/sogang/ppe_fpga_ho/vitis_workspace/dma_loopback_v2_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+00255-
+15:34:28 Build Finished (took 5s.735ms)
+

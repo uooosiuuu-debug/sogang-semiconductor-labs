@@ -1,0 +1,27 @@
+timestamp=[2026-07-31 13:38:02], mode=WORKBENCH_START, duration=0:00:10.965, duration_ms=10965, data={}
+timestamp=[2026-07-31 13:38:03], mode=WORKBENCH_UI_INIT, duration=0:00:00.813, duration_ms=813, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2026-07-31 13:38:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:05.162, duration_ms=5162, data={}
+timestamp=[2026-07-31 13:47:02], mode=PLATFORM_CREATION, duration=0:00:18.039, duration_ms=18039, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2026-07-31 13:47:57], mode=PLATFORM_GENERATION, duration=0:00:32.691, duration_ms=32691, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 13:54:35], mode=APP_CREATION, duration=0:00:01.724, duration_ms=1724, data={name=dma_loopback, project_type=sdk, os=standalone, processor=cortex-a53, runtime=C/C++, platform=ppe_dma_platform, application_type=application}
+timestamp=[2026-07-31 14:09:00], mode=BUILD, duration=0:00:00.431, duration_ms=431, data={name=dma_loopback, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 14:09:06], mode=BUILD, duration=0:00:06.236, duration_ms=6236, data={name=dma_loopback_system, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 14:30:12], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=dma_loopback, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 14:44:55], mode=BUILD, duration=0:00:00.321, duration_ms=321, data={name=dma_loopback, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 14:45:01], mode=BUILD, duration=0:00:05.886, duration_ms=5886, data={name=dma_loopback_system, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 15:13:21], mode=PLATFORM_GENERATION, duration=0:00:05.585, duration_ms=5585, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 15:14:54], mode=PLATFORM_GENERATION, duration=0:00:04.157, duration_ms=4157, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 15:14:56], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=dma_loopback, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 15:16:20], mode=PLATFORM_GENERATION, duration=0:00:04.165, duration_ms=4165, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 15:16:45], mode=PLATFORM_GENERATION, duration=0:00:04.176, duration_ms=4176, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 15:16:45], mode=BUILD, duration=0:00:00.173, duration_ms=173, data={name=dma_loopback, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 15:17:04], mode=PLATFORM_GENERATION, duration=0:00:04.158, duration_ms=4158, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 15:17:23], mode=PLATFORM_GENERATION, duration=0:00:04.115, duration_ms=4115, data={name=ppe_dma_platform}
+timestamp=[2026-07-31 15:19:08], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.433, duration_ms=433, data={}
+timestamp=[2026-07-31 15:19:08], mode=WORKBENCH_START, duration=0:00:08.738, duration_ms=8738, data={}
+timestamp=[2026-07-31 15:19:08], mode=WORKBENCH_UI_INIT, duration=0:00:00.160, duration_ms=160, data={editors_count=3, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,dma_loopback,dma_loopback_system,ppe_dma_platform}
+timestamp=[2026-07-31 15:23:43], mode=PLATFORM_CREATION, duration=0:00:12.368, duration_ms=12368, data={platform_source=dsa, os=standalone, processor=psu_cortexa53, platform=null}
+timestamp=[2026-07-31 15:24:47], mode=PLATFORM_GENERATION, duration=0:00:26.915, duration_ms=26915, data={name=ppe_dma_platform_v2}
+timestamp=[2026-07-31 15:33:03], mode=APP_CREATION, duration=0:00:01.413, duration_ms=1413, data={name=dma_loopback_v2, project_type=sdk, os=standalone, processor=cortex-a53, runtime=C/C++, platform=ppe_dma_platform_v2, application_type=application}
+timestamp=[2026-07-31 15:34:22], mode=BUILD, duration=0:00:00.287, duration_ms=287, data={name=dma_loopback_v2, configuration=Debug, clean_build=false}
+timestamp=[2026-07-31 15:34:28], mode=BUILD, duration=0:00:05.743, duration_ms=5743, data={name=dma_loopback_v2_system, configuration=Debug, clean_build=false}

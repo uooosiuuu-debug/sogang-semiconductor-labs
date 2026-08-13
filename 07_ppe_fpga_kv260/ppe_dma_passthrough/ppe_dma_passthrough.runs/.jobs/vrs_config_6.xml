@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="dma_passthrough_xbar_0_synth_1" LaunchDir="/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/dma_passthrough_xbar_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dma_passthrough_auto_ds_0_synth_1" LaunchDir="/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/dma_passthrough_auto_ds_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dma_passthrough_auto_pc_0_synth_1" LaunchDir="/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/dma_passthrough_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

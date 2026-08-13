@@ -1,0 +1,13 @@
+15:16:45 **** Incremental Build of configuration Debug for project dma_loopback ****
+make all 
+Building file: ../src/main.c
+Invoking: ARM v8 gcc compiler
+aarch64-none-elf-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I/home/sogang/ppe_fpga_ho/vitis_workspace/ppe_dma_platform/export/ppe_dma_platform/sw/ppe_dma_platform/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:1:10: fatal error: xparameters.h: No such file or directory
+    1 | #include "xparameters.h"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/subdir.mk:23: src/main.o] Error 1
+
+15:16:45 Build Finished (took 168ms)
+

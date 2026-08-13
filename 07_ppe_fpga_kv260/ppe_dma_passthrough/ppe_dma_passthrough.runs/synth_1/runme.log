@@ -1,0 +1,374 @@
+
+*** Running vivado
+    with args -log dma_passthrough_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_passthrough_wrapper.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source dma_passthrough_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sogang/ppe_fpga_ho/axis/passthrough/axis_passthrough_hls/solution1/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.srcs/utils_1/imports/synth_1/dma_passthrough_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.srcs/utils_1/imports/synth_1/dma_passthrough_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top dma_passthrough_wrapper -part xck26-sfvc784-2LV-c
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
+INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 189328
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2958.191 ; gain = 238.801 ; free physical = 4760 ; free virtual = 34730
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3939.062; parent = 2962.164; children = 976.898
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_wrapper' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/hdl/dma_passthrough_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:12]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_axi_dma_0_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_axi_dma_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_axi_dma_0_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_axi_dma_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mm2s_prmry_reset_out_n' of module 'dma_passthrough_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:166]
+WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'dma_passthrough_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:166]
+WARNING: [Synth 8-7071] port 'mm2s_introut' of module 'dma_passthrough_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:166]
+WARNING: [Synth 8-7071] port 's2mm_introut' of module 'dma_passthrough_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:166]
+WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'dma_passthrough_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:166]
+WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'dma_passthrough_axi_dma_0_0' has 64 connections declared, but only 59 given [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:166]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_axi_interconnect_0_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:502]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_QV4XGV' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:1036]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_QV4XGV' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:1036]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_1IR9C9T' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:1161]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_1IR9C9T' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:1161]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_HW6CMV' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:1293]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_auto_ds_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_auto_ds_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_auto_ds_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_auto_pc_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_auto_pc_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_HW6CMV' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:1293]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_xbar_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_xbar_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'dma_passthrough_xbar_0' is unconnected for instance 'xbar' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:995]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'dma_passthrough_xbar_0' is unconnected for instance 'xbar' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:995]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'dma_passthrough_xbar_0' has 40 connections declared, but only 38 given [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:995]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_axi_interconnect_0_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:502]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_axis_passthrough_0_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_axis_passthrough_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_axis_passthrough_0_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_axis_passthrough_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'dma_passthrough_axis_passthrough_0_0' is unconnected for instance 'axis_passthrough_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:305]
+WARNING: [Synth 8-7071] port 'output_stream_TSTRB' of module 'dma_passthrough_axis_passthrough_0_0' is unconnected for instance 'axis_passthrough_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:305]
+WARNING: [Synth 8-7023] instance 'axis_passthrough_0' of module 'dma_passthrough_axis_passthrough_0_0' has 32 connections declared, but only 30 given [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:305]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_proc_sys_reset_0_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_proc_sys_reset_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_proc_sys_reset_0_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_proc_sys_reset_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'dma_passthrough_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:336]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'dma_passthrough_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:336]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'dma_passthrough_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:336]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'dma_passthrough_proc_sys_reset_0_0' has 10 connections declared, but only 7 given [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:336]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_reset_const_high_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_reset_const_high_0/synth/dma_passthrough_reset_const_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_reset_const_high_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_reset_const_high_0/synth/dma_passthrough_reset_const_high_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_reset_const_low_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_reset_const_low_0/synth/dma_passthrough_reset_const_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_reset_const_low_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_reset_const_low_0/synth/dma_passthrough_reset_const_low_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_reset_inverter_0_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_reset_inverter_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_reset_inverter_0_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_reset_inverter_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_smartconnect_1_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_smartconnect_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_smartconnect_1_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_smartconnect_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dma_passthrough_zynq_ultra_ps_e_0_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_zynq_ultra_ps_e_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_zynq_ultra_ps_e_0_0' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/.Xil/Vivado-189306-sogang-500TGA-500SGA/realtime/dma_passthrough_zynq_ultra_ps_e_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'maxigp0_awuser' of module 'dma_passthrough_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:420]
+WARNING: [Synth 8-7071] port 'maxigp0_aruser' of module 'dma_passthrough_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:420]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'dma_passthrough_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:420]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'dma_passthrough_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:420]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'dma_passthrough_zynq_ultra_ps_e_0_0' has 83 connections declared, but only 79 given [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:420]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/synth/dma_passthrough.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'dma_passthrough_wrapper' (0#1) [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/hdl/dma_passthrough_wrapper.v:12]
+WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_HW6CMV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_HW6CMV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_1IR9C9T is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_1IR9C9T is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_1IR9C9T is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_1IR9C9T is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_QV4XGV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_QV4XGV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_QV4XGV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_QV4XGV is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3032.129 ; gain = 312.738 ; free physical = 4779 ; free virtual = 34748
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4009.031; parent = 3032.133; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3049.941 ; gain = 330.551 ; free physical = 4779 ; free virtual = 34748
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4026.844; parent = 3049.945; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3049.941 ; gain = 330.551 ; free physical = 4779 ; free virtual = 34748
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4026.844; parent = 3049.945; children = 976.898
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3049.941 ; gain = 0.000 ; free physical = 4779 ; free virtual = 34748
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_zynq_ultra_ps_e_0_0/dma_passthrough_zynq_ultra_ps_e_0_0/dma_passthrough_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'dma_passthrough_i/zynq_ultra_ps_e_0'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_zynq_ultra_ps_e_0_0/dma_passthrough_zynq_ultra_ps_e_0_0/dma_passthrough_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'dma_passthrough_i/zynq_ultra_ps_e_0'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_axi_dma_0_0/dma_passthrough_axi_dma_0_0/dma_passthrough_axi_dma_0_0_in_context.xdc] for cell 'dma_passthrough_i/axi_dma_0'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_axi_dma_0_0/dma_passthrough_axi_dma_0_0/dma_passthrough_axi_dma_0_0_in_context.xdc] for cell 'dma_passthrough_i/axi_dma_0'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_axis_passthrough_0_0/dma_passthrough_axis_passthrough_0_0/dma_passthrough_axis_passthrough_0_0_in_context.xdc] for cell 'dma_passthrough_i/axis_passthrough_0'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_axis_passthrough_0_0/dma_passthrough_axis_passthrough_0_0/dma_passthrough_axis_passthrough_0_0_in_context.xdc] for cell 'dma_passthrough_i/axis_passthrough_0'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_proc_sys_reset_0_0/dma_passthrough_proc_sys_reset_0_0/dma_passthrough_proc_sys_reset_0_0_in_context.xdc] for cell 'dma_passthrough_i/proc_sys_reset_0'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_proc_sys_reset_0_0/dma_passthrough_proc_sys_reset_0_0/dma_passthrough_proc_sys_reset_0_0_in_context.xdc] for cell 'dma_passthrough_i/proc_sys_reset_0'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_smartconnect_1_0/dma_passthrough_smartconnect_1_0/dma_passthrough_smartconnect_1_0_in_context.xdc] for cell 'dma_passthrough_i/smartconnect_1'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_smartconnect_1_0/dma_passthrough_smartconnect_1_0/dma_passthrough_smartconnect_1_0_in_context.xdc] for cell 'dma_passthrough_i/smartconnect_1'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_reset_inverter_0_0/dma_passthrough_reset_inverter_0_0/dma_passthrough_reset_inverter_0_0_in_context.xdc] for cell 'dma_passthrough_i/reset_inverter_0'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_reset_inverter_0_0/dma_passthrough_reset_inverter_0_0/dma_passthrough_reset_inverter_0_0_in_context.xdc] for cell 'dma_passthrough_i/reset_inverter_0'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_xbar_0/dma_passthrough_xbar_0/dma_passthrough_xbar_0_in_context.xdc] for cell 'dma_passthrough_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_xbar_0/dma_passthrough_xbar_0/dma_passthrough_xbar_0_in_context.xdc] for cell 'dma_passthrough_i/axi_interconnect_0/xbar'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_auto_ds_0/dma_passthrough_auto_ds_0/dma_passthrough_auto_ds_0_in_context.xdc] for cell 'dma_passthrough_i/axi_interconnect_0/s00_couplers/auto_ds'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_auto_ds_0/dma_passthrough_auto_ds_0/dma_passthrough_auto_ds_0_in_context.xdc] for cell 'dma_passthrough_i/axi_interconnect_0/s00_couplers/auto_ds'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_auto_pc_0/dma_passthrough_auto_pc_0/dma_passthrough_auto_pc_0_in_context.xdc] for cell 'dma_passthrough_i/axi_interconnect_0/s00_couplers/auto_pc'
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.gen/sources_1/bd/dma_passthrough/ip/dma_passthrough_auto_pc_0/dma_passthrough_auto_pc_0/dma_passthrough_auto_pc_0_in_context.xdc] for cell 'dma_passthrough_i/axi_interconnect_0/s00_couplers/auto_pc'
+Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.816 ; gain = 0.000 ; free physical = 4803 ; free virtual = 34772
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3128.816 ; gain = 0.000 ; free physical = 4803 ; free virtual = 34772
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3128.816 ; gain = 409.426 ; free physical = 4781 ; free virtual = 34750
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4073.703; parent = 3096.805; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xck26-sfvc784-2LV-c
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3128.816 ; gain = 409.426 ; free physical = 4781 ; free virtual = 34750
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4073.703; parent = 3096.805; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/axi_dma_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/axis_passthrough_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/proc_sys_reset_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/smartconnect_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/reset_inverter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/reset_const_high. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/reset_const_low. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/axi_interconnect_0/xbar. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/axi_interconnect_0/s00_couplers/auto_ds. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/axi_interconnect_0/s00_couplers/auto_pc. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for dma_passthrough_i/axi_interconnect_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3128.816 ; gain = 409.426 ; free physical = 4781 ; free virtual = 34750
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4073.703; parent = 3096.805; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 3128.816 ; gain = 409.426 ; free physical = 4781 ; free virtual = 34751
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4073.703; parent = 3096.805; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port M00_ACLK in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module dma_passthrough_axi_interconnect_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 3128.816 ; gain = 409.426 ; free physical = 4799 ; free virtual = 34772
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2376.163; parent = 2173.000; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4073.703; parent = 3096.805; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3579.332 ; gain = 859.941 ; free physical = 4325 ; free virtual = 34299
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.235; parent = 2721.104; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4556.234; parent = 3579.336; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3579.332 ; gain = 859.941 ; free physical = 4325 ; free virtual = 34299
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4556.234; parent = 3579.336; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 3599.371 ; gain = 879.980 ; free physical = 4313 ; free virtual = 34287
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4576.273; parent = 3599.375; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-------------------------------------+----------+
+|      |BlackBox name                        |Instances |
++------+-------------------------------------+----------+
+|1     |dma_passthrough_xbar_0               |         1|
+|2     |dma_passthrough_auto_ds_0            |         1|
+|3     |dma_passthrough_auto_pc_0            |         1|
+|4     |dma_passthrough_axi_dma_0_0          |         1|
+|5     |dma_passthrough_axis_passthrough_0_0 |         1|
+|6     |dma_passthrough_proc_sys_reset_0_0   |         1|
+|7     |dma_passthrough_reset_inverter_0_0   |         1|
+|8     |dma_passthrough_smartconnect_1_0     |         1|
+|9     |dma_passthrough_zynq_ultra_ps_e_0_0  |         1|
++------+-------------------------------------+----------+
+
+Report Cell Usage: 
++------+-----------------------------------+------+
+|      |Cell                               |Count |
++------+-----------------------------------+------+
+|1     |dma_passthrough_auto_ds            |     1|
+|2     |dma_passthrough_auto_pc            |     1|
+|3     |dma_passthrough_axi_dma_0          |     1|
+|4     |dma_passthrough_axis_passthrough_0 |     1|
+|5     |dma_passthrough_proc_sys_reset_0   |     1|
+|6     |dma_passthrough_reset_inverter_0   |     1|
+|7     |dma_passthrough_smartconnect_1     |     1|
+|8     |dma_passthrough_xbar               |     1|
+|9     |dma_passthrough_zynq_ultra_ps_e_0  |     1|
++------+-----------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.309 ; gain = 885.918 ; free physical = 4347 ; free virtual = 34322
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2924.388; parent = 2721.256; children = 203.163
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4582.211; parent = 3605.312; children = 976.898
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 3605.309 ; gain = 807.043 ; free physical = 4347 ; free virtual = 34322
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 3605.316 ; gain = 885.918 ; free physical = 4348 ; free virtual = 34322
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3605.316 ; gain = 0.000 ; free physical = 4451 ; free virtual = 34425
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3639.965 ; gain = 0.000 ; free physical = 4430 ; free virtual = 34405
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d9ee1bb1
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 44 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 3645.902 ; gain = 1862.621 ; free physical = 4569 ; free virtual = 34544
+INFO: [Common 17-1381] The checkpoint '/home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/synth_1/dma_passthrough_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file dma_passthrough_wrapper_utilization_synth.rpt -pb dma_passthrough_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 31 16:12:15 2026...

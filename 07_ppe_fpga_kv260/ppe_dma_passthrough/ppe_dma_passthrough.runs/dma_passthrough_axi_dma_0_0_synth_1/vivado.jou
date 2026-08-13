@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jul 31 10:48:37 2026
+# Process ID: 25831
+# Current directory: /home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/dma_passthrough_axi_dma_0_0_synth_1
+# Command line: vivado -log dma_passthrough_axi_dma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dma_passthrough_axi_dma_0_0.tcl
+# Log file: /home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/dma_passthrough_axi_dma_0_0_synth_1/dma_passthrough_axi_dma_0_0.vds
+# Journal file: /home/sogang/ppe_fpga_ho/ppe_dma_passthrough/ppe_dma_passthrough.runs/dma_passthrough_axi_dma_0_0_synth_1/vivado.jou
+# Running On: sogang-500TGA-500SGA, OS: Linux, CPU Frequency: 2785.468 MHz, CPU Physical cores: 10, Host memory: 16429 MB
+#-----------------------------------------------------------
+source dma_passthrough_axi_dma_0_0.tcl -notrace
